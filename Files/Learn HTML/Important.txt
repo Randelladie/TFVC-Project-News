@@ -10,3 +10,5 @@ HTML Responsive - Responsive web design is about creating web pages that look go
 A responsive web design will automatically adjust for different screen sizes and viewports.
 
 HTML Semantics - elements with a meaning.
+
+CSS Position - usually used for ads
