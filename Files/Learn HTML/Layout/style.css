@@ -1,0 +1,22 @@
+#WebsiteHeader{
+    background-color:#57659E;
+    height: 10%;
+}
+
+.WebsiteHeaderClass {
+    color:white;
+}
+
+#WebsiteFooter {
+    background-color:#B7D3E9;
+    height: 5%;
+}
+
+.WebsiteFooterClass {
+    color: white;
+}
+
+.Content {
+    height: 85%;
+    width: 100%;
+}
