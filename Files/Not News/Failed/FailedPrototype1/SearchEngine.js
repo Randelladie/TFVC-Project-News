@@ -11,7 +11,6 @@ function myFunction() {
 
   li[0] = contents[0]
 
-  /*
   // Loop through all list items, and hide those who don't match the search query
   for (i = 0; i < li.length; i++) {
     a = String(contents[i]);
@@ -21,5 +20,4 @@ function myFunction() {
       li[i] = "none";
     }
   }
-  */
 }
