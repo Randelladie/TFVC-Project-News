@@ -8,6 +8,11 @@ body {
     background-attachment: fixed;
 }
 
+.overflow {
+    height: 200px;
+    display: flex;
+}
+
 #Main_Layout {
     position:fixed;
     width:100%;
@@ -85,10 +90,13 @@ body {
 #Content_Layout {
     background-color:white;
     position:absolute;
+    top:132px;
     left:50%;
     transform:translate(-50%,0);
-    width:1128px;
-    display:table;
+    width:1120px;
+    /*display:flex;*/
+    display: grid;
+    grid-template-columns:auto 1fr;
     
     border-color:#792845;
     border-style:solid;
@@ -97,7 +105,8 @@ body {
 #Content_Article {
     position:relative;
     width:832px;
-    float:left;
+    right:0;
+
     padding:4px;
 }
 
@@ -106,22 +115,68 @@ body {
     border-style:dashed;
     padding:16px;
 }
-
+/*
 section::after {
     content: "";
     display: table;
     clear: both;
 }
-
-#Content_AsideAds {
-    position: -webkit-sticky;
-    position:sticky;
-    top:0;
+*/
+#Content_Aside {
+    position:relative;
     width:280px;
-    float:right;
+    height:100%;
+    left:0;
+
+    padding:4px;
 }
 
-.Content_AsideAds_Ad {
+#Content_Suggestions {
+    border-color:#792845;
+    border-style:dashed;
+    padding:8px;
+}
+
+.Content_Suggestions_Item {
+
+}
+
+.Content_Suggestions_Title {
+    line-height: 24px;
+}
+
+.Content_Suggestions_Info {
+    display:flex
+}
+
+.Content_Suggestions_Image {
+    width:96px; 
+    height:64px;
+    margin-right: 4px;
+}
+
+.Content_Suggestions_Description {
+    width:156px; 
+    height:56px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+
+#Content_Ads {
+    position: -webkit-sticky;
+    position:sticky;
+
+    width:280px;
+    float:right;
+    top:128px;
+}
+
+.Content_Ads_Ad {
     width:248px;
     margin:16px;
 }
