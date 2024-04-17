@@ -88,18 +88,26 @@ body {
 }
 
 #Content_Layout {
-    background-color:white;
     position:absolute;
     top:132px;
     left:50%;
     transform:translate(-50%,0);
     width:1120px;
-    /*display:flex;*/
+
+    display: grid;
+    grid-template-columns:auto 1fr;
+}
+
+#Content_Layout_Border {
+    background-color:white;
+
     display: grid;
     grid-template-columns:auto 1fr;
     
     border-color:#792845;
     border-style:solid;
+
+    margin-bottom:36px;
 }
 
 #Content_Article {
@@ -115,13 +123,7 @@ body {
     border-style:dashed;
     padding:16px;
 }
-/*
-section::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-*/
+
 #Content_Aside {
     position:relative;
     width:280px;
