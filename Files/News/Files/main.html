@@ -3,29 +3,37 @@
         <title id="Title">Title</title>
         <link rel="stylesheet" href="mainRes/style.css">
         <style id="Style">
+        #Content_Layout {
+            display: none;
+        }
+        body {
+            background-image: url('mainRes/DefaultBG.png');
+            background-size:100%;
+            background-attachment: fixed;
+        }
         #Main_Header {
-            background-color:rgb(0, 66, 0);
+            background-color:rgb(0, 0, 100);
         }
         #Main_AsideCategory {
-            background-color:green;
+            background-color:blue;
         }
         .Main_CategoryListButton {
-            background-color:green;
+            background-color:blue;
         }
         #Main_Footer {
-            background-color:greenyellow;
+            background-color:rgb(128, 128, 255);
             color:white;
         }
         #Content_Layout_Border {
             background-color:white;
-            border-color:green;
+            border-color:blue;
         }
         #Content_Article_Content {
-            border-color:green;
+            border-color:blue;
             border-style:dashed;
         }
         #Content_Suggestions {
-            border-color:green;
+            border-color:blue;
             border-style:dashed;
         }
         </style>
@@ -34,6 +42,39 @@
     </head>
 
     <body id="Body">
+        <div id="Global_Background" ></div>
+        <div id="Form_Register">
+            <label>Email: </label> 
+            <input type="text"></input>
+            <label>Username: </label> 
+            <input type="text"></input>
+            <label>Password: </label> 
+            <input type="password"></input>
+            <label>Confirm Password:</label> 
+            <input type="Password"></input>
+            <div><br></div><div></div>
+            <a href="#" onclick="LoadPage('Login')">Already have an account?</a>
+            <button style="display: flex; align-self: right; justify-self: right;">Register</button>
+            <a href="#" onclick="LoadPage('Home')">Continue as guest</a>
+        </div>
+
+        <div id="Form_Login">
+            <label>Username: </label> 
+            <input type="text" id="login_username"></input>
+            <label>Password: </label> 
+            <input type="password" id="login_password"></input>
+            <label id="login_error" style="color: red"></label><div></div>
+            <div><br></div><div></div>
+            <a href="#" onclick="LoadPage('Home')">Forgot Password?</a>
+            <button style="display: flex; align-self: right; justify-self: right;" onclick="Login(document.getElementById('login_username').value,document.getElementById('login_password').value)">Login</button>
+            <a href="#" onclick="LoadPage('Home')">Continue as guest</a>
+            <a href="#" onclick="LoadPage('Register')" style="text-align: right;">Dont have an account?</a>
+        </div>
+
+        <div id="Form_Home">
+
+        </div>
+
         <div id="Content_Layout">
             <div id="Content_Layout_Border">
                 <article id="Content_Article">
@@ -116,8 +157,10 @@
                     </div>
                 </aside>
             </div>
+            <h1>TEST</h1>
         </div>
 
+        <!-- The Master Page -->
         <div id="Main_Layout">
             <aside id="Main_AsideCategory">
                 <div style="height:120px"></div>
@@ -127,7 +170,9 @@
                 <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Default')">Default</button>
             </aside>
             <header id="Main_Header">
-                <img id="Main_Logo" src="mainRes/Logo.png">
+                <img id="Main_Logo" src="mainRes/LogoDefault.png">
+                <label id="Main_HGreetings">Greetings, <br>Guest</label>
+                <button id="Main_LogButton" onclick="LogButton()">Login</button>
                 <button id="Main_CategoryButton" onclick="ToggleCategory()"><img id="Main_CategoryButtonIcon" src="mainRes/ListVector.jpg"></button>
             </header>
             <footer id="Main_Footer">
@@ -135,7 +180,9 @@
                 <a href="#" style="margin:4px">Terms Of Service</a>
                 <a href="#" style="margin:4px">Support</a>
                 <a href="#" style="margin:4px">Credits</a>
+                <a href="#" style="margin:4px" onclick="LoadPage('Home')">Home</button>
             </footer>
         </div>
     </body>
+    <script>LoadPage("Register");</script>
 </html>

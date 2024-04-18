@@ -1,184 +1,295 @@
-* {
-    box-sizing: border-box;
-}
+/*#region Global*/
 
-body {
-    background-image: url('SportsBG.jpg');
-    background-size:100%;
-    background-attachment: fixed;
-}
+    * {
+        box-sizing: border-box;
+    }
 
-.overflow {
-    height: 200px;
-    display: flex;
-}
+    #Global_Background {
+        background-image: url('SportsBG.jpg');
+        background-size:100%;
+        background-attachment: fixed;
+        position:fixed;
+        width: 100%;
+        height: 100%;
+        display:inline;
+    }
 
-#Main_Layout {
-    position:fixed;
-    width:100%;
-    height:100%;
-    top:0;
-    left:0;
+    .overflow {
+        height: 200px;
+        display: flex;
+    }
 
-    display:contents;
-}
+/*#endregion*/
 
-#Main_Header {
-    position:fixed;
-    width:100%;
-    height:128px;
-    top:0;
-    left:0;
+/*#region Main*/
 
-    background-color:#792845;
-    color:white;
-    font-size:35px;
-}
+    #Main_Layout {
+        position:fixed;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
 
-#Main_Logo {
-    position: fixed;
-    width:96px;
-    height:96px;
-    margin:16px;
-}
+        display:contents;
+    }
 
-#Main_CategoryButton {
-    position: fixed;
-    width:32px;
-    height:32px;
-    top:64px;
-    right:32px;
-    margin:16px;
+    #Main_Header {
+        position:fixed;
+        width:100%;
+        height:128px;
+        top:0;
+        left:0;
 
-    border:none;
-}
+        background-color:#792845;
+        color:white;
+        font-size:35px;
+    }
 
-#Main_CategoryButtonIcon {
-    width:100%;
-    height:66%;
-}
+    #Main_Logo {
+        position: fixed;
+        width:96px;
+        height:96px;
+        margin:16px;
+    }
 
-#Main_AsideCategory {
-    position:fixed;
-    width:256px;
-    height:100%;
-    right:0;
+    #Main_HGreetings {
+        position: fixed;
+        width:192px;
+        height:48px;
+        top:80px;
+        right:80px;
+        margin:0;
+        color:white;
+        font-size:20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+    }
 
-    background-color:#d883a1;
-    color:white;
+    #Main_LogButton {
+        position: fixed;
+        top:80px;
+        right:80px;
+        margin:0;
+    }
 
-    display:none;
-}
+    #Main_CategoryButton {
+        position: fixed;
+        width:32px;
+        height:32px;
+        top:80px;
+        right:16px;
+        margin:0;
 
-.Main_CategoryListButton {
-    width:256px;
-    height:64px;
-    background-color:#c34773;
-}
+        border:none;
+    }
 
-#Main_Footer {
-    position:fixed;
-    width:100%;
-    height:32px;
-    bottom:0;
-    left:0;
+    #Main_CategoryButtonIcon {
+        width:100%;
+        height:66%;
+    }
 
-    background-color:#e5b5c6;
-    color:white;
-}
+    #Main_AsideCategory {
+        position:fixed;
+        width:256px;
+        height:100%;
+        right:0;
 
-#Content_Layout {
-    position:absolute;
-    top:132px;
-    left:50%;
-    transform:translate(-50%,0);
-    width:1120px;
+        background-color:#d883a1;
+        color:white;
 
-    display: grid;
-    grid-template-columns:auto 1fr;
-}
+        display:none;
+    }
 
-#Content_Layout_Border {
-    background-color:white;
+    .Main_CategoryListButton {
+        width:256px;
+        height:64px;
+        background-color:#c34773;
+    }
 
-    display: grid;
-    grid-template-columns:auto 1fr;
-    
-    border-color:#792845;
-    border-style:solid;
+    #Main_Footer {
+        position:fixed;
+        width:100%;
+        height:32px;
+        bottom:0;
+        left:0;
 
-    margin-bottom:36px;
-}
+        background-color:#e5b5c6;
+        color:white;
+    }
 
-#Content_Article {
-    position:relative;
-    width:832px;
-    right:0;
+/*#endregion*/
 
-    padding:4px;
-}
+/*#region Content*/
 
-#Content_Article_Content {
-    border-color:#792845;
-    border-style:dashed;
-    padding:16px;
-}
+    #Content_Layout {
+        position:absolute;
+        top:132px;
+        left:50%;
+        transform:translate(-50%,0);
+        width:1120px;
+        display:none;
+    }
 
-#Content_Aside {
-    position:relative;
-    width:280px;
-    height:100%;
-    left:0;
+    #Content_Layout_Border {
+        background-color:white;
 
-    padding:4px;
-}
+        display: none;
+        grid-template-columns:auto 1fr;
+        
+        border-color:#792845;
+        border-style:solid;
 
-#Content_Suggestions {
-    border-color:#792845;
-    border-style:dashed;
-    padding:8px;
-}
+        margin-bottom:36px;
+    }
 
-.Content_Suggestions_Item {
+    /*#region Register*/
 
-}
+        #Form_Register {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            margin:auto;
+            vertical-align:middle;
 
-.Content_Suggestions_Title {
-    line-height: 24px;
-}
+            border-style:solid;
+            border-color:blue;
+            background-color: white;
+            display:none;
+            grid-template-columns:auto auto;
+            padding:32px;
+        }
 
-.Content_Suggestions_Info {
-    display:flex
-}
+        #Form_Register label {
+            margin:4px;
+        }
+        #Form_Register input {
+            margin:4px;
+            margin-left:8px;
+        }
+        #Form_Register a {
+            margin:4px;
+        }
+        #Form_Register button {
+            margin:0;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
 
-.Content_Suggestions_Image {
-    width:96px; 
-    height:64px;
-    margin-right: 4px;
-}
+    /*#endregion*/
 
-.Content_Suggestions_Description {
-    width:156px; 
-    height:56px;
+    /*#region Login*/
 
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+        #Form_Login {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            margin:auto;
+            vertical-align:middle;
 
-    overflow:hidden;
-    text-overflow:ellipsis;
-}
+            border-style:solid;
+            border-color:blue;
+            background-color: white;
+            display:none;
+            grid-template-columns:auto auto;
+            padding:32px;
+        }
 
-#Content_Ads {
-    position: -webkit-sticky;
-    position:sticky;
+        #Form_Login label {
+            margin:4px;
+        }
+        #Form_Login input {
+            margin:4px;
+            margin-left:8px;
+        }
+        #Form_Login a {
+            margin:4px;
+        }
+        #Form_Login button {
+            margin:0;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
 
-    width:280px;
-    float:right;
-    top:128px;
-}
+/*#endregion*/
 
-.Content_Ads_Ad {
-    width:248px;
-    margin:16px;
-}
+    /*#region Article Page*/
+
+        #Content_Article {
+            position:relative;
+            width:832px;
+            right:0;
+
+            padding:4px;
+        }
+
+        #Content_Article_Content {
+            border-color:#792845;
+            border-style:dashed;
+            padding:16px;
+        }
+
+        #Content_Aside {
+            position:relative;
+            width:280px;
+            height:100%;
+            left:0;
+
+            padding:4px;
+        }
+
+        #Content_Suggestions {
+            border-color:#792845;
+            border-style:dashed;
+            padding:8px;
+        }
+
+        .Content_Suggestions_Item {
+
+        }
+
+        .Content_Suggestions_Title {
+            line-height: 24px;
+        }
+
+        .Content_Suggestions_Info {
+            display:flex
+        }
+
+        .Content_Suggestions_Image {
+            width:96px; 
+            height:64px;
+            margin-right: 4px;
+        }
+
+        .Content_Suggestions_Description {
+            width:156px; 
+            height:56px;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+
+        #Content_Ads {
+            position: -webkit-sticky;
+            position:sticky;
+
+            width:280px;
+            float:right;
+            top:128px;
+        }
+
+        .Content_Ads_Ad {
+            width:248px;
+            margin:16px;
+        }
+
+/*#endregion*/
+
+/*#endregion*/
