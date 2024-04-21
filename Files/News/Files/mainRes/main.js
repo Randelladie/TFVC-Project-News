@@ -17,7 +17,10 @@ var LoggedOn = false;
 var minimumPassLength = 8;
 
 //#region Account Management
-var Accounts = []
+var Accounts = [];
+
+//For Layout Refresh
+var curtype = "Default";
 
 class Account {
     constructor(name, pass, email){
@@ -297,7 +300,10 @@ function SetCategoryTheme(type) {
     //Foods
     let logo = document.getElementById("Main_Logo")
     
-    if (type=="Default") {
+    if (type!="Refresh") {
+        curtype = type;
+    }
+    if (curtype=="Default") {
         style.innerHTML = `
         #Global_Background {
             background-image: url('mainRes/DefaultBG.png');
@@ -330,7 +336,7 @@ function SetCategoryTheme(type) {
         `;
         logo.src = LogoDefault;
     }
-    if (type=="Sports") {
+    if (curtype=="Sports") {
         style.innerHTML = `
         #Global_Background {
             background-image: url('mainRes/SportsBG.jpg');
@@ -359,7 +365,7 @@ function SetCategoryTheme(type) {
         `;
         logo.src = LogoSports;
     }
-    if (type=="Politics") {
+    if (curtype=="Politics") {
         style.innerHTML = `
         #Global_Background {
             background-image: url('mainRes/PoliticsBG.jpg');
@@ -392,7 +398,7 @@ function SetCategoryTheme(type) {
         `;
         logo.src = LogoPolitics;
     }
-    if (type=="Foods") {
+    if (curtype=="Foods") {
         style.innerHTML = `
         #Global_Background {
             background-image: url('mainRes/FoodsBG.jpg');
@@ -424,5 +430,10 @@ function SetCategoryTheme(type) {
         }
         `;
         logo.src = LogoFoods;
+    }
+    if (LoggedOn) {
+        style.innerHTML += `
+        #Main_RegButton { display: none; }
+        `;
     }
 }
