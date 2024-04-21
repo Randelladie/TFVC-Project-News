@@ -13,6 +13,9 @@ var Acc_Username = "Guest";
 var Acc_Email = "";
 var LoggedOn = false;
 
+//Account Rules
+var minimumPassLength = 8;
+
 //#region Account Management
 var Accounts = []
 
@@ -38,9 +41,10 @@ class SetAccounts {
 
         function thisAccount(account){
             if (exists == false) {
+                /*
                 if (name == account.username) {console.log("username yes")} else {console.log("username no")}
                 if (pass == account.password) {console.log("password yes")} else {console.log("password no")}
-
+                */
                 if ((name == account.username) && (pass == account.password)) {
                     exists = true;
                 }
@@ -48,29 +52,70 @@ class SetAccounts {
         }
         return exists;
     }
+    isExistsExtra(name, email) {
+        let status = 0;
+        this.accounts.forEach(thisAccount)
+
+        function thisAccount(account){
+            if (status == 0) {
+
+                if (name == account.username) {console.log("username already exists")}
+                if (email == account.email) {console.log("email already exists")
+                    console.log("Email Used:" + email);
+                    console.log("Email Exists:" + account.email);
+                }
+
+                if ((name == account.username)) {
+                    status = 1;
+                }
+                if ((email == account.email)) {
+                    status = 2;
+                }
+            }
+        }
+        return status;
+    }
+    getEmail(name) {
+        let email = "";
+        this.accounts.forEach(thisAccount)
+
+        function thisAccount(account){
+            if (email == "") {
+                if (name == account.username) {
+                    email = account.email;
+                }
+            }
+        }
+        return email;
+    }
 }
 Accounts = new SetAccounts();
-Accounts.newAccount(new Account("root", "admin", "root@example.com"))
-Accounts.newAccount(new Account("acc1", "pass1", "root@example.com"))
-Accounts.newAccount(new Account("acc2", "pass2", "root@example.com"))
+
+//#region Preset Accounts
+Accounts.newAccount(new Account("Randell", "adminroot123", "ragerock90@gmail.com"))
+Accounts.newAccount(new Account("Arjay", "cuterj10", "root@example.com"))
+Accounts.newAccount(new Account("Jasper", "pass2", "root@example.com"))
+Accounts.newAccount(new Account("Hannah", "pass3", "root@example.com"))
+Accounts.newAccount(new Account("Ramil", "pass4", "root@example.com"))
+//#endregion
 
 //#region Login
 
 function Authenticate(username, password){
     if (Accounts.isExists(username, password))
     {
-        console.log("Account Successfuly logged in");
+        console.log("Account " + Accounts.getEmail(username) + " Successfuly logged in");
         return true;
     }
     else
     {
-        console.log("Account Does not Exist");
+        console.log("Wrong Password or Account Does not Exist");
         return false;
     } 
 }
 
 function Login(name, pass) {
-    if (Authenticate(name, pass)) {
+    if (Authenticate(name, pass, "")) {
         Acc_Username = name;
         document.getElementById('Main_LogButton').innerHTML = "Log out";
         LoggedOn = true;
@@ -87,6 +132,74 @@ function Login(name, pass) {
     }
 }
 
+//#endregion
+
+//#region Register
+
+function Register(name, pass, cpass, email) {
+    let register_error = document.getElementById('register_error');
+    let register_password = document.getElementById('register_password');
+    let register_cpassword = document.getElementById('register_cpassword');
+
+    if (name == "" || pass == "" || cpass == "" || email== ""){
+        //Form must be filled
+        register_error.innerHTML = "The form must be filled."
+        register_password.value = "";
+        register_cpassword.value = "";
+    }
+    else if (cpass != pass) {
+        //Password not same as confirmed password expression
+        register_error.innerHTML = "Incorrect confirm password."
+        register_password.value = "";
+        register_cpassword.value = "";
+    }
+    else if (pass.length < minimumPassLength){
+        //Password is too short
+        register_error.innerHTML = "Password must have <br>atleast 8 characters."
+        register_password.value = "";
+        register_cpassword.value = "";
+    }
+    else if (!email.endsWith(".com") || (email.indexOf("@") == -1)) {
+        //It is not a valid email
+        register_error.innerHTML = "Email is invaild."
+        console.log(email.endsWith(".com"));
+        console.log((email.indexOf("@") != -1));
+    }
+    else {
+        if (Accounts.isExistsExtra(name, email) == 0) {
+            Accounts.newAccount(new Account(name, pass, email));
+            Login(name, pass);
+            LoadPage("Home");
+        }
+        else if (Accounts.isExistsExtra(name, email) == 1) {
+            //username error
+            register_error.innerHTML = "Username is already used."
+        }
+        else if (Accounts.isExistsExtra(name, email) == 2) {
+            //email error
+            register_error.innerHTML = "Email is already used."
+        }
+    }
+}
+
+//#endregion
+
+//#region Forgot password
+
+function CheckEmail(email) {
+    if (!email.endsWith(".com") || (email.indexOf("@") == -1)) {
+        //It is not a valid email
+        document.getElementById('forgot_error').innerHTML = "Email is invaild."
+        document.getElementById('forgot_error').style = "color: red";
+    }
+    else {
+        document.getElementById('forgot_error').innerHTML = "Email sent.";
+        document.getElementById('forgot_error').style = "color: black";
+    }
+}
+
+//#endregion
+
 function Logout() {
     var hgreet = document.getElementById("Main_HGreetings");
     Acc_Username = "Guest";
@@ -95,8 +208,6 @@ function Logout() {
     hgreet.innerHTML = "Greetings, <br>";
     hgreet.innerHTML += Acc_Username;
 }
-
-//#endregion
 
 //#endregion
 
@@ -113,6 +224,11 @@ function LoadPage(page) {
             display: grid;
         }
         `;
+        document.getElementById('register_username').value = "";
+        register_password.value = "";
+        register_cpassword.value = "";
+        document.getElementById('register_email').value = "";
+        register_error.innerHTML = "";
     }
     if (page == "Login") {
         SetCategoryTheme("Default");
@@ -124,9 +240,30 @@ function LoadPage(page) {
             display: grid;
         }
         `;
+        document.getElementById('login_username').value = "";
+        document.getElementById('login_password').value = "";
+        document.getElementById('login_error').innerHTML = "";
+    }
+    if (page == "Forgot") {
+        SetCategoryTheme("Default");
+        style.innerHTML += `
+        #Global_Background {
+            filter: blur(8px);
+        }
+        #Form_Forgot {
+            display: grid;
+        }
+        `;
+        document.getElementById('forgot_email').value = "";
+        document.getElementById('forgot_error').innerHTML = "";
     }
     if (page == "Home") {
         SetCategoryTheme("Default");
+        style.innerHTML += `
+        #Form_Home {
+            display: flex;
+        }
+        `;
     }
 }
 //#endregion
@@ -164,8 +301,6 @@ function SetCategoryTheme(type) {
         style.innerHTML = `
         #Global_Background {
             background-image: url('mainRes/DefaultBG.png');
-            background-size:100%;
-            background-attachment: fixed;
         }
         #Main_Header {
             background-color:rgb(0, 0, 100);
@@ -199,8 +334,6 @@ function SetCategoryTheme(type) {
         style.innerHTML = `
         #Global_Background {
             background-image: url('mainRes/SportsBG.jpg');
-            background-size:100%;
-            background-attachment: fixed;
         }
         #Main_Header {
             background-color:#792845;
@@ -230,8 +363,6 @@ function SetCategoryTheme(type) {
         style.innerHTML = `
         #Global_Background {
             background-image: url('mainRes/PoliticsBG.jpg');
-            background-size:100%;
-            background-attachment: fixed;
         }
         #Main_Header {
             background-color:rgb(100, 0, 0);
@@ -265,8 +396,6 @@ function SetCategoryTheme(type) {
         style.innerHTML = `
         #Global_Background {
             background-image: url('mainRes/FoodsBG.jpg');
-            background-size:100%;
-            background-attachment: fixed;
         }
         #Main_Header {
             background-color:rgb(0, 66, 0);

@@ -6,12 +6,13 @@
 
     #Global_Background {
         background-image: url('SportsBG.jpg');
-        background-size:100%;
-        background-attachment: fixed;
+        background-size: 1920px 1080px;
+        background-repeat: no-repeat;
         position:fixed;
-        width: 100%;
-        height: 100%;
+        width: 1920px;
+        height: 1080px;
         display:inline;
+        background-position: 50% 50%;
     }
 
     .overflow {
@@ -214,6 +215,62 @@
         }
 
 /*#endregion*/
+
+    /*#region Forgot*/
+
+        #Form_Forgot {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            margin:auto;
+            vertical-align:middle;
+
+            border-style:solid;
+            border-color:blue;
+            background-color: white;
+            display:none;
+            grid-template-columns:auto auto;
+            padding:32px;
+        }
+
+        #Form_Forgot label {
+            margin:4px;
+        }
+        #Form_Forgot input {
+            margin:4px;
+            margin-left:8px;
+        }
+        #Form_Forgot button {
+            margin:0;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+
+    /*#endregion*/
+
+    /*#region Home*/
+
+        #Form_Home {
+
+            position:absolute;
+            top:132px;
+            left:50%;
+            transform:translate(-50%,0);
+
+            background-color:white;
+            width:1120px;
+            height:calc(100% - 168px);
+
+            display: none;
+        
+            border-color:blue;
+            border-style:solid;
+
+            margin-bottom:36px;
+        }
+
+    /*#endregion*/
 
     /*#region Article Page*/
 

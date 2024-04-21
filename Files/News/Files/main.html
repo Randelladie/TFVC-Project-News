@@ -8,8 +8,6 @@
         }
         body {
             background-image: url('mainRes/DefaultBG.png');
-            background-size:100%;
-            background-attachment: fixed;
         }
         #Main_Header {
             background-color:rgb(0, 0, 100);
@@ -45,16 +43,17 @@
         <div id="Global_Background" ></div>
         <div id="Form_Register">
             <label>Email: </label> 
-            <input type="text"></input>
+            <input type="text" id="register_email"></input>
             <label>Username: </label> 
-            <input type="text"></input>
+            <input type="text" id="register_username"></input>
             <label>Password: </label> 
-            <input type="password"></input>
+            <input type="password" id="register_password"></input>
             <label>Confirm Password:</label> 
-            <input type="Password"></input>
+            <input type="Password" id="register_cpassword"></input>
+            <label id="register_error" style="color: red"></label><div></div>
             <div><br></div><div></div>
             <a href="#" onclick="LoadPage('Login')">Already have an account?</a>
-            <button style="display: flex; align-self: right; justify-self: right;">Register</button>
+            <button style="display: flex; align-self: right; justify-self: right;" onclick="Register(document.getElementById('register_username').value,document.getElementById('register_password').value,document.getElementById('register_cpassword').value,document.getElementById('register_email').value)">Register</button>
             <a href="#" onclick="LoadPage('Home')">Continue as guest</a>
         </div>
 
@@ -65,14 +64,23 @@
             <input type="password" id="login_password"></input>
             <label id="login_error" style="color: red"></label><div></div>
             <div><br></div><div></div>
-            <a href="#" onclick="LoadPage('Home')">Forgot Password?</a>
+            <a href="#" onclick="LoadPage('Forgot')">Forgot Password?</a>
             <button style="display: flex; align-self: right; justify-self: right;" onclick="Login(document.getElementById('login_username').value,document.getElementById('login_password').value)">Login</button>
             <a href="#" onclick="LoadPage('Home')">Continue as guest</a>
             <a href="#" onclick="LoadPage('Register')" style="text-align: right;">Dont have an account?</a>
         </div>
 
-        <div id="Form_Home">
+        <div id="Form_Forgot">
+            <label>Email: </label> 
+            <input type="text" id="forgot_email"></input>
+            <label id="forgot_error" style="color: red"></label><div></div>
+            <div><br></div><div></div>
+            <button style="display: flex; align-self: left; justify-self: left;" onclick="LoadPage('Login')">Back</button>
+            <button style="display: flex; align-self: right; justify-self: right;" onclick="CheckEmail(document.getElementById('forgot_email').value)">Reset Password</button>
+        </div>
 
+        <div id="Form_Home">
+            <h1>Hello world</h1>
         </div>
 
         <div id="Content_Layout">
