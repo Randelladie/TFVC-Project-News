@@ -74,6 +74,13 @@
         margin:0;
     }
 
+    #Main_RegButton {
+        position: fixed;
+        top:104px;
+        right:80px;
+        margin:0;
+    }
+
     #Main_CategoryButton {
         position: fixed;
         width:32px;
@@ -260,7 +267,7 @@
 
             background-color:white;
             width:1120px;
-            height:calc(100% - 168px);
+            min-height:calc(100% - 168px);
 
             display: none;
         
@@ -268,7 +275,79 @@
             border-style:solid;
 
             margin-bottom:36px;
+
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
         }
+
+        #Form_Home h1 {
+
+            font-size: 50px;
+            background-color: white;
+
+        }
+
+        #Form_Home_3C {
+
+            width: 100%;
+            height: 400px;
+            display: grid;
+            grid-template-columns:auto auto auto;
+
+        }
+        
+        #Form_Home_Column1 {
+
+            font-size: 50px;
+            background-color: purple;
+            background-image: url("hsportbg.jpg");
+
+        }
+
+        #Form_Home_Column1I {
+
+            width: 100%;
+            height: 100%;
+
+            background-image: linear-gradient(rgb(104, 18, 68) 0%,rgba(104, 18, 68, 0.123) 80%)
+
+        }
+
+        #Form_Home_Column2 {
+
+            font-size: 50px;
+            background-color: greenyellow;
+            background-image: url("hfoodbg.jpg");
+
+        }
+
+        #Form_Home_Column2I {
+
+            width: 100%;
+            height: 100%;
+
+            background-image: linear-gradient(rgb(3, 92, 22) 0%,rgba(104, 18, 68, 0.123) 80%)
+
+        }
+                
+        #Form_Home_Column3 {
+            
+            font-size: 50px;
+            background-color: red;
+            background-image: url("hpoliticbg.jpg");
+
+        }
+
+        #Form_Home_Column3I {
+
+            width: 100%;
+            height: 100%;
+
+            background-image: linear-gradient(rgb(146, 7, 7) 0%,rgba(104, 18, 68, 0.123) 80%)
+
+        }
+
+
 
     /*#endregion*/
 

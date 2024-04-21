@@ -264,7 +264,7 @@ function LoadPage(page) {
         SetCategoryTheme("Default");
         style.innerHTML += `
         #Form_Home {
-            display: flex;
+            display: inline;
         }
         `;
     }

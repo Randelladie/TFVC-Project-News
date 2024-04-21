@@ -3,37 +3,6 @@
         <title id="Title">Title</title>
         <link rel="stylesheet" href="mainRes/style.css">
         <style id="Style">
-        #Content_Layout {
-            display: none;
-        }
-        body {
-            background-image: url('mainRes/DefaultBG.png');
-        }
-        #Main_Header {
-            background-color:rgb(0, 0, 100);
-        }
-        #Main_AsideCategory {
-            background-color:blue;
-        }
-        .Main_CategoryListButton {
-            background-color:blue;
-        }
-        #Main_Footer {
-            background-color:rgb(128, 128, 255);
-            color:white;
-        }
-        #Content_Layout_Border {
-            background-color:white;
-            border-color:blue;
-        }
-        #Content_Article_Content {
-            border-color:blue;
-            border-style:dashed;
-        }
-        #Content_Suggestions {
-            border-color:blue;
-            border-style:dashed;
-        }
         </style>
         <script src="mainRes/main.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -80,7 +49,24 @@
         </div>
 
         <div id="Form_Home">
-            <h1>Hello world</h1>
+            <h1>The Fisher Valley News Website</h1>
+            <div id="Form_Home_3C">
+
+                <div id="Form_Home_Column1" class="Form_Home_Column">
+                    <div id="Form_Home_Column1I">Sport</div>
+                </div>
+
+                <div id="Form_Home_Column2" class="Form_Home_Column">
+                    <div id="Form_Home_Column2I">Food</div>
+                </div>
+                
+                <div id="Form_Home_Column3" class="Form_Home_Column">
+                    <div id="Form_Home_Column3I">Politics</div>
+                </div>
+
+
+                
+            </div>
         </div>
 
         <div id="Content_Layout">
@@ -180,7 +166,8 @@
             <header id="Main_Header">
                 <img id="Main_Logo" src="mainRes/LogoDefault.png">
                 <label id="Main_HGreetings">Greetings, <br>Guest</label>
-                <button id="Main_LogButton" onclick="LogButton()">Login</button>
+                <button id="Main_LogButton" onclick="LogButton(); SetCategoryTheme('Refresh');">Login</button>
+                <button id="Main_RegButton" onclick="RegButton()">Register</button>
                 <button id="Main_CategoryButton" onclick="ToggleCategory()"><img id="Main_CategoryButtonIcon" src="mainRes/ListVector.jpg"></button>
             </header>
             <footer id="Main_Footer">
