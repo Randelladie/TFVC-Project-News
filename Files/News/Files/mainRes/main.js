@@ -268,6 +268,14 @@ function LoadPage(page) {
         }
         `;
     }
+    if (page == "Privacy") {
+        SetCategoryTheme("Default");
+        style.innerHTML += `
+        #Form_Privacy {
+            display: inline;
+        }
+        `;
+    }
 }
 //#endregion
 

@@ -136,7 +136,7 @@
         left:50%;
         transform:translate(-50%,0);
         width:1120px;
-        display:none;
+        display:inline;
     }
 
     #Content_Layout_Border {
@@ -290,9 +290,11 @@
         #Form_Home_3C {
 
             width: 100%;
-            height: 400px;
+            height: 500px;
             display: grid;
             grid-template-columns:auto auto auto;
+            position: absolute;
+            bottom: 0;
 
         }
         
@@ -301,6 +303,8 @@
             font-size: 50px;
             background-color: purple;
             background-image: url("hsportbg.jpg");
+            background-size: cover;
+            overflow: hidden;
 
         }
 
@@ -348,6 +352,32 @@
         }
 
 
+
+    /*#endregion*/
+    
+    /*#region Privacy*/
+        
+        #Form_Privacy {
+
+            position:absolute;
+            top:132px;
+            left:50%;
+            transform:translate(-50%,0);
+
+            background-color:white;
+            width:1120px;
+            min-height:calc(100% - 168px);
+
+            display: none;
+        
+            border-color:blue;
+            border-style:solid;
+
+            margin-bottom:36px;
+
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
 
     /*#endregion*/
 
