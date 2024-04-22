@@ -258,100 +258,166 @@
 
     /*#region Home*/
 
-        #Form_Home {
+    #Form_Home {
 
-            position:absolute;
-            top:132px;
-            left:50%;
-            transform:translate(-50%,0);
+        position:absolute;
+        top:132px;
+        left:50%;
+        transform:translate(-50%,0);
 
-            background-color:white;
-            width:1120px;
-            min-height:calc(100% - 168px);
+        background-color:white;
+        width:1120px;
+        min-height:calc(100% - 168px);
 
-            display: none;
+        display: none;
+    
+        border-color:blue;
+        border-style:solid;
+
+        margin-bottom:36px;
+
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         
-            border-color:blue;
-            border-style:solid;
+    }
 
-            margin-bottom:36px;
+    #Form_Home h1 {
 
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            
-        }
+        font-size: 50px;
+        background-color: white;
 
-        #Form_Home h1 {
+    }
 
-            font-size: 50px;
-            background-color: white;
+    #Home_3C {
 
-        }
+        width: 100%;
+        height: 500px;
+        display: grid;
+        grid-template-columns:auto auto auto;
+        position: absolute;
+        bottom: 0;
+        font-size: auto;
 
-        #Form_Home_3C {
+    }
+    
+    .Home_Column {
+        height:480px;
+        background-color: purple;
+        background-image: url("hsportbg.jpg");
+        background-size: cover;
+        overflow: overflow;
 
-            width: 100%;
-            height: 500px;
-            display: grid;
-            grid-template-columns:auto auto auto;
-            position: absolute;
-            bottom: 0;
+    }
 
-        }
-        
-        #Form_Home_Column1 {
+    .Home_ColumnI {
+        position: absolute;
+        height: 100%;
+        width: 33.33%;
 
-            font-size: 50px;
-            background-color: purple;
-            background-image: url("hsportbg.jpg");
-            background-size: cover;
-            overflow: hidden;
+        background-image: linear-gradient(rgb(104, 18, 68) 0%,rgba(104, 18, 68, 0.123) 80%);
+        color: white;
 
-        }
+    }
 
-        #Form_Home_Column1I {
+    #Home_Column1 {
 
-            width: 100%;
-            height: 100%;
+        font-size: 50px;
+        background-color: purple;
+        background-image: url("hsportbg.jpg");
+        background-size: cover;
+        overflow: hidden;
 
-            background-image: linear-gradient(rgb(104, 18, 68) 0%,rgba(104, 18, 68, 0.123) 80%)
+    }
 
-        }
+    #Home_Column1I {
 
-        #Form_Home_Column2 {
+        background-image: linear-gradient(rgb(104, 18, 68) 0%,rgba(104, 18, 68, 0.123) 80%)
 
-            font-size: 50px;
-            background-color: greenyellow;
-            background-image: url("hfoodbg.jpg");
+    }
 
-        }
+    #Home_Column2 {
 
-        #Form_Home_Column2I {
+        font-size: 50px;
+        background-color: greenyellow;
+        background-image: url("hfoodbg.jpg");
 
-            width: 100%;
-            height: 100%;
+    }
 
-            background-image: linear-gradient(rgb(3, 92, 22) 0%,rgba(104, 18, 68, 0.123) 80%)
+    #Home_Column2I {
 
-        }
-                
-        #Form_Home_Column3 {
-            
-            font-size: 50px;
-            background-color: red;
-            background-image: url("hpoliticbg.jpg");
+        background-image: linear-gradient(rgb(3, 92, 22) 0%,rgba(104, 18, 68, 0.123) 80%)
 
-        }
+    }
 
-        #Form_Home_Column3I {
+    #Home_Column3 {
 
-            width: 100%;
-            height: 100%;
+        font-size: 50px;
+        background-color: red;
+        background-image: url("hpoliticbg.jpg");
 
-            background-image: linear-gradient(rgb(146, 7, 7) 0%,rgba(104, 18, 68, 0.123) 80%)
+    }
 
-        }
+    #Home_Column3I {
 
+        background-image: linear-gradient(rgb(146, 7, 7) 0%,rgba(104, 18, 68, 0.123) 80%)
 
+    }
+
+    .Home_Suggestions {
+        position:relative;
+        width:calc(100%-16px);
+        height:350px;
+        left:0;
+        top:60px;
+
+        border-color:blue;
+        border-style:dashed;
+        padding:8px;
+        margin: 8px;
+
+        font-size:16px;
+        font-family:'Times New Roman', Times, serif;
+
+        background-color: white;
+    }
+
+    .Home_Suggestions_Item {
+
+    }
+
+    .Home_Suggestions_Title {
+        width:100%; 
+        line-height: 16px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .Home_Suggestions_Info {
+        display:flex
+    }
+
+    .Home_Suggestions_Image {
+        width:96px; 
+        height:64px;
+        margin-right: 4px;
+        margin-bottom: 12px;
+    }
+
+    .Home_Suggestions_Description {
+        width:230px; 
+        height:56px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
 
     /*#endregion*/
     
@@ -376,7 +442,26 @@
             margin-bottom:36px;
 
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            
+
+        }
+
+        #Form_Privacy h1 {
+            color: black;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        #Form_Privacy p {
+            font-family: 'Lucida Console', sans-serif;
+        }
+
+        #Form_Privacy h2 {
+            text-shadow: 2px 2px 4px #000000;
+            font-size: large;
+        }
+
+        #Form_Privacy h3 {
+           text-shadow: 2px 2px 4px #000000;
+            font-size: large;
         }
 
     /*#endregion*/
@@ -407,6 +492,8 @@
         }
 
         #Content_Suggestions {
+            height: 410px;
+
             border-color:#792845;
             border-style:dashed;
             padding:8px;
@@ -417,7 +504,15 @@
         }
 
         .Content_Suggestions_Title {
-            line-height: 24px;
+            width:100%; 
+            line-height: 16px;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+
+            overflow:hidden;
+            text-overflow:ellipsis;
         }
 
         .Content_Suggestions_Info {
@@ -428,6 +523,7 @@
             width:96px; 
             height:64px;
             margin-right: 4px;
+            margin-bottom: 12px;
         }
 
         .Content_Suggestions_Description {
