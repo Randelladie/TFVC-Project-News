@@ -299,6 +299,11 @@ function LogButton() {
         LoadPage("Login");
     }
 }
+
+function RegButton() {
+    LoadPage("Register");
+}
+
 //#endregion
 
 function SetCategoryTheme(type) {
