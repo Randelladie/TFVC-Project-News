@@ -2,11 +2,11 @@
 var style = document.getElementById("Style");
 
 //Logos
-var LogoDefault = "mainRes/LogoDefault.png";
-var LogoDefaultBlur = "mainRes/LogoDefault.png";
-var LogoFoods = "mainRes/LogoFoods.png";
-var LogoPolitics = "mainRes/LogoPolitics.png";
-var LogoSports = "mainRes/LogoSports.png";
+var LogoDefault = "mainRes/Website/LogoDefault.png";
+var LogoDefaultBlur = "mainRes/Website/LogoDefault.png";
+var LogoFoods = "mainRes/Website/LogoFoods.png";
+var LogoPolitics = "mainRes/Website/LogoPolitics.png";
+var LogoSports = "mainRes/Website/LogoSports.png";
 
 //Account Details
 var Acc_Username = "Guest";
@@ -35,7 +35,6 @@ class SetAccounts {
         this.accounts = []
     }
     newAccount(account) {
-        let a = account;
         this.accounts.push(account);
     }
     isExists(name, pass) {
@@ -93,6 +92,28 @@ class SetAccounts {
     }
 }
 Accounts = new SetAccounts();
+
+class NewsContent {
+    constructor(id, type, title, desc, date, source, author){
+        this.id = id; // This will be used to identify news content
+        this.type = type; // Types are (sports, foods, politics)
+        this.title = title;
+        this.description = desc;
+        this.date = date; // new Date(year,month,day)
+        this.source = source; // Link to the website
+        this.author = author; // name (Can be empty)
+    }
+}
+
+class SetNewsContents {
+    constructor() {
+        this.contents = []
+    }
+    newAccount(content) {
+        this.contents.push(content);
+    }
+}
+NewsContents = new SetNewsContents();
 
 //#region Preset Accounts
 Accounts.newAccount(new Account("Randell", "adminroot123", "ragerock90@gmail.com"))
@@ -202,6 +223,8 @@ function CheckEmail(email) {
 }
 
 //#endregion
+
+//#region Logout
 
 function Logout() {
     var hgreet = document.getElementById("Main_HGreetings");
@@ -327,7 +350,7 @@ function SetCategoryTheme(type) {
     if (curtype=="Default") {
         style.innerHTML = `
         #Global_Background {
-            background-image: url('mainRes/DefaultBG.png');
+            background-image: url('mainRes/Website/DefaultBG.png');
         }
         #Main_Header {
             background-color:rgb(0, 0, 100);
@@ -360,7 +383,7 @@ function SetCategoryTheme(type) {
     if (curtype=="Sports") {
         style.innerHTML = `
         #Global_Background {
-            background-image: url('mainRes/SportsBG.jpg');
+            background-image: url('mainRes/Website/SportsBG.jpg');
         }
         #Main_Header {
             background-color:#792845;
@@ -389,7 +412,7 @@ function SetCategoryTheme(type) {
     if (curtype=="Politics") {
         style.innerHTML = `
         #Global_Background {
-            background-image: url('mainRes/PoliticsBG.jpg');
+            background-image: url('mainRes/Website/PoliticsBG.jpg');
         }
         #Main_Header {
             background-color:rgb(100, 0, 0);
@@ -422,7 +445,7 @@ function SetCategoryTheme(type) {
     if (curtype=="Foods") {
         style.innerHTML = `
         #Global_Background {
-            background-image: url('mainRes/FoodsBG.jpg');
+            background-image: url('mainRes/Website/FoodsBG.jpg');
         }
         #Main_Header {
             background-color:rgb(0, 66, 0);
