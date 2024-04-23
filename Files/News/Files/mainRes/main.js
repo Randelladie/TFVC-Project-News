@@ -276,6 +276,14 @@ function LoadPage(page) {
         }
         `;
     }
+    if (page == "Terms") {
+        SetCategoryTheme("Default");
+        style.innerHTML += `
+        #Form_Terms {
+            display: inline;
+        }
+        `;
+    }
 }
 //#endregion
 

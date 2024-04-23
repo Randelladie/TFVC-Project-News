@@ -420,7 +420,7 @@
     }
 
     /*#endregion*/
-    
+
     /*#region Privacy*/
         
         #Form_Privacy {
@@ -460,11 +460,44 @@
         }
 
         #Form_Privacy h3 {
-           text-shadow: 2px 2px 4px #000000;
+            text-shadow: 2px 2px 4px #000000;
+            font-size: large;
+        }
+        
+        #Form_Privacy h4 {
+            text-shadow: 2px 2px 4px #000000;
             font-size: large;
         }
 
     /*#endregion*/
+
+    /*region Terms*/
+        
+        #Form_Terms  {
+            position:absolute;
+            top:132px;
+            left:50%;
+            transform:translate(-50%,0);
+
+            background-color:white;
+            width:1120px;
+            min-height:calc(100% - 168px);
+
+            display: none;
+        
+            border-color:blue;
+            border-style:solid;
+
+            margin-bottom:36px;
+
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        #Form_Terms h1{
+            
+        }
+    /*endregion*/
 
     /*#region Article Page*/
 
