@@ -1,0 +1,272 @@
+<html>
+    <head>
+        <title id="Title">Title</title>
+        <link rel="stylesheet" href="style.css">
+        <style id="Style">
+        </style>
+        <script src="main.js"></script>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="bootstrap.css">
+        <script src="bootstrap.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body id="Body">
+        <div id="Global_Background" ></div>
+        <div id="Form_Register">
+            <label>Email: </label> 
+            <input type="text" id="register_email"></input>
+            <label>Username: </label> 
+            <input type="text" id="register_username"></input>
+            <label>Password: </label> 
+            <input type="password" id="register_password"></input>
+            <label>Confirm Password:</label> 
+            <input type="Password" id="register_cpassword"></input>
+            <label id="register_error" style="color: red"></label><div></div>
+            <div><br></div><div></div>
+            <a href="#" onclick="LoadPage('Login')">Already have an account?</a>
+            <button style="display: flex; align-self: right; justify-self: right;" onclick="Register(document.getElementById('register_username').value,document.getElementById('register_password').value,document.getElementById('register_cpassword').value,document.getElementById('register_email').value)">Register</button>
+            <a href="#" onclick="LoadPage('Home')">Continue as guest</a>
+        </div>
+
+        <div id="Form_Login">
+            <label>Username: </label> 
+            <input type="text" id="login_username"></input>
+            <label>Password: </label> 
+            <input type="password" id="login_password"></input>
+            <label id="login_error" style="color: red"></label><div></div>
+            <div><br></div><div></div>
+            <a href="#" onclick="LoadPage('Forgot')">Forgot Password?</a>
+            <button style="display: flex; align-self: right; justify-self: right;" onclick="Login(document.getElementById('login_username').value,document.getElementById('login_password').value)">Login</button>
+            <a href="#" onclick="LoadPage('Home')">Continue as guest</a>
+            <a href="#" onclick="LoadPage('Register')" style="text-align: right;">Dont have an account?</a>
+        </div>
+
+        <div id="Form_Forgot">
+            <label>Email: </label> 
+            <input type="text" id="forgot_email"></input>
+            <label id="forgot_error" style="color: red"></label><div></div>
+            <div><br></div><div></div>
+            <button style="display: flex; align-self: left; justify-self: left;" onclick="LoadPage('Login')">Back</button>
+            <button style="display: flex; align-self: right; justify-self: right;" onclick="CheckEmail(document.getElementById('forgot_email').value)">Reset Password</button>
+        </div>
+
+        <div id="Form_Home">
+            <h1>The Fisher Valley News Website</h1>
+
+            <h2> 
+                Welcome to our Website of BSIT in Web System & Technologies
+            </h2>
+            <hr>
+            <p>
+                In our website, you can see what we have here. A simple website that we created by our group, that you can create also by learning and typing of codes.
+                Welcome to our Website!
+            </p>
+
+            <div id="Home_3C">
+
+                <div id="Home_Column1" class="Home_Column">
+                    <div id="Home_Column1I" class="Home_ColumnI">Sport</div>
+
+                    <div class="Home_Suggestions">
+                        <div class="Home_Suggestions_Item">
+
+                            <!-- HST_1_1 -->
+                            <a id="HST1_1" class="Home_Suggestions_Title" href="#">Title</a> <br>
+                            <div id="HSInfo1_1" class="Home_Suggestions_Info">
+                                <img id="HSIMG1_1" class="Home_Suggestions_Image">
+                                <div id="HSD1_1" class="Home_Suggestions_Description">Description</div> <br>
+                            </div>
+
+                            <a id="HST1_2" class="Home_Suggestions_Title" href="#">Title</a> <br>
+                            <div id="HSInfo1_2" class="Home_Suggestions_Info">
+                                <img id="HSIMG1_2" class="Home_Suggestions_Image">
+                                <div id="HSD1_2" class="Home_Suggestions_Description">Description</div> <br>
+                            </div>
+
+                            <a id="HST1_3" class="Home_Suggestions_Title" href="#">Title</a> <br>
+                            <div id="HSInfo1_3" class="Home_Suggestions_Info">
+                                <img id="HSIMG1_3" class="Home_Suggestions_Image"> 
+                                <div id="HSD1_3" class="Home_Suggestions_Description">Description</div> <br>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button id="Home_MoreSports" class="Home_SeeMore">See More</button>
+
+                </div>
+
+                <div id="Home_Column2" class="Home_Column">
+                    <div id="Home_Column2I" class="Home_ColumnI">Food</div>
+
+                    <div class="Home_Suggestions">
+                        <div class="Home_Suggestions_Item">
+
+                            <a id="HST2_1" class="Home_Suggestions_Title" href="#">Jordan Fails a Layup Layup Layup a a a a a a a a l l l l l l l</a> <br>
+                            <div id="HSInfo2_1" class="Home_Suggestions_Info">
+                                <img id="HSIMG2_1" class="Home_Suggestions_Image"> 
+                                <div id="HSD2_1" class="Home_Suggestions_Description">Jordan has been playing on the lakers for awhile but he changed into Miami heat and changed into different teams again recently he has been making big plays and many teams are wanting to contracting him to the rosters </div> <br>
+                            </div>
+
+                            <a id="HST2_2" class="Home_Suggestions_Title" href="#">Ronaldo Does a fail</a> <br>
+                            <div id="HSInfo2_2" class="Home_Suggestions_Info">
+                                <img id="HSIMG2_2" class="Home_Suggestions_Image"> 
+                                <div id="HSD2_2" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                            </div>
+
+                            <a id="HST2_3" class="Home_Suggestions_Title" href="#">Philippines joining the NBA</a> <br>
+                            <div id="HSInfo2_3" class="Home_Suggestions_Info">
+                                <img id="HSIMG2_3" class="Home_Suggestions_Image"> 
+                                <div id="HSD2_3" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button id="Home_MoreFoods" class="Home_SeeMore">See More</button>
+
+                </div>
+
+                <div id="Home_Column3" class="Home_Column">
+                    <div id="Home_Column3I" class="Home_ColumnI">Politics</div>
+
+                    <div class="Home_Suggestions">
+                        <div class="Home_Suggestions_Item">
+
+                            <a id="HST3_1" class="Home_Suggestions_Title" href="#">Jordan Fails a Layup</a> <br>
+                            <div id="HSInfo3_1" class="Home_Suggestions_Info">
+                                <img id="HSIMG3_1" class="Home_Suggestions_Image"> 
+                                <div id="HSD3_1" class="Home_Suggestions_Description">Jordan has been playing on the lakers for awhile but he changed into Miami heat and changed into different teams again recently he has been making big plays and many teams are wanting to contracting him to the rosters </div> <br>
+                            </div>
+
+                            <a id="HST3_2" class="Home_Suggestions_Title" href="#">Ronaldo Does a fail</a> <br>
+                            <div id="HSInfo3_2" class="Home_Suggestions_Info">
+                                <img id="HSIMG3_2" class="Home_Suggestions_Image"> 
+                                <div id="HSD3_2" lass="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                            </div>
+
+                            <a id="HST3_3" class="Home_Suggestions_Title" href="#">Philippines joining the NBA</a> <br>
+                            <div id="HSInfo3_3" class="Home_Suggestions_Info">
+                                <img id="HSIMG3_3" class="Home_Suggestions_Image"> 
+                                <div id="HSD3_3" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button id="Home_MorePolitics" class="Home_SeeMore">See More</button>
+
+                </div>
+
+            </div>
+
+        </div>
+        
+        <div id="Form_Privacy">
+
+            <h1>Privacy Policy</h1>
+            <p>Our Website (FVNW) wants you to protect your privacy, because we value you. So you can see in this page what possible things we can get to you.
+            </p>
+            
+            <h2>Information we may collect</h2>
+            <p>We're not collecting any kinds of your data, when you enter in our webpage. We do not use cookies either, or any kinds of data collecting,tracking thing that may collect
+                your information.
+            </p>
+
+            <h3>Policy Changes</h3>
+            <p>We inform you, if we have new or update in our policy. To insure your date privacy in our webpage, to have chill while you visiting our website. Morely,
+            </p>
+
+            <h4>Contact</h4>
+            <p>If you have any concern and questions, dont hesitate to ask and contact us in this website and DM's.</p>
+
+        </div>
+
+        <div id="Form_Terms">
+
+            <h1>Terms of Service</h1>
+            <p></p>
+
+        </div>
+
+        <div id="Content_Layout">
+            <div id="Content_Layout_Border">
+                <article id="Content_Article">
+                    <div id="Content_Article_Content">
+
+                    </div>
+                </article>
+
+                <aside id="Content_Aside">
+
+                    <div id="Content_Suggestions">
+                        <div class="Content_Suggestions_Item">
+                            <h1 style="text-align: center;"><b>More Suggested:</b></h1>
+
+                            <a id="HSTCA1" class="Content_Suggestions_Title" href="#">Jordan Fails a Layup</a> <br>
+                            <div id="HSInfoCA1" class="Content_Suggestions_Info">
+                                <img id="HSIMGCA1" class="Content_Suggestions_Image"> 
+                                <div id="HSDCA1" class="Content_Suggestions_Description">Jordan has been playing on the lakers for awhile but he changed into Miami heat and changed into different teams again recently he has been making big plays and many teams are wanting to contracting him to the rosters </div> <br>
+                            </div>
+
+                            <a id="HSTCA2" class="Content_Suggestions_Title" href="#">Ronaldo Does a fail</a> <br>
+                            <div id="HSInfoCA2" class="Content_Suggestions_Info">
+                                <img id="HSIMGCA2" class="Content_Suggestions_Image"> 
+                                <div id="HSDCA2" class="Content_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                            </div>
+
+                            <a id="HSTCA3" class="Content_Suggestions_Title" href="#">Philippines joining the NBA</a> <br>
+                            <div id="HSInfoCA3" class="Content_Suggestions_Info">
+                                <img id="HSIMGCA3" class="Content_Suggestions_Image"> 
+                                <div id="HSDCA3" class="Content_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="Content_Ads">
+                        <a href="mainRes/Ads/Ad1.html">
+                            <img class="Content_Ads_Ad" src="mainRes/Ads/Ad1.png">
+                        </a>
+                        <a href="https://www.minecraft.net/">
+                            <img class="Content_Ads_Ad" src="mainRes/Ads/Ad2.jpg">
+                        </a>
+                        <a href="https://www.burgerking.com.ph/">
+                            <img class="Content_Ads_Ad" src="mainRes/Ads/Ad3.jpg">
+                        </a>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <!-- The Master Page -->
+        <div id="Main_Layout">
+            <aside id="Main_AsideCategory">
+                <div style="height:56px"></div>
+                <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Sports')">Sports</button>
+                <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Politics')">Politics</button>
+                <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Foods')">Foods</button>
+                <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Default')">Default</button>
+            </aside>
+            <header id="Main_Header">
+                <button id="Main_LogoButton" onclick="LoadPage('Home')"><img id="Main_Logo" src="mainRes/Website/LogoDefault.png"></button>
+                <label id="Main_HGreetings">Greetings, <br>Guest</label>
+                <button id="Main_LogButton" onclick="SetCategoryTheme('Refresh'); LogButton(); ">Login</button>
+                <button id="Main_RegButton" onclick="RegButton()">Register</button>
+                <button id="Main_CategoryButton" onclick="ToggleCategory()"><img id="Main_CategoryButtonIcon" src="mainRes/Website/ListVector.jpg"></button>
+            </header>
+            <footer id="Main_Footer">
+                <a href="#" onclick="LoadPage('Privacy')" style="margin:4px">Privacy Policy</a>
+                <a href="#" onclick="LoadPage('Terms')" style="margin:4px">Terms Of Service</a>
+                <a href="#" onclick="NewsContents.loadContent(NewsContents.getContent(1));" style="margin:4px">Support</a>
+                <a href="#" style="margin:4px">About</a>
+                <a href="#" style="margin:4px" onclick="LoadPage('Home')">Home</button>
+            </footer>
+        </div>
+    </body>
+    <script>LoadPage("Register");</script>
+    <script>LoadNews("HomeSports", "RecentSports")</script>
+    <script>LoadNews("HomePolitics", "RecentSports")</script>
+    <script>LoadNews("HomeFoods", "RecentSports")</script>
+</html>
