@@ -269,7 +269,7 @@ function LoadPage(page) {
         SetCategoryTheme("Default");
         style.innerHTML += `
         #Form_Home {
-            display: inline;
+            display: grid;
         }
         `;
     }
@@ -347,13 +347,13 @@ function SetCategoryTheme(type) {
             background-color:rgb(0, 0, 100);
         }
         #Main_AsideCategory {
-            background-color:rgb(213, 244, 255);
+            background-color:rgb(109 150 237);
         }
         .Main_CategoryListButton {
-            background-color:lightblue;
+            background-color:#4a8ff1;
         }
         #Main_Footer {
-            background-color:rgb(128, 128, 255);
+            background-color:rgb(178, 178, 255);
             color:white;
         }
         #Content_Layout_Border {
@@ -367,6 +367,19 @@ function SetCategoryTheme(type) {
         #Content_Suggestions {
             border-color:blue;
             border-style:solid;
+        }
+
+        #Main_TopRight {
+            background-color:rgb(40, 40, 140);
+        }
+        #Main_CategoryButtonBackground {
+            background-color:rgb(69, 111, 188);
+        }
+        #Main_LogButton {
+            background-color:rgb(69, 111, 188);
+        }
+        #Main_RegButton {
+            background-color:rgb(69, 111, 188);
         }
         `;
         logo.src = LogoDefault;
@@ -396,6 +409,19 @@ function SetCategoryTheme(type) {
         #Content_Suggestions {
             border-color:#792845;
             border-style:solid;
+        }
+
+        #Main_TopRight {
+            background-color:rgb(145 20 79);
+        }
+        #Main_CategoryButtonBackground {
+            background-color:rgb(191 0 152);
+        }
+        #Main_LogButton {
+            background-color:rgb(191 0 152);
+        }
+        #Main_RegButton {
+            background-color:rgb(191 0 152);
         }
         `;
         logo.src = LogoSports;
@@ -430,6 +456,19 @@ function SetCategoryTheme(type) {
             border-color:red;
             border-style:solid;
         }
+
+        #Main_TopRight {
+            background-color:rgb(129 10 10);
+        }
+        #Main_CategoryButtonBackground {
+            background-color:rgb(255 0 0);
+        }
+        #Main_LogButton {
+            background-color:rgb(255 0 0);
+        }
+        #Main_RegButton {
+            background-color:rgb(255 0 0);
+        }
         `;
         logo.src = LogoPolitics;
     }
@@ -462,6 +501,19 @@ function SetCategoryTheme(type) {
         #Content_Suggestions {
             border-color:green;
             border-style:solid;
+        }
+
+        #Main_TopRight {
+            background-color:rgb(7 91 1);
+        }
+        #Main_CategoryButtonBackground {
+            background-color:rgb(43 159 12);
+        }
+        #Main_LogButton {
+            background-color:rgb(43 159 12);
+        }
+        #Main_RegButton {
+            background-color:rgb(43 159 12);
         }
         `;
         logo.src = LogoFoods;
@@ -510,18 +562,19 @@ class SetNewsContents {
         switch(content.type) {
             case 0:
                 SetCategoryTheme("Default");
+                LoadNews("ContentAside", "RecentGeneral", 3)
                 break;
             case 1:
                 SetCategoryTheme("Sports");
-                LoadNews("ContentAside", "RecentSports")
+                LoadNews("ContentAside", "RecentSports", 3)
                 break;
             case 2:
                 SetCategoryTheme("Foods");
-                LoadNews("ContentAside", "RecentSports")
+                LoadNews("ContentAside", "RecentFoods", 3)
                 break;
             case 3:
                 SetCategoryTheme("Politics");
-                LoadNews("ContentAside", "RecentSports")
+                LoadNews("ContentAside", "RecentAside", 3)
                 break;
         }
         LoadPage("NewsContent");
@@ -556,19 +609,51 @@ class SetNewsContents {
             eimg.src = cdir + src;
             console.log("loading image file: "+ cdir + src);
         }
+
+        eimgs = document.getElementsByClassName("InContent_Imgs_port");
+
+        for (let eimg of eimgs){
+            let src = eimg.src.split('/').pop();
+            eimg.src = cdir + src;
+            console.log("loading image file: "+ cdir + src);
+        }
     }
-    getRandomContent(type, count) {
+    getRandomContent(type) {
         //Type
         //0 = all
         //1 = Sports
         //2 = Foods
         //3 = Politics
-        let scontents;
+        let scontents = [];
 
         //Count: The amount of contents given
         if (type==0) {
             scontents = this.contents;
-            let scontents_sortdate = scontents.sort((a, b) => Date.parse(b.date)/1000 - Date.parse(a.date)/1000);
+            let scontents_sortdate = scontents.sort((a, b) => Date.parse(a.date)/1000 - Date.parse(b.date)/1000);
+            return scontents_sortdate;
+        }
+        if (type==1) {
+            for (let i = 0; i < this.contents.length; i++){
+                let icontent = this.contents[i];
+                if (icontent.type == 1) { scontents.push(icontent); }
+            }
+            let scontents_sortdate = scontents.sort((a, b) => Date.parse(a.date)/1000 - Date.parse(b.date)/1000);
+            return scontents_sortdate;
+        }
+        if (type==2) {
+            for (let i = 0; i < this.contents.length; i++){
+                let icontent = this.contents[i];
+                if (icontent.type == 2) { scontents.push(icontent); }
+            }
+            let scontents_sortdate = scontents.sort((a, b) => Date.parse(a.date)/1000 - Date.parse(b.date)/1000);
+            return scontents_sortdate;
+        }
+        if (type==3) {
+            for (let i = 0; i < this.contents.length; i++){
+                let icontent = this.contents[i];
+                if (icontent.type == 3) { scontents.push(icontent); }
+            }
+            let scontents_sortdate = scontents.sort((a, b) => Date.parse(a.date)/1000 - Date.parse(b.date)/1000);
             return scontents_sortdate;
         }
         return [];
@@ -581,6 +666,8 @@ NewsContents = new SetNewsContents();
 // Foods = 2
 // Politics = 3
 
+let cid = 0;
+let ctype = 0;
 let ctitle = "";
 let cdesc = "";
 let cdate = new Date();
@@ -793,6 +880,543 @@ NewsContents.newContent(new NewsContent(3, 3, ctitle, cdesc, cdate, csource, cau
 
 //#endregion
 
+//#region Report 4
+
+cid = 4
+ctype = 2 //Sports=1, Foods=2, Politics=3
+ctitle = "Man-go crazy! Get 4 kilos of Guimaras mangoes for P820 from island farmers";
+cdesc = `If you can't get enough of Philippine sweet mangoes, you'll love Rural Rising's newest mango-nificent deal - the socio-agricultural enterprise is holding a Guimaras RR Mango Rescue Buy, where four kilos of the "sweetest mangoes in the world" will cost P820, hand-picked by Guimaras Island's farmers.`;
+cdate = new Date("2024-04-10T02:49:00"); //APR 10, 2024 2:49 PM PHT
+csource = "https://www.rappler.com/life-and-style/food-drinks/guimaras-mangoes-rescue-buy-rural-rising-april-2024/"
+cauthor = "";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 4
+    ctype = 2 //Sports=1, Foods=2, Politics=3
+    ctitle = "Man-go crazy! Get 4 kilos of Guimaras mangoes for P820 from island farmers";
+    cdesc = "If you can't get enough of Philippine sweet mangoes, you'll love Rural Rising's newest mango-nificent deal - the socio-agricultural enterprise is holding a Guimaras RR Mango Rescue Buy, where four kilos of the "sweetest mangoes in the world" will cost P820, hand-picked by Guimaras Island's farmers.";
+    cdate = new Date("2024-04-10T02:49:00"); //APR 10, 2024 2:49 PM PHT
+    csource = "https://www.rappler.com/life-and-style/food-drinks/guimaras-mangoes-rescue-buy-rural-rising-april-2024/"
+    cauthor = "";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="p1.png"> 
+
+    <p>
+        MANILA, Philippines - If you can't get enough of Philippine sweet mangoes, you'll love Rural Rising's newest mango-nificent deal - the socio-agricultural enterprise is holding a Guimaras RR Mango Rescue Buy, where four kilos of the "sweetest mangoes in the world" will cost P820, hand-picked by Guimaras Island's farmers.
+
+Rural Rising has over a boatload of authentic mangoes from the island that need a new home. The term "RR" means that they are "second-class fruits," meaning they will "never see the insides of an air-conditioned mall or a grocery."
+
+<div class="InContent_Div">
+<img class="InContent_Imgs_port" src="p2.png">
+</div>
+
+"Good mangoes are nurtured and protected on the tree. What about its RR mangoes? An RR is left to survive and grow as best it can at the mercy of the unforgiving insect and unforgiving buyer. They are not lovingly covered with paper like 'legitimate' mangoes - they find no love, they grow small," RuRi wrote.
+
+<div class="InContent_Div">
+<img class="InContent_Imgs_port" src="p3.png">
+</div>
+
+"This unwanted child has so much to prove and it dies. But you know what? On the Brix sweetness score it is EQUAL OR BETTER than good mangoes, even if they are smaller," they added.
+
+RuRi is helping several mango farmers in Guimaras Island by buying all their RR mangoes at a good price. As of writing, there are 80 orders in stock on RuRi's website.
+
+The dispatch date has yet to be announced. Order pick-ups can be done at any of RuRi's three points: RuRi Central in Avida Towers Centera, EDSA cor. Reliance Street, Mandaluyong City; RuRi North in 22 Congressional Avenue, Project 8, Quezon City; and RuRi in South Old Transport Terminal Bldg., Alabang Town Center, Theater Dr., Ayala Alabang, Muntinlupa.
+
+RuRi advises customers to claim their produce within 48 hours of the dispatch date, as fresh produce spoils quickly.
+
+"In context of these Rescue Buys, it will be a tragedy to save produce from one place only to have it spoil in our hands. We shall donate all unclaimed produce in your name to hungry communities like Barangay Tatalon in Quezon City," they said.
+
+Rural Rising has been actively supporting local farming communities by hosting regular rescue buys. Campaigns have contributed to the sale of kamote from Guimaras, basil from Pampanga, sweet corn from Pangasinan, and pineapples from Isabela, among many others. - Steph Arnaldo/Rappler.com
+    </p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 5
+
+cid = 5
+ctype = 3 //Sports=1, Foods=2, Politics=3
+ctitle = "As Iran attacks Israel, Biden confronts an escalating Middle East crisis he had hoped to avoid";
+cdesc = "For President Joe Biden, an attack on Israel launched from Iranian soil amounts to a scenario he'd greatly sought to avoid since the start of the current Middle East conflict.";
+cdate = new Date("2024-04-14T08:18:00"); //8:18 AM EDT, Sun April 14, 2024
+csource = "https://edition.cnn.com/2024/04/13/politics/biden-iran-israel-attack/index.html"
+cauthor = "Kevin Liptak and MJ Lee, CNN";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 5
+    ctype = 3 //Sports=1, Foods=2, Politics=3
+    ctitle = "As Iran attacks Israel, Biden confronts an escalating Middle East crisis he had hoped to avoid";
+    cdesc = "For President Joe Biden, an attack on Israel launched from Iranian soil amounts to a scenario he'd greatly sought to avoid since the start of the current Middle East conflict.";
+    cdate = new Date("2024-04-14T08:18:00"); //8:18 AM EDT, Sun April 14, 2024
+    csource = "https://edition.cnn.com/2024/04/13/politics/biden-iran-israel-attack/index.html"
+    cauthor = "Kevin Liptak and MJ Lee, CNN";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent img { width:100%; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="p1.png">
+
+    <p>
+    For President Joe Biden, an attack on Israel launched from Iranian soil amounts to a scenario he'd greatly sought to avoid since the start of the current Middle East conflict.
+
+    The reprisals heighten the risk of a wider regional conflict that could directly draw in the United States, along with other countries.
+    
+    And they place Biden - again - in the tenuous position of pledging stalwart support for Israel while also trying to prevent a new conflagration from exploding with the United States involved.
+    
+    What comes next is unknown. In the immediate aftermath of Iran's attacks, American officials acknowledged they were entering uncharted territory. One significant question mark is how proxies might potentially join Iranian efforts to target Israel and add a new layer of unpredictability. And with Israel's plans for a response still being formed, Biden administration officials are expected to continue advising their Israeli counterparts – with the desire for containment in mind.
+    
+    In a call with Israeli Prime Minister Benjamin Netanyahu on Saturday night, in which Biden told Netanyahu to consider Saturday a win because the US assessed Iran's attacks had been largely unsuccessful and demonstrated Israel's superior military capability, Biden made clear that the US will not participate in any offensive operations against Iran in response, a senior administration official told CNN.
+    
+    But in the hours following Iran's attack, it became clear the president faces a severe challenge putting a lid on the flare-up between Iran and Israel and stopping a full-scale regional war breaking out.
+    
+    Israel will respond to Iran's attack, but the scope of that response has yet to be determined, an Israeli official told CNN's Jeremy Diamond on Sunday.
+    
+    The official said Israel is yet to determine whether to try to "break all the dishes" or do something more measured.
+    
+    Israeli Defense Minister Yoav Gallant warned that the confrontation with Iran is "not over yet." The country's response options are expected to be discussed in detail during a meeting of Israel's war cabinet meeting on Sunday.
+    
+    The Commander of Iran's Islamic Revolutionary Guard Corps Hossein Salami warned that Tehran would respond directly if Israel retaliates saying a "new equation" had been created.
+    
+    Biden is also operating within the fraught politics of an election year, lending outsized importance to his upcoming decisions. The eruption of the Israel-Hamas war on October 7 has hurt Biden at home, eroding his support with key constituencies as he has declined to call for a permanent ceasefire in Gaza.
+    
+    One of the reasons Biden returned urgently to the White House from his beach house in Delaware Saturday afternoon was the ongoing nature of the attack, one official said, with the Situation Room better equipped for real-time monitoring of events.
+    
+    Administration officials saw Iran's attacks on Israel Saturday as disproportionate to Israel's strikes in Damascus that prompted the retaliation, a US official told CNN.
+    
+    That view has been an important factor in the discussions taking place in the White House throughout the day on next steps, particularly as Biden is set on preventing a full-scale regional conflict from erupting.
+    
+    There is also a recognition that what Israel is likely to do in response will depend on a full damage assessment, including potential casualties, so the Biden administration's advice to Israel will depend on that picture coming into focus, the official added.
+    
+    In the immediate aftermath of the Israeli strikes in Syria that killed top Iranian commanders, US officials monitored Iran gearing up to launch a major attack on Israel, seeing it as inevitable. As the US, in close consultation with Israel, sought to figure out exactly how, when and where exactly Iran would retaliate, administration officials never fully ruled out Iran trying to strike inside Israel as well as American personnel and assets in the region.
+    
+    The most likely "worst case scenario," one senior administration official said in the days leading up to Iran's Saturday attacks, was a direct attack by Iran on Israel, and the eruption of a state-on-state conflict that could very well prompt the beginning of a wider regional conflict that the US has been working to prevent since the immediate aftermath of Hamas' October 7 attacks.
+    
+    Despite his current tensions with Netanyahu over the war in Gaza, Biden and his top officials have sought over the past week to diminish any daylight between the US and Israel when it comes to Israel's defense against Iran.
+    
+    In the hours before Iran launched its attack, the US defense secretary and national security adviser spoke with their counterparts in Israel to reiterate that support. And last week, Gen. Erik Kurilla, the commander of US Central Command, was in Israel discussing contingencies with officials ahead of the expected attack.
+    
+    Biden kept to his Friday promise that "the US is devoted to the defense of Israel," with defense officials telling CNN that the US military successfully intercepted some Iranian missiles on Saturday.
+    
+    Contained within the conversations about preparations for Iran's attack and coordinating a response were also implicit encouragement to the Israeli government to not allow the situation to spiral out of control if Iran's response was limited in nature, officials familiar with the matter said.
+    
+    The US also sent messages publicly and privately to Iran warning about escalating the crisis further and pressed European and Arab allies to use their own leverage with Tehran to deliver similar messages.
+    
+    As Iran's plans to attack Israel grew clearer, American officials increasingly assessed that Tehran was not seeking direct conflict with the United States. Ahead of the drone attack launched by Iran on Saturday, US officials said they did not expect the targets to include American forces in the region.
+    
+    That is a change from earlier in the conflict, when Iran-backed militias regularly attacked US troops in the Middle East, including in a strike that killed three Americans stationed in Jordan. After the US launched retaliatory strikes, the attacks by Iranian proxies waned.
+    
+    Yet the simmering tensions between Iran and Israel have not let up. Without any direct channels of communication between the two countries, the risk of miscalculation is amplified.
+    
+    CNN's Oren Liebermann contributed reporting.
+    </p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 6
+
+cid = 6
+ctype = 2 //Sports=1, Foods=2, Politics=3
+ctitle = "Balai Pandesal emerges as new challenger to Julie's Bakeshop, Pan de Manila";
+cdesc = "Who says the Philippines' national bread - pan de sal (bread of salt) - can't carry a food and beverage company to greater heights?";
+cdate = new Date("2024-04-14T11:20:00"); //APR 14, 2024 7:20 PM PHT+8
+csource = "https://www.rappler.com/business/balai-pandesal-emerges-new-challenger-julies-bakeshop-pan-de-manila/"
+cauthor = "ISAGANI DE CASTRO JR.";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 6
+    ctype = 2 //Sports=1, Foods=2, Politics=3
+    ctitle = "Balai Pandesal emerges as new challenger to Julie's Bakeshop, Pan de Manila";
+    cdesc = "Who says the Philippines' national bread - pan de sal (bread of salt) - can't carry a food and beverage company to greater heights?";
+    cdate = new Date("2024-04-14T11:20:00"); //APR 14, 2024 7:20 PM PHT+8
+    csource = "https://www.rappler.com/business/balai-pandesal-emerges-new-challenger-julies-bakeshop-pan-de-manila/"
+    cauthor = "ISAGANI DE CASTRO JR.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+
+    <p>
+    Who says the Philippines' national bread - pan de sal (bread of salt) - can't carry a food and beverage company to greater heights? 
+
+Although the average size of pan de sal has gotten smaller through the years, symbolizing its decline as a source of nutrition in the Filipino diet, emerging food and beverage firm Balai ni Fruitas is proving that it can be a source of strength for the company.
+
+Balai ni Fruitas is known for its Buko ni Fruitas, its first brand which sells fresh coconut-based drinks and coconut-based desserts. Related to this is its smaller brand Fruitas House of Desserts. 
+
+In 2021, in response to the COVID-19 pandemic which badly hit the company, Yu acquired Balai Pandesal bakery and put up its first community store in Kamuning, Quezon City. It turned out to be a wise move since the company has seen its bakery business grow fast. 
+    </p>
+
+    <div class="InContent_Div">
+        <img class="InContent_Imgs_port" src="p1.png"> 
+    </div>
+
+    <p>
+From only 5 outlets in June 2021, it now has 50 Balai Pandesal stores, effectively become a challenger in the "mid-price counter service retail bakery" to industry leaders 43-year-old Julie's Bakeshop, as well as 25-year-old Pan de Manila.
+
+In this segment, Julie's Bakeshop had a nearly 40% market share in 2022, while Pan Manila had a 36% share, according to an industry study in 2022 cited by Balai ni Fruitas. Other key players in this segment are BreadTalk, French Baker, and Panaderia All-Day Hot Pandesal. 
+    </p>
+
+    <img class="InContent_Imgs" src="p2.png"> 
+
+    <p>
+"We responded to the pandemic by acquiring Balai Pandesal and rolling out community stores and we are glad that this strategy paid off. We are now growing same store sales by earning customer loyalty and constantly improving our product offerings," said Yu. 
+
+"We believe we have also barely scratched the surface in terms of provincial expansion and we have already started to build capacity to serve this market," he added. 
+    </p>
+
+    <div class="InContent_Div">
+        <img class="InContent_Imgs_port" src="p3.png"> 
+    </div>
+
+    <p>
+Aside from selling pan de sal, Balai Pandesal has introduced new new baked goods such as malunggay bread and wheat pan de sal. It also widened its offerings of bakery products from third-party suppliers. 
+    </p>
+
+    <div class="InContent_Div">
+        <img class="InContent_Imgs_port" src="p4.png"> 
+    </div>
+
+    <p>
+BREAD. Balai ni Fruitas Inc. President and CEO Lester Yu (extreme left) shows Manila Bulletin President Dr. Emilio Yap III (center) a Balai Pandesal branch in E. Rodriguez, Quezon City, in September 2022. Balai Pandesal Facebook
+Balai ni Fruitas, a subsidiary of Chinese-Filipino businessman Lester Yu's Fruitas Holdings Incorporated, disclosed on Thursday, April 11, that its revenues rose 57% from P341 million in 2022 to P535 million in 2023. Its net income increased by 58% from P37 million in 2022 to P59 million in 2023. It is publicly listed on the Small, Medium and Emerging Board of the Philippine Stock Exchange (PSE). Fruitas Holdings filed for a P1.2 billion Initial Public Offering (IPO) in 2019. It is using most of the funds raised from the IPO to expand its network of stores.
+
+"2023 marked significant milestones for Balai [ni Fruitas] as we passed 100 stores and the half-billion peso revenue level," Yu said.
+
+According to Balai ni Fruitas, its revenue growth of 57% in 2023 is higher than the revenue growth of select PSE-listed food service firms.
+    </p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 7
+
+cid = 7
+ctype = 3 //Sports=1, Foods=2, Politics=3
+ctitle = "Belgium to investigate suspected Russian interference in EU electionsa";
+cdesc = `Belgium will investigate suspected Russian meddling in European Parliament elections after the country's intelligence services found evidence of "pro-Russian interference networks," Prime Minister Alexander De Croo said on Friday.`;
+cdate = new Date("2024-04-17T07:06:00"); //7:06 PM EDT, Wed April 17, 2024
+csource = "https://edition.cnn.com/2024/04/12/europe/european-elections-russian-interference-intl"
+cauthor = "Eve Brennan and Luke McGee and Xiaofei Xu, CNN";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 7
+    ctype = 3 //Sports=1, Foods=2, Politics=3
+    ctitle = "Belgium to investigate suspected Russian interference in EU electionsa";
+    cdesc = "Belgium will investigate suspected Russian meddling in European Parliament elections after the country's intelligence services found evidence of "pro-Russian interference networks," Prime Minister Alexander De Croo said on Friday.";
+    cdate = new Date("2024-04-17T07:06:00"); //7:06 PM EDT, Wed April 17, 2024
+    csource = "https://edition.cnn.com/2024/04/12/europe/european-elections-russian-interference-intl"
+    cauthor = "Eve Brennan and Luke McGee and Xiaofei Xu, CNN";
+-->
+
+<!--
+
+<img class="InContent_Imgs" src="pcover.png"> 
+
+<div class="InContent_Div">
+    <img class="InContent_Imgs_port" src="p1.png"> 
+</div>
+
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+
+    <p>
+        
+Belgium will investigate suspected Russian meddling in European Parliament elections after the country's intelligence services found evidence of "pro-Russian interference networks," Prime Minister Alexander De Croo said on Friday.
+
+Moscow's objective "is to help elect more pro-Russian candidates to the European Parliament" in order to weaken the EU's support for Ukraine, De Croo told reporters.
+
+A recent investigation by Czech authorities uncovered a "pro-Russian influence operation in Europe" involving espionage, said De Croo, which highlighted that Moscow has approached EU members of parliament and even paid some to promote a "Russian agenda."
+
+"Belgian intelligence services confirmed the existence of pro-Russian interference networks" with activities in several European countries including Belgium, said De Croo, adding that Belgium's judicial authorities confirmed that Russian interference would be subject to prosecution.
+
+"The cash payments did not take place in Belgium, but the interference does," De Croo added.
+
+He did not name suspects or give further details of agencies or people alleged to be involved in the influence peddling.
+
+On Wednesday, in a statement co-signed by the Czech Prime Minister Petr Fiala, De Croo called on other EU member states to consider the creation of a new framework to counter Russian interference and said he would bring up the topic during the EU leaders' summit on April 17 and 18.
+    </p>
+
+    <h1>'A new reality'</h1>
+
+    <p>
+        "The goal is very clear: a weakened European support for Ukraine serves Russia on the battlefield, and that is the real aim of what has been uncovered in the last weeks," he said. "These are very serious concerns and that is why I have taken action... we cannot allow this type of Russian menace in our midst. We need to act and we need to act both on the national level and we also need to act on the EU level."
+
+He went on to say that Belgium has a responsibility as one of the seats of EU institutions "to uphold that every citizen's right to a free and safe vote can be maintained," but that "more tools to fight Russian propaganda and to fight Russian disinformation" are also needed on an "EU level."
+
+"We are in a new reality and we need to adapt to that new reality," he said.
+
+Belgium currently holds the presidency of the EU. The next elections to the European Parliament will take place from June 6-9, according to the European Council. 
+
+The EU has donated billions to Ukraine in military support since the start of Russia's invasion in February 2022 and has sanctioned Russian officials. But Viktor Orban - Hungarian Prime Minister and ally of Russian President Vladimir Putin - has held up Kyiv's membership negotiations with the EU and delayed aid deals.
+
+Far-right and populist parties, some of whom are considered sympathetic to the Kremlin, are expected to make gains at the European Parliament elections. There are concerns that this would influence - and possibly weaken - the EU's overall support for Ukraine.
+
+European support for Ukraine has become increasingly important as US support for Kyiv has faltered in recent months. European officials regularly discuss how possible it would be for the gap in funding to be plugged and fear what implications a Donald Trump return to the White House might mean.
+    </p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 8
+
+cid = 8
+ctype = 2 //Sports=1, Foods=2, Politics=3
+ctitle = "Of Course Meghan Markle Is Doing a Cooking Show";
+cdesc = "Just one month after announcing plans to launch her forthcoming lifestyle brand, American Riviera Orchard, Meghan Markle, aka Meghan, Duchess of Sussex, is preparing to further solidify her new role as a food influencer with a brand new cooking show that's set to debut on Netflix in the coming months.";
+cdate = new Date("2024-04-12T12:13:00"); //Apr 12, 2024, 12:13pm EDT
+csource = "https://www.eater.com/24128497/meghan-markle-cooking-show-netflix-relatability-american-riviera-orchard"
+cauthor = "Amy McCarthy";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 8
+    ctype = 2 //Sports=1, Foods=2, Politics=3
+    ctitle = "Of Course Meghan Markle Is Doing a Cooking Show";
+    cdesc = "Just one month after announcing plans to launch her forthcoming lifestyle brand, American Riviera Orchard, Meghan Markle, aka Meghan, Duchess of Sussex, is preparing to further solidify her new role as a food influencer with a brand new cooking show that's set to debut on Netflix in the coming months.";
+    cdate = new Date("2024-04-12T12:13:00"); //Apr 12, 2024, 12:13pm EDT
+    csource = "https://www.eater.com/24128497/meghan-markle-cooking-show-netflix-relatability-american-riviera-orchard"
+    cauthor = "Amy McCarthy";
+-->
+
+<!-- Shortcuts
+
+<img class="InContent_Imgs" src="pcover.png"> 
+
+<div class="InContent_Div">
+    <img class="InContent_Imgs_port" src="p1.png"> 
+</div>
+
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="p1.png"> 
+
+    <p>
+    Just one month after announcing plans to launch her forthcoming lifestyle brand, American Riviera Orchard, Meghan Markle, aka Meghan, Duchess of Sussex, is preparing to further solidify her new role as a food influencer with a brand new cooking show that's set to debut on Netflix in the coming months.
+
+The as-yet-untitled television show will, according to Deadline, "celebrate the joys of cooking, gardening, entertaining, and friendship," a description that makes it sound a lot like a millennial's take on Barefoot Contessa. With this announcement, Markle joins a growing crop of celebrity cooking shows, including Selena + Chef, which is helmed by the same showrunner as Markle's forthcoming series. But given Markle's royal ties and her experience as an wildly popular influencer, she may soon outshine them all.
+
+Markle isn't new to the world of food, either. She may not have formal training as a chef, but in her former life as an actress and lifestyle influencer, she regularly shared recipes for dishes like matzo ball soup and ginger berry crumble on her now-defunct blog the Tig. In fact, cooking has always been part of the royal love story that captured the world's attention. When Markle and Prince Harry got engaged in 2018, Markle later told reporters that he got down on one knee to propose while she was cooking him a roast chicken.
+
+It's unclear what exactly viewers can expect from the show, beyond "cooking" and "friendship." (Maybe "friendship" means she'll bring on her famous friends like Tyler Perry and Mindy Kaling.) But it's both fascinating — and unsurprising — that Markle has chosen food as her next act.
+
+The new series offers Markle the opportunity to distance herself from the drama and (often racist) gossip that plagued her brief time as a member of the British royal family, while reintroducing her to American audiences as something more than that girl from Suits who went off to marry a prince. Now that Markle has the opportunity to reinvent herself, a cooking show might be the best way to make people remember that she is an actual human being, not just fodder for the gossip rags. Because food is the ultimate vehicle for relatability. You may not be able to replicate her impeccable outfits or the Sussexes' beautiful home in Montecito, but you can roast a chicken.
+
+At the same time, though, Markle's connection to the royals offers cachet that most other influencers simply can't replicate. She can position herself as an expert on entertaining because she's learned all the best tips from royal party planners. Perhaps she's discussed organic gardening at length with King Charles, a noted enthusiast of the hobby. Even as she pursues a "normal" life in the States, Markle can capitalize on her royal experiences in a way that balances her desire to look accessible — at least, as much as is possible for someone who got married at a literal castle to an actual prince.
+    </p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 9
+
+cid = 9
+ctype = 1 //Sports=1, Foods=2, Politics=3
+ctitle = "PBA: Barroca, Sangalang lead bench mob as Magnolia takes down Phoenix";
+cdesc = "Veterans Mark Barroca and Ian Sangalang sparked off the bench to lead Magnolia's 107-93 mastery over Phoenix in the PBA Philippine Cup on Sunday at the Ninoy Aquino Stadium.";
+cdate = new Date("2024-04-14T18:05:00"); //4/14/2024 18:05:00
+csource = "https://www.gmanetwork.com/news/sports/volleyball/903625/pba-barroca-sangalang-lead-bench-mob-as-magnolia-takes-down-phoenix/story/"
+cauthor = "";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 9
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "PBA: Barroca, Sangalang lead bench mob as Magnolia takes down Phoenix";
+    cdesc = "Veterans Mark Barroca and Ian Sangalang sparked off the bench to lead Magnolia's 107-93 mastery over Phoenix in the PBA Philippine Cup on Sunday at the Ninoy Aquino Stadium.";
+    cdate = new Date("2024-04-14T18:05:00"); //4/14/2024 18:05:00
+    csource = "https://www.gmanetwork.com/news/sports/volleyball/903625/pba-barroca-sangalang-lead-bench-mob-as-magnolia-takes-down-phoenix/story/"
+    cauthor = "";
+-->
+
+<!-- Shortcuts
+
+<img class="InContent_Imgs" src="pcover.png"> 
+
+<div class="InContent_Div">
+    <img class="InContent_Imgs_port" src="p1.png"> 
+</div>
+
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="p1.png"> 
+
+    <p>
+        Veterans Mark Barroca and Ian Sangalang sparked off the bench to lead Magnolia's 107-93 mastery over Phoenix in the PBA Philippine Cup on Sunday at the Ninoy Aquino Stadium.
+
+        advertisement
+        
+        Barroca tied his career-high after pouring in 27 points alongside four assists, one steal, and one rebound while the seasoned big man followed up his previous outing last game against NorthPort with 23 markers, nine boards, five dimes, and one block. 
+        
+        The Hotshots have now won back-to-back games to improve to 3-2 while the Fuel Masters dropped to 2-5 just two days after a tight victory against Converge. 
+        
+        Magnolia pulled away for good in the fourth quarter, extending a two-point lead at the end of the third, 79-77, to an 18-point cushion late in the game following a three-pointer from Barroca, 105-87. 
+        
+        Prior to that, the Hotshots had to overcome a double-digit deficit early in the second half after RJ Jazul buried a triple to give Phoenix a 60-49 advantage. 
+        
+        Scores:
+        
+        Magnolia 107 - Barroca 27, Sangalang 23, Jalalon 13, Eriobu 11, Tratter 8, Dionisio 7, Lee 7, Abueva 6, Balanza 2, Mendoza 2, Reavis 1, Escoto 0, Laput 0.
+        
+        Phoenix 93 - Jazul 21, Tuffin 17, Perkins 16, Mocon 11, Salado 8, Verano 8, Alejandro 6, Rivero 6, Muyang 0, Camacho 0, Daves 0, Lalata 0.
+        
+        Quarters: 28-18, 47-57, 79-77, 107-93.    
+    </p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+
 // REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS
 // PORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS R
 // RTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REP
@@ -805,11 +1429,9 @@ NewsContents.newContent(new NewsContent(3, 3, ctitle, cdesc, cdate, csource, cau
 
 //#endregion
 
-function LoadNews(name, type) {
-    let rcontents = NewsContents.getRandomContent(0,0);
+function LoadNews(name, type, count) {
+    let rcontents;
     let e;
-
-    let count = 3;
 
     // Names:
     // HomeSports
@@ -824,7 +1446,9 @@ function LoadNews(name, type) {
     // RecentPolitics
     // RandomNews
 
-    if (type == "RecentSports") {
+    if (type == "RecentGeneral") {
+
+        rcontents = NewsContents.getRandomContent(0);
         for (let i = 0; i < count; i++) {
             e = ItemSuggestid(name, "Title", i);
             e.innerHTML = rcontents[i].title;
@@ -834,7 +1458,52 @@ function LoadNews(name, type) {
             e = ItemSuggestid(name, "Cover", i);
             e.src = rdir + rcontents[i].id + "/pcover.png";
             e = ItemSuggestid(name, "Description", i);
+            e.innerHTML = rcontents[i].description;
+        }
+    }
+    if (type == "RecentSports") {
+
+        rcontents = NewsContents.getRandomContent(1);
+        for (let i = 0; i < count; i++) {
+            e = ItemSuggestid(name, "Title", i);
             e.innerHTML = rcontents[i].title;
+            e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
+            e = ItemSuggestid(name, "Info", i);
+            //nothing lmao
+            e = ItemSuggestid(name, "Cover", i);
+            e.src = rdir + rcontents[i].id + "/pcover.png";
+            e = ItemSuggestid(name, "Description", i);
+            e.innerHTML = rcontents[i].description;
+        }
+    }
+    if (type == "RecentFoods") {
+
+        rcontents = NewsContents.getRandomContent(2);
+        for (let i = 0; i < count; i++) {
+            e = ItemSuggestid(name, "Title", i);
+            e.innerHTML = rcontents[i].title;
+            e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
+            e = ItemSuggestid(name, "Info", i);
+            //nothing lmao
+            e = ItemSuggestid(name, "Cover", i);
+            e.src = rdir + rcontents[i].id + "/pcover.png";
+            e = ItemSuggestid(name, "Description", i);
+            e.innerHTML = rcontents[i].description;
+        }
+    }
+    if (type == "RecentPolitics") {
+
+        rcontents = NewsContents.getRandomContent(3);
+        for (let i = 0; i < count; i++) {
+            e = ItemSuggestid(name, "Title", i);
+            e.innerHTML = rcontents[i].title;
+            e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
+            e = ItemSuggestid(name, "Info", i);
+            //nothing lmao
+            e = ItemSuggestid(name, "Cover", i);
+            e.src = rdir + rcontents[i].id + "/pcover.png";
+            e = ItemSuggestid(name, "Description", i);
+            e.innerHTML = rcontents[i].description;
         }
     }
 }
@@ -866,6 +1535,7 @@ function ItemSuggestid(item, attr, id) {
     if (item == "HomeSports") { idstr += "1_"; }
     if (item == "HomeFoods") { idstr += "2_"; }
     if (item == "HomePolitics") { idstr += "3_"; }
+    if (item == "HomeGeneral") { idstr += "4_"; }
     if (item == "ContentAside") { idstr += "CA"; }
     idstr += (id+1).toString();
     element = document.getElementById(idstr);

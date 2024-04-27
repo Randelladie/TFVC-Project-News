@@ -12,8 +12,8 @@
     </head>
 
     <body id="Body">
-        <div id="Global_Background" ></div>
-        <div id="Form_Register">
+        <div id="Global_Background"></div>
+        <div id="Form_Register" class="Form_C_Accounts">
             <label>Email: </label> 
             <input type="text" id="register_email"></input>
             <label>Username: </label> 
@@ -29,7 +29,7 @@
             <a href="#" onclick="LoadPage('Home')">Continue as guest</a>
         </div>
 
-        <div id="Form_Login">
+        <div id="Form_Login" class="Form_C_Accounts">
             <label>Username: </label> 
             <input type="text" id="login_username"></input>
             <label>Password: </label> 
@@ -42,7 +42,7 @@
             <a href="#" onclick="LoadPage('Register')" style="text-align: right;">Dont have an account?</a>
         </div>
 
-        <div id="Form_Forgot">
+        <div id="Form_Forgot" class="Form_C_Accounts">
             <label>Email: </label> 
             <input type="text" id="forgot_email"></input>
             <label id="forgot_error" style="color: red"></label><div></div>
@@ -52,113 +52,155 @@
         </div>
 
         <div id="Form_Home">
-            <h1>The Fisher Valley News Website</h1>
+            <div id="Form_Homediv1">
+                <h1>The Fisher Valley News Website</h1>
 
-            <h2> 
-                Welcome to our Website of BSIT in Web System & Technologies
-            </h2>
-            <hr>
-            <p>
-                In our website, you can see what we have here. A simple website that we created by our group, that you can create also by learning and typing of codes.
-                Welcome to our Website!
-            </p>
+                <h2> 
+                    Welcome to our Website of BSIT in Web System & Technologies
+                </h2>
+                <hr>
+                <p>
+                    In our website, you can see what we have here. A simple website that we created by our group, that you can create also by learning and typing of codes.
+                    Welcome to our Website!
+                </p>
 
-            <div id="Home_3C">
+                <div id="Home_4C">
 
-                <div id="Home_Column1" class="Home_Column">
-                    <div id="Home_Column1I" class="Home_ColumnI">Sport</div>
+                    <div id="Home_Column1" class="Home_Column">
+                        <div id="Home_Column1I" class="Home_ColumnI">Sports</div>
 
-                    <div class="Home_Suggestions">
-                        <div class="Home_Suggestions_Item">
+                        <div class="Home_Suggestions">
+                            <div class="Home_Suggestions_Item">
 
-                            <!-- HST_1_1 -->
-                            <a id="HST1_1" class="Home_Suggestions_Title" href="#">Title</a> <br>
-                            <div id="HSInfo1_1" class="Home_Suggestions_Info">
-                                <img id="HSIMG1_1" class="Home_Suggestions_Image">
-                                <div id="HSD1_1" class="Home_Suggestions_Description">Description</div> <br>
+                                <!-- HST_1_1 -->
+                                <a id="HST1_1" class="Home_Suggestions_Title" href="#">Title</a> <br>
+                                <div id="HSInfo1_1" class="Home_Suggestions_Info">
+                                    <img id="HSIMG1_1" class="Home_Suggestions_Image">
+                                    <div id="HSD1_1" class="Home_Suggestions_Description">Description</div> <br>
+                                </div>
+
+                                <a id="HST1_2" class="Home_Suggestions_Title" href="#">Title</a> <br>
+                                <div id="HSInfo1_2" class="Home_Suggestions_Info">
+                                    <img id="HSIMG1_2" class="Home_Suggestions_Image">
+                                    <div id="HSD1_2" class="Home_Suggestions_Description">Description</div> <br>
+                                </div>
+
+                                <a id="HST1_3" class="Home_Suggestions_Title" href="#">Title</a> <br>
+                                <div id="HSInfo1_3" class="Home_Suggestions_Info">
+                                    <img id="HSIMG1_3" class="Home_Suggestions_Image"> 
+                                    <div id="HSD1_3" class="Home_Suggestions_Description">Description</div> <br>
+                                </div>
+
                             </div>
-
-                            <a id="HST1_2" class="Home_Suggestions_Title" href="#">Title</a> <br>
-                            <div id="HSInfo1_2" class="Home_Suggestions_Info">
-                                <img id="HSIMG1_2" class="Home_Suggestions_Image">
-                                <div id="HSD1_2" class="Home_Suggestions_Description">Description</div> <br>
-                            </div>
-
-                            <a id="HST1_3" class="Home_Suggestions_Title" href="#">Title</a> <br>
-                            <div id="HSInfo1_3" class="Home_Suggestions_Info">
-                                <img id="HSIMG1_3" class="Home_Suggestions_Image"> 
-                                <div id="HSD1_3" class="Home_Suggestions_Description">Description</div> <br>
-                            </div>
-
                         </div>
+
+                        <button id="Home_MoreSports" class="Home_SeeMore">See More</button>
+
                     </div>
 
-                    <button id="Home_MoreSports" class="Home_SeeMore">See More</button>
+                    <div id="Home_Column2" class="Home_Column">
+                        <div id="Home_Column2I" class="Home_ColumnI">Foods/Business</div>
 
-                </div>
+                        <div class="Home_Suggestions">
+                            <div class="Home_Suggestions_Item">
 
-                <div id="Home_Column2" class="Home_Column">
-                    <div id="Home_Column2I" class="Home_ColumnI">Food</div>
+                                <a id="HST2_1" class="Home_Suggestions_Title" href="#">Jordan Fails a Layup Layup Layup a a a a a a a a l l l l l l l</a> <br>
+                                <div id="HSInfo2_1" class="Home_Suggestions_Info">
+                                    <img id="HSIMG2_1" class="Home_Suggestions_Image"> 
+                                    <div id="HSD2_1" class="Home_Suggestions_Description">Jordan has been playing on the lakers for awhile but he changed into Miami heat and changed into different teams again recently he has been making big plays and many teams are wanting to contracting him to the rosters </div> <br>
+                                </div>
 
-                    <div class="Home_Suggestions">
-                        <div class="Home_Suggestions_Item">
+                                <a id="HST2_2" class="Home_Suggestions_Title" href="#">Ronaldo Does a fail</a> <br>
+                                <div id="HSInfo2_2" class="Home_Suggestions_Info">
+                                    <img id="HSIMG2_2" class="Home_Suggestions_Image"> 
+                                    <div id="HSD2_2" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                                </div>
 
-                            <a id="HST2_1" class="Home_Suggestions_Title" href="#">Jordan Fails a Layup Layup Layup a a a a a a a a l l l l l l l</a> <br>
-                            <div id="HSInfo2_1" class="Home_Suggestions_Info">
-                                <img id="HSIMG2_1" class="Home_Suggestions_Image"> 
-                                <div id="HSD2_1" class="Home_Suggestions_Description">Jordan has been playing on the lakers for awhile but he changed into Miami heat and changed into different teams again recently he has been making big plays and many teams are wanting to contracting him to the rosters </div> <br>
+                                <a id="HST2_3" class="Home_Suggestions_Title" href="#">Philippines joining the NBA</a> <br>
+                                <div id="HSInfo2_3" class="Home_Suggestions_Info">
+                                    <img id="HSIMG2_3" class="Home_Suggestions_Image"> 
+                                    <div id="HSD2_3" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                                </div>
+
                             </div>
-
-                            <a id="HST2_2" class="Home_Suggestions_Title" href="#">Ronaldo Does a fail</a> <br>
-                            <div id="HSInfo2_2" class="Home_Suggestions_Info">
-                                <img id="HSIMG2_2" class="Home_Suggestions_Image"> 
-                                <div id="HSD2_2" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
-                            </div>
-
-                            <a id="HST2_3" class="Home_Suggestions_Title" href="#">Philippines joining the NBA</a> <br>
-                            <div id="HSInfo2_3" class="Home_Suggestions_Info">
-                                <img id="HSIMG2_3" class="Home_Suggestions_Image"> 
-                                <div id="HSD2_3" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
-                            </div>
-
                         </div>
+
+                        <button id="Home_MoreFoods" class="Home_SeeMore">See More</button>
+
                     </div>
 
-                    <button id="Home_MoreFoods" class="Home_SeeMore">See More</button>
+                    <div id="Home_Column3" class="Home_Column">
+                        <div id="Home_Column3I" class="Home_ColumnI">Politics</div>
 
-                </div>
+                        <div class="Home_Suggestions">
+                            <div class="Home_Suggestions_Item">
 
-                <div id="Home_Column3" class="Home_Column">
-                    <div id="Home_Column3I" class="Home_ColumnI">Politics</div>
+                                <a id="HST3_1" class="Home_Suggestions_Title" href="#">Jordan Fails a Layup</a> <br>
+                                <div id="HSInfo3_1" class="Home_Suggestions_Info">
+                                    <img id="HSIMG3_1" class="Home_Suggestions_Image"> 
+                                    <div id="HSD3_1" class="Home_Suggestions_Description">Jordan has been playing on the lakers for awhile but he changed into Miami heat and changed into different teams again recently he has been making big plays and many teams are wanting to contracting him to the rosters </div> <br>
+                                </div>
 
-                    <div class="Home_Suggestions">
-                        <div class="Home_Suggestions_Item">
+                                <a id="HST3_2" class="Home_Suggestions_Title" href="#">Ronaldo Does a fail</a> <br>
+                                <div id="HSInfo3_2" class="Home_Suggestions_Info">
+                                    <img id="HSIMG3_2" class="Home_Suggestions_Image"> 
+                                    <div id="HSD3_2" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                                </div>
 
-                            <a id="HST3_1" class="Home_Suggestions_Title" href="#">Jordan Fails a Layup</a> <br>
-                            <div id="HSInfo3_1" class="Home_Suggestions_Info">
-                                <img id="HSIMG3_1" class="Home_Suggestions_Image"> 
-                                <div id="HSD3_1" class="Home_Suggestions_Description">Jordan has been playing on the lakers for awhile but he changed into Miami heat and changed into different teams again recently he has been making big plays and many teams are wanting to contracting him to the rosters </div> <br>
+                                <a id="HST3_3" class="Home_Suggestions_Title" href="#">Philippines joining the NBA</a> <br>
+                                <div id="HSInfo3_3" class="Home_Suggestions_Info">
+                                    <img id="HSIMG3_3" class="Home_Suggestions_Image"> 
+                                    <div id="HSD3_3" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                                </div>
+
                             </div>
-
-                            <a id="HST3_2" class="Home_Suggestions_Title" href="#">Ronaldo Does a fail</a> <br>
-                            <div id="HSInfo3_2" class="Home_Suggestions_Info">
-                                <img id="HSIMG3_2" class="Home_Suggestions_Image"> 
-                                <div id="HSD3_2" lass="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
-                            </div>
-
-                            <a id="HST3_3" class="Home_Suggestions_Title" href="#">Philippines joining the NBA</a> <br>
-                            <div id="HSInfo3_3" class="Home_Suggestions_Info">
-                                <img id="HSIMG3_3" class="Home_Suggestions_Image"> 
-                                <div id="HSD3_3" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
-                            </div>
-
                         </div>
+
+                        <button id="Home_MorePolitics" class="Home_SeeMore">See More</button>
+
                     </div>
 
-                    <button id="Home_MorePolitics" class="Home_SeeMore">See More</button>
+                    <div id="Home_Column4" class="Home_Column">
+                        <div id="Home_Column4I" class="Home_ColumnI">General</div>
+
+                        <div class="Home_Suggestions">
+                            <div class="Home_Suggestions_Item">
+
+                                <a id="HST4_1" class="Home_Suggestions_Title" href="#">Jordan Fails a Layup</a> <br>
+                                <div id="HSInfo4_1" class="Home_Suggestions_Info">
+                                    <img id="HSIMG4_1" class="Home_Suggestions_Image"> 
+                                    <div id="HSD4_1" class="Home_Suggestions_Description">Jordan has been playing on the lakers for awhile but he changed into Miami heat and changed into different teams again recently he has been making big plays and many teams are wanting to contracting him to the rosters </div> <br>
+                                </div>
+
+                                <a id="HST4_2" class="Home_Suggestions_Title" href="#">Ronaldo Does a fail</a> <br>
+                                <div id="HSInfo4_2" class="Home_Suggestions_Info">
+                                    <img id="HSIMG4_2" class="Home_Suggestions_Image"> 
+                                    <div id="HSD4_2" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                                </div>
+
+                                <a id="HST4_3" class="Home_Suggestions_Title" href="#">Philippines joining the NBA</a> <br>
+                                <div id="HSInfo4_3" class="Home_Suggestions_Info">
+                                    <img id="HSIMG4_3" class="Home_Suggestions_Image"> 
+                                    <div id="HSD4_3" class="Home_Suggestions_Description">Lpsum Lorem i i i i i i i i i i i </div> <br>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <button id="Home_MorePolitics" class="Home_SeeMore">See More</button>
+
+                    </div>
+
 
                 </div>
-
+            </div>
+            <div id="Form_Homediv2">
+                <h1>2nd</h1>
+                <h1>2nd</h1>
+                <h1>2nd</h1>
+                <h1>2nd</h1>
+                <h1>2nd</h1>
+                <h1>2nd</h1>
             </div>
 
         </div>
@@ -202,7 +244,7 @@
 
                     <div id="Content_Suggestions">
                         <div class="Content_Suggestions_Item">
-                            <h1 style="text-align: center;"><b>More Suggested:</b></h1>
+                            <h1 style="text-align: center; font-size:24px;"><b>More Suggested:</b></h1>
 
                             <a id="HSTCA1" class="Content_Suggestions_Title" href="#">Jordan Fails a Layup</a> <br>
                             <div id="HSInfoCA1" class="Content_Suggestions_Info">
@@ -243,7 +285,7 @@
         <!-- The Master Page -->
         <div id="Main_Layout">
             <aside id="Main_AsideCategory">
-                <div style="height:56px"></div>
+                <div style="height:124px"></div>
                 <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Sports')">Sports</button>
                 <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Politics')">Politics</button>
                 <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Foods')">Foods</button>
@@ -251,22 +293,31 @@
             </aside>
             <header id="Main_Header">
                 <button id="Main_LogoButton" onclick="LoadPage('Home')"><img id="Main_Logo" src="mainRes/Website/LogoDefault.png"></button>
-                <label id="Main_HGreetings">Greetings, <br>Guest</label>
-                <button id="Main_LogButton" onclick="SetCategoryTheme('Refresh'); LogButton(); ">Login</button>
-                <button id="Main_RegButton" onclick="RegButton()">Register</button>
-                <button id="Main_CategoryButton" onclick="ToggleCategory()"><img id="Main_CategoryButtonIcon" src="mainRes/Website/ListVector.jpg"></button>
+                <div id="Main_TopRight">
+                    <div id="Main_TopRightD1">
+                        <label id="Main_HGreetings"><b>Greetings, <br>Guest</b></label>
+                    </div>
+                    <div id="Main_TopRightD2">
+                        <div><button id="Main_LogButton" onclick="LogButton(); ">Login</button></div>
+                        <div><button id="Main_RegButton" onclick="RegButton()">Register</button></div>
+                    </div>
+                    <div>
+                        <button id="Main_CategoryButton" onclick="ToggleCategory()"><div id="Main_CategoryButtonBackground"><img id="Main_CategoryButtonIcon" src="mainRes/Website/ListVector.png"></div></button>
+                    </div>
+                </div>
             </header>
             <footer id="Main_Footer">
-                <a href="#" onclick="LoadPage('Privacy')" style="margin:4px">Privacy Policy</a>
-                <a href="#" onclick="LoadPage('Terms')" style="margin:4px">Terms Of Service</a>
-                <a href="#" onclick="NewsContents.loadContent(NewsContents.getContent(1));" style="margin:4px">Support</a>
-                <a href="#" style="margin:4px">About</a>
-                <a href="#" style="margin:4px" onclick="LoadPage('Home')">Home</button>
+                <div><a href="#" onclick="LoadPage('Privacy')">Privacy Policy</a></div>
+                <div><a href="#" onclick="LoadPage('Terms')">Terms Of Service</a></div>
+                <div><a href="#" onclick="NewsContents.loadContent(NewsContents.getContent(1));">Support</a></div>
+                <div><a href="#">About</a></div>
+                <div><a href="#" onclick="LoadPage('Home')">Home</button></div>
             </footer>
         </div>
     </body>
     <script>LoadPage("Register");</script>
-    <script>LoadNews("HomeSports", "RecentSports")</script>
-    <script>LoadNews("HomePolitics", "RecentSports")</script>
-    <script>LoadNews("HomeFoods", "RecentSports")</script>
+    <script>LoadNews("HomeSports", "RecentSports", 3)</script>
+    <script>LoadNews("HomePolitics", "RecentPolitics", 3)</script>
+    <script>LoadNews("HomeFoods", "RecentFoods", 3)</script>
+    <script>LoadNews("HomeGeneral", "RecentGeneral", 3)</script>
 </html>
