@@ -320,7 +320,7 @@
         height:calc(100% - 192px);
 
         display: none;
-        grid-template-columns: calc(100% - 256px) 256px;
+        grid-template-columns: calc(100% - 280px) 280px;
         
         overflow:hidden;
         border-color:blue;
@@ -353,7 +353,7 @@
 
     #Home_4C {
 
-        width: calc(100% - 256px);
+        width: calc(100% - 280px);
         height: 550px;
         display: grid;
         grid-template-columns:25% 25% 25% 25%;
@@ -532,6 +532,15 @@
         padding: 8px;    
     }
 
+    #Form_Home_Ads {
+        position: -webkit-sticky;
+        position:sticky;
+
+        width:280px;
+        float:right;
+        top:128px;
+    }
+
     /*#endregion*/
 
     /*#region Privacy*/
@@ -612,6 +621,84 @@
         }
     /*#endregion*/
 
+    /*#region Support*/
+        
+        #Form_Support {
+
+            position:absolute;
+            top:132px;
+            left:50%;
+            transform:translate(-50%,0);
+
+            background-color:white;
+            width:1120px;
+            min-height:calc(100% - 168px);
+
+            display: none;
+        
+            border-color:blue;
+            border-style:solid;
+
+            margin-bottom:36px;
+
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        #Form_Privacy h1 {
+            color: black;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        #Form_Privacy p {
+            font-family: 'Lucida Console', sans-serif;
+        }
+
+        #Form_Privacy h2 {
+            text-shadow: 2px 2px 4px #000000;
+            font-size: large;
+        }
+
+        #Form_Privacy h3 {
+            text-shadow: 2px 2px 4px #000000;
+            font-size: large;
+        }
+        
+        #Form_Privacy h4 {
+            text-shadow: 2px 2px 4px #000000;
+            font-size: large;
+        }
+
+    /*#endregion*/
+
+    /*#region About*/
+        
+        #Form_About  {
+            position:absolute;
+            top:132px;
+            left:50%;
+            transform:translate(-50%,0);
+
+            background-color:white;
+            width:1120px;
+            min-height:calc(100% - 168px);
+
+            display: none;
+        
+            border-color:blue;
+            border-style:solid;
+
+            margin-bottom:36px;
+
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        #Form_Terms h1{
+            
+        }
+    /*#endregion*/
+
     /*#region Article Page*/
 
     #Content_Layout {
@@ -647,6 +734,7 @@
             border-color:#792845;
             border-style:solid;
             padding:16px;
+            min-height: 1306px;
         }
 
         #Content_Aside {
@@ -765,6 +853,7 @@
             border-color:#792845;
             border-style:solid;
             padding:16px;
+            min-height:888px;
         }
 
         #NewsList_SearchDiv {

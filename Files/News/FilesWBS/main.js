@@ -311,6 +311,22 @@ function LoadPage(page) {
         }
         `;
     }
+    if (page == "Support") {
+        SetCategoryTheme("Default");
+        style.innerHTML += `
+        #Form_Support {
+            display: inline;
+        }
+        `;
+    }
+    if (page == "About") {
+        SetCategoryTheme("Default");
+        style.innerHTML += `
+        #Form_About {
+            display: inline;
+        }
+        `;
+    }
 }
 //#endregion
 
@@ -382,6 +398,11 @@ function SetCategoryTheme(type) {
             border-color:blue;
             border-style:solid;
         }
+        #Content_Categories {
+            background-color:white;
+            border-color:blue;
+        }
+
         #NewsList_Border {
             background-color:white;
             border-color:blue;
@@ -389,6 +410,10 @@ function SetCategoryTheme(type) {
         #NewsList_Main_Content {
             border-color:blue;
             border-style:solid;
+        }
+        #NewsList_Categories {
+            background-color:white;
+            border-color:blue;
         }
 
         #Main_TopRight {
@@ -433,6 +458,11 @@ function SetCategoryTheme(type) {
             border-color:#792845;
             border-style:solid;
         }
+        #Content_Categories {
+            background-color:white;
+            border-color:#792845;
+        }
+
         #NewsList_Border {
             background-color:white;
             border-color:#792845;
@@ -440,6 +470,10 @@ function SetCategoryTheme(type) {
         #NewsList_Main_Content {
             border-color:#792845;
             border-style:solid;
+        }
+        #NewsList_Categories {
+            background-color:white;
+            border-color:#792845;
         }
 
         #Main_TopRight {
@@ -488,11 +522,20 @@ function SetCategoryTheme(type) {
             border-color:red;
             border-style:solid;
         }
+        #Content_Categories {
+            border-color:red;
+            border-style:solid;
+        }
+
         #NewsList_Border {
             background-color:white;
             border-color:red;
         }
         #NewsList_Main_Content {
+            border-color:red;
+            border-style:solid;
+        }
+        #NewsList_Categories {
             border-color:red;
             border-style:solid;
         }
@@ -543,11 +586,20 @@ function SetCategoryTheme(type) {
             border-color:green;
             border-style:solid;
         }
+        #Content_Categories {
+            border-color:green;
+            border-style:solid;
+        }
+
         #NewsList_Border {
             background-color:white;
             border-color:green;
         }
         #NewsList_Main_Content {
+            border-color:green;
+            border-style:solid;
+        }
+        #Content_Categories {
             border-color:green;
             border-style:solid;
         }
@@ -623,7 +675,7 @@ class SetNewsContents {
                 break;
             case 3:
                 SetCategoryTheme("Politics");
-                LoadNews("ContentAside", "RecentAside", 3)
+                LoadNews("ContentAside", "RecentPolitics", 3)
                 break;
         }
         LoadPage("NewsContent");

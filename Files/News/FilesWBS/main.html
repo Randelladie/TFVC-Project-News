@@ -195,12 +195,17 @@
                 </div>
             </div>
             <div id="Form_Homediv2">
-                <h1>2nd</h1>
-                <h1>2nd</h1>
-                <h1>2nd</h1>
-                <h1>2nd</h1>
-                <h1>2nd</h1>
-                <h1>2nd</h1>
+                <div id="Form_Home_Ads">
+                    <a href="mainRes/Ads/Ad1.html">
+                        <img class="NewsList_Ads_Ad" src="mainRes/Ads/Ad1.png">
+                    </a>
+                    <a href="https://www.minecraft.net/">
+                        <img class="NewsList_Ads_Ad" src="mainRes/Ads/Ad2.jpg">
+                    </a>
+                    <a href="https://www.burgerking.com.ph/">
+                        <img class="NewsList_Ads_Ad" src="mainRes/Ads/Ad4.jpg">
+                    </a>
+                </div>
             </div>
 
         </div>
@@ -337,10 +342,10 @@
                     <div id="NewsList_Categories">
                         <a href="#" onclick="LoadPage('Home');">Home</a>
                         <ul>
-                            <li><a href="#">General</a></li>
-                            <li><a href="#">Sports</a></li>
-                            <li><a href="#">Foods</a></li>
-                            <li><a href="#">Politics</a></li>
+                            <li><a href="#" onclick="NewsContents.loadNewsList(0);">General</a></li>
+                            <li><a href="#" onclick="NewsContents.loadNewsList(1);">Sports</a></li>
+                            <li><a href="#" onclick="NewsContents.loadNewsList(2);">Foods</a></li>
+                            <li><a href="#" onclick="NewsContents.loadNewsList(3);">Politics</a></li>
                         </ul>
                     </div>
 
@@ -372,10 +377,10 @@
                     <div id="Content_Categories">
                         <a href="#" onclick="LoadPage('Home');">Home</a>
                         <ul>
-                            <li><a href="#">General</a></li>
-                            <li><a href="#">Sports</a></li>
-                            <li><a href="#">Foods</a></li>
-                            <li><a href="#">Politics</a></li>
+                            <li><a href="#" onclick="NewsContents.loadNewsList(0);">General</a></li>
+                            <li><a href="#" onclick="NewsContents.loadNewsList(1);">Sports</a></li>
+                            <li><a href="#" onclick="NewsContents.loadNewsList(2);">Foods</a></li>
+                            <li><a href="#" onclick="NewsContents.loadNewsList(3);">Politics</a></li>
                         </ul>
                     </div>
 
@@ -446,15 +451,30 @@
 
         </div>
 
+        <div id="Form_Support">
+
+            <h1>How may we help you?</h1>
+            <p></p>
+
+        </div>
+
+        <div id="Form_About">
+
+            <h1>Credits to My team:</h1>
+            <p></p>
+
+        </div>
+
 
         <!-- The Master Page -->
         <div id="Main_Layout">
             <aside id="Main_AsideCategory">
                 <div style="height:124px"></div>
-                <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Sports')">Sports</button>
-                <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Politics')">Politics</button>
-                <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Foods')">Foods</button>
-                <button class="Main_CategoryListButton" onclick="SetCategoryTheme('Default')">Default</button>
+                <button class="Main_CategoryListButton" onclick="NewsContents.loadNewsList(1);">Sports</button>
+                <button class="Main_CategoryListButton" onclick="NewsContents.loadNewsList(3);">Politics</button>
+                <button class="Main_CategoryListButton" onclick="NewsContents.loadNewsList(2);">Foods</button>
+                <button class="Main_CategoryListButton" onclick="NewsContents.loadNewsList(0);">General</button>
+                <button class="Main_CategoryListButton" onclick="LoadPage('Home');">Home</button>
             </aside>
             <header id="Main_Header">
                 <button id="Main_LogoButton" onclick="LoadPage('Home')"><img id="Main_Logo" src="mainRes/Website/LogoDefault.png"></button>
@@ -472,11 +492,11 @@
                 </div>
             </header>
             <footer id="Main_Footer">
-                <div><a href="#" onclick="LoadPage('Privacy')">Privacy Policy</a></div>
-                <div><a href="#" onclick="LoadPage('Terms')">Terms Of Service</a></div>
-                <div><a href="#" onclick="NewsContents.loadContent(NewsContents.getContent(1));">Support</a></div>
-                <div><a href="#">About</a></div>
-                <div><a href="#" onclick="LoadPage('Home')">Home</button></div>
+                <div><a href="#" onclick="LoadPage('Privacy');">Privacy Policy</a></div>
+                <div><a href="#" onclick="LoadPage('Terms');">Terms Of Service</a></div>
+                <div><a href="#" onclick="LoadPage('Support');">Support</a></div>
+                <div><a href="#" onclick="LoadPage('About');">About</a></div>
+                <!--<div><a href="#" onclick="LoadPage('Home')">Home</button></div>-->
             </footer>
         </div>
     </body>
