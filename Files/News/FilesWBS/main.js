@@ -212,6 +212,10 @@ function Logout() {
     LoggedOn = false;
     hgreet.innerHTML = "Greetings, <br>";
     hgreet.innerHTML += Acc_Username;
+
+    style.innerHTML += `
+    #Main_RegButton { display: inline; }
+    `;
 }
 
 //#endregion
@@ -273,6 +277,15 @@ function LoadPage(page) {
         }
         `;
     }
+
+    if (page == "NewsList") {
+        style.innerHTML += `
+        #NewsList_Border {
+            display: grid;
+        }
+        `;
+    }
+
     if (page == "NewsContent") {
         style.innerHTML += `
         #Content_Layout_Border {
@@ -356,6 +369,7 @@ function SetCategoryTheme(type) {
             background-color:rgb(178, 178, 255);
             color:white;
         }
+
         #Content_Layout_Border {
             background-color:white;
             border-color:blue;
@@ -365,6 +379,14 @@ function SetCategoryTheme(type) {
             border-style:solid;
         }
         #Content_Suggestions {
+            border-color:blue;
+            border-style:solid;
+        }
+        #NewsList_Border {
+            background-color:white;
+            border-color:blue;
+        }
+        #NewsList_Main_Content {
             border-color:blue;
             border-style:solid;
         }
@@ -398,6 +420,7 @@ function SetCategoryTheme(type) {
         .Main_CategoryListButton {
             background-color:#c34773;
         }
+
         #Content_Layout_Border {
             background-color:white;
             border-color:#792845;
@@ -407,6 +430,14 @@ function SetCategoryTheme(type) {
             border-style:solid;
         }
         #Content_Suggestions {
+            border-color:#792845;
+            border-style:solid;
+        }
+        #NewsList_Border {
+            background-color:white;
+            border-color:#792845;
+        }
+        #NewsList_Main_Content {
             border-color:#792845;
             border-style:solid;
         }
@@ -444,6 +475,7 @@ function SetCategoryTheme(type) {
             background-color:rgb(255, 125, 125);
             color:white;
         }
+
         #Content_Layout_Border {
             background-color:white;
             border-color:red;
@@ -453,6 +485,14 @@ function SetCategoryTheme(type) {
             border-style:solid;
         }
         #Content_Suggestions {
+            border-color:red;
+            border-style:solid;
+        }
+        #NewsList_Border {
+            background-color:white;
+            border-color:red;
+        }
+        #NewsList_Main_Content {
             border-color:red;
             border-style:solid;
         }
@@ -490,6 +530,7 @@ function SetCategoryTheme(type) {
             background-color:greenyellow;
             color:white;
         }
+
         #Content_Layout_Border {
             background-color:white;
             border-color:green;
@@ -499,6 +540,14 @@ function SetCategoryTheme(type) {
             border-style:solid;
         }
         #Content_Suggestions {
+            border-color:green;
+            border-style:solid;
+        }
+        #NewsList_Border {
+            background-color:white;
+            border-color:green;
+        }
+        #NewsList_Main_Content {
             border-color:green;
             border-style:solid;
         }
@@ -626,10 +675,9 @@ class SetNewsContents {
         //3 = Politics
         let scontents = [];
 
-        //Count: The amount of contents given
         if (type==0) {
             scontents = this.contents;
-            let scontents_sortdate = scontents.sort((a, b) => Date.parse(a.date)/1000 - Date.parse(b.date)/1000);
+            let scontents_sortdate = scontents.sort((a, b) => Date.parse(b.date)/1000 - Date.parse(a.date)/1000);
             return scontents_sortdate;
         }
         if (type==1) {
@@ -637,7 +685,7 @@ class SetNewsContents {
                 let icontent = this.contents[i];
                 if (icontent.type == 1) { scontents.push(icontent); }
             }
-            let scontents_sortdate = scontents.sort((a, b) => Date.parse(a.date)/1000 - Date.parse(b.date)/1000);
+            let scontents_sortdate = scontents.sort((a, b) => Date.parse(b.date)/1000 - Date.parse(a.date)/1000);
             return scontents_sortdate;
         }
         if (type==2) {
@@ -645,7 +693,7 @@ class SetNewsContents {
                 let icontent = this.contents[i];
                 if (icontent.type == 2) { scontents.push(icontent); }
             }
-            let scontents_sortdate = scontents.sort((a, b) => Date.parse(a.date)/1000 - Date.parse(b.date)/1000);
+            let scontents_sortdate = scontents.sort((a, b) => Date.parse(b.date)/1000 - Date.parse(a.date)/1000);
             return scontents_sortdate;
         }
         if (type==3) {
@@ -653,10 +701,40 @@ class SetNewsContents {
                 let icontent = this.contents[i];
                 if (icontent.type == 3) { scontents.push(icontent); }
             }
-            let scontents_sortdate = scontents.sort((a, b) => Date.parse(a.date)/1000 - Date.parse(b.date)/1000);
+            let scontents_sortdate = scontents.sort((a, b) => Date.parse(b.date)/1000 - Date.parse(a.date)/1000);
             return scontents_sortdate;
         }
         return [];
+    }
+    loadNewsList(type) {
+        //Type
+        //0 = all
+        //1 = Sports
+        //2 = Foods
+        //3 = Politics
+
+        let cac = document.getElementById("Content_Article_Content");
+
+        if (type==0) {
+            SetCategoryTheme("Default");
+            LoadPage("NewsList");
+            LoadNews("NewsList", "RecentGeneral", 1);
+        }
+        if (type==1) {
+            SetCategoryTheme("Sports");
+            LoadPage("NewsList");
+            LoadNews("NewsList", "RecentSports", 1);
+        }
+        if (type==2) {
+            SetCategoryTheme("Foods");
+            LoadPage("NewsList");
+            LoadNews("NewsList", "RecentFoods", 1);
+        }
+        if (type==3) {
+            SetCategoryTheme("Politics");
+            LoadPage("NewsList");
+            LoadNews("NewsList", "RecentPolitics", 1);
+        }
     }
 }
 NewsContents = new SetNewsContents();
@@ -675,6 +753,7 @@ let csource = "";
 let cauthor = "";
 let chtml = "";
 
+//#region Reports
 // REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS
 // PORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS R
 // RTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REP
@@ -1129,9 +1208,7 @@ In this segment, Julie's Bakeshop had a nearly 40% market share in 2022, while P
 "We believe we have also barely scratched the surface in terms of provincial expansion and we have already started to build capacity to serve this market," he added. 
     </p>
 
-    <div class="InContent_Div">
-        <img class="InContent_Imgs_port" src="p3.png"> 
-    </div>
+    <img class="InContent_Imgs" src="p3.png"> 
 
     <p>
 Aside from selling pan de sal, Balai Pandesal has introduced new new baked goods such as malunggay bread and wheat pan de sal. It also widened its offerings of bakery products from third-party suppliers. 
@@ -1166,7 +1243,7 @@ NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csourc
 
 cid = 7
 ctype = 3 //Sports=1, Foods=2, Politics=3
-ctitle = "Belgium to investigate suspected Russian interference in EU electionsa";
+ctitle = "Belgium to investigate suspected Russian interference in EU election sa";
 cdesc = `Belgium will investigate suspected Russian meddling in European Parliament elections after the country's intelligence services found evidence of "pro-Russian interference networks," Prime Minister Alexander De Croo said on Friday.`;
 cdate = new Date("2024-04-17T07:06:00"); //7:06 PM EDT, Wed April 17, 2024
 csource = "https://edition.cnn.com/2024/04/12/europe/european-elections-russian-interference-intl"
@@ -1176,7 +1253,7 @@ chtml = `
 <!-- You may edit this (optional)
     cid = 7
     ctype = 3 //Sports=1, Foods=2, Politics=3
-    ctitle = "Belgium to investigate suspected Russian interference in EU electionsa";
+    ctitle = "Belgium to investigate suspected Russian interference in EU election sa";
     cdesc = "Belgium will investigate suspected Russian meddling in European Parliament elections after the country's intelligence services found evidence of "pro-Russian interference networks," Prime Minister Alexander De Croo said on Friday.";
     cdate = new Date("2024-04-17T07:06:00"); //7:06 PM EDT, Wed April 17, 2024
     csource = "https://edition.cnn.com/2024/04/12/europe/european-elections-russian-interference-intl"
@@ -1420,6 +1497,7 @@ NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csourc
 // REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS
 // PORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS R
 // RTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REPORTS REP
+//#endregion
 
 //#region News
 
@@ -1437,73 +1515,181 @@ function LoadNews(name, type, count) {
     // HomeSports
     // HomeFoods
     // HomePolitics
-    // SeeMore - When SeeMore is clicked
+    // NewsList - On a News List
     // ContentAside - On a News Content
 
     // type:
+    // RecentGeneral
     // RecentSports
     // RecentFoods
     // RecentPolitics
     // RandomNews
 
-    if (type == "RecentGeneral") {
+    if (name == "NewsList") {
+        console.log("News List")
+        //count is converted into page
+        let page = count;
+        count = 10;
 
-        rcontents = NewsContents.getRandomContent(0);
-        for (let i = 0; i < count; i++) {
-            e = ItemSuggestid(name, "Title", i);
-            e.innerHTML = rcontents[i].title;
-            e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
-            e = ItemSuggestid(name, "Info", i);
-            //nothing lmao
-            e = ItemSuggestid(name, "Cover", i);
-            e.src = rdir + rcontents[i].id + "/pcover.png";
-            e = ItemSuggestid(name, "Description", i);
-            e.innerHTML = rcontents[i].description;
+        if (type == "RecentGeneral") {
+
+            rcontents = NewsContents.getRandomContent(0);
+            for (let i = (page-1)*10; i < ((page)*10)-1; i++) {
+                if (i>=rcontents.length) {
+                    break;
+                }
+                e = ItemSuggestid(name, "Title", i);
+                e.innerHTML = rcontents[i].title;
+                style.innerHTML += `#` + e.id + ` { display: -webkit-box; } `;
+                e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
+                e = ItemSuggestid(name, "Info", i);
+                style.innerHTML += `#` + e.id + ` { display: flex; } `;
+                //nothing lmao
+                e = ItemSuggestid(name, "Cover", i);
+                e.src = rdir + rcontents[i].id + "/pcover.png";
+                e = ItemSuggestid(name, "Description", i);
+                e.innerHTML = rcontents[i].description;
+
+                e = ItemSuggestid(name, "BInfo", i);
+                style.innerHTML += `#` + e.id + ` { display: block; } `;
+                e = ItemSuggestid(name, "Date", i);
+                let formattedDate = rcontents[i].date.toLocaleString("en-GB", {
+                    day: "numeric",
+                    month: "short",
+                    year: "numeric",
+                    hour: "numeric",
+                    minute: "2-digit",
+                    timeZone: "Asia/Hong_Kong"
+                  });
+                e.innerHTML = formattedDate;
+                e = ItemSuggestid(name, "Author", i);
+                e.innerHTML = rcontents[i].author;
+                e = ItemSuggestid(name, "Source", i);
+                e.innerHTML = rcontents[i].source;
+            }
+        }
+        if (type == "RecentSports") {
+
+            rcontents = NewsContents.getRandomContent(1);
+            for (let i = (page-1)*10; i < ((page)*10)-1; i++) {
+                if (i>=rcontents.length) {
+                    break;
+                }
+                e = ItemSuggestid(name, "Title", i);
+                e.innerHTML = rcontents[i].title;
+                style.innerHTML += `#` + e.id + ` { display: -webkit-box; } `;
+                e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
+                e = ItemSuggestid(name, "Info", i);
+                style.innerHTML += `#` + e.id + ` { display: flex; } `;
+                //nothing lmao
+                e = ItemSuggestid(name, "Cover", i);
+                e.src = rdir + rcontents[i].id + "/pcover.png";
+                e = ItemSuggestid(name, "Description", i);
+                e.innerHTML = rcontents[i].description;
+            }
+        }
+        if (type == "RecentFoods") {
+
+            rcontents = NewsContents.getRandomContent(2);
+            for (let i = (page-1)*10; i < ((page)*10)-1; i++) {
+                if (i>=rcontents.length) {
+                    break;
+                }
+                e = ItemSuggestid(name, "Title", i);
+                e.innerHTML = rcontents[i].title;
+                style.innerHTML += `#` + e.id + ` { display: -webkit-box; } `;
+                e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
+                e = ItemSuggestid(name, "Info", i);
+                style.innerHTML += `#` + e.id + ` { display: flex; } `;
+                //nothing lmao
+                e = ItemSuggestid(name, "Cover", i);
+                e.src = rdir + rcontents[i].id + "/pcover.png";
+                e = ItemSuggestid(name, "Description", i);
+                e.innerHTML = rcontents[i].description;
+            }
+        }
+        if (type == "RecentPolitics") {
+
+            rcontents = NewsContents.getRandomContent(3);
+            for (let i = (page-1)*10; i < ((page)*10)-1; i++) {
+                if (i>=rcontents.length) {
+                    break;
+                }
+                e = ItemSuggestid(name, "Title", i);
+                e.innerHTML = rcontents[i].title;
+                style.innerHTML += `#` + e.id + ` { display: -webkit-box; } `;
+                e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
+                e = ItemSuggestid(name, "Info", i);
+                style.innerHTML += `#` + e.id + ` { display: flex; } `;
+                //nothing lmao
+                e = ItemSuggestid(name, "Cover", i);
+                e.src = rdir + rcontents[i].id + "/pcover.png";
+                e = ItemSuggestid(name, "Description", i);
+                e.innerHTML = rcontents[i].description;
+            }
         }
     }
-    if (type == "RecentSports") {
+    else
+    {
+        if (type == "RecentGeneral") {
 
-        rcontents = NewsContents.getRandomContent(1);
-        for (let i = 0; i < count; i++) {
-            e = ItemSuggestid(name, "Title", i);
-            e.innerHTML = rcontents[i].title;
-            e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
-            e = ItemSuggestid(name, "Info", i);
-            //nothing lmao
-            e = ItemSuggestid(name, "Cover", i);
-            e.src = rdir + rcontents[i].id + "/pcover.png";
-            e = ItemSuggestid(name, "Description", i);
-            e.innerHTML = rcontents[i].description;
+            rcontents = NewsContents.getRandomContent(0);
+            for (let i = 0; i < count; i++) {
+                e = ItemSuggestid(name, "Title", i);
+                e.innerHTML = rcontents[i].title;
+                e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
+                e = ItemSuggestid(name, "Info", i);
+                //nothing lmao
+                e = ItemSuggestid(name, "Cover", i);
+                e.src = rdir + rcontents[i].id + "/pcover.png";
+                e = ItemSuggestid(name, "Description", i);
+                e.innerHTML = rcontents[i].description;
+            }
         }
-    }
-    if (type == "RecentFoods") {
+        if (type == "RecentSports") {
 
-        rcontents = NewsContents.getRandomContent(2);
-        for (let i = 0; i < count; i++) {
-            e = ItemSuggestid(name, "Title", i);
-            e.innerHTML = rcontents[i].title;
-            e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
-            e = ItemSuggestid(name, "Info", i);
-            //nothing lmao
-            e = ItemSuggestid(name, "Cover", i);
-            e.src = rdir + rcontents[i].id + "/pcover.png";
-            e = ItemSuggestid(name, "Description", i);
-            e.innerHTML = rcontents[i].description;
+            rcontents = NewsContents.getRandomContent(1);
+            for (let i = 0; i < count; i++) {
+                e = ItemSuggestid(name, "Title", i);
+                e.innerHTML = rcontents[i].title;
+                e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
+                e = ItemSuggestid(name, "Info", i);
+                //nothing lmao
+                e = ItemSuggestid(name, "Cover", i);
+                e.src = rdir + rcontents[i].id + "/pcover.png";
+                e = ItemSuggestid(name, "Description", i);
+                e.innerHTML = rcontents[i].description;
+            }
         }
-    }
-    if (type == "RecentPolitics") {
+        if (type == "RecentFoods") {
 
-        rcontents = NewsContents.getRandomContent(3);
-        for (let i = 0; i < count; i++) {
-            e = ItemSuggestid(name, "Title", i);
-            e.innerHTML = rcontents[i].title;
-            e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
-            e = ItemSuggestid(name, "Info", i);
-            //nothing lmao
-            e = ItemSuggestid(name, "Cover", i);
-            e.src = rdir + rcontents[i].id + "/pcover.png";
-            e = ItemSuggestid(name, "Description", i);
-            e.innerHTML = rcontents[i].description;
+            rcontents = NewsContents.getRandomContent(2);
+            for (let i = 0; i < count; i++) {
+                e = ItemSuggestid(name, "Title", i);
+                e.innerHTML = rcontents[i].title;
+                e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
+                e = ItemSuggestid(name, "Info", i);
+                //nothing lmao
+                e = ItemSuggestid(name, "Cover", i);
+                e.src = rdir + rcontents[i].id + "/pcover.png";
+                e = ItemSuggestid(name, "Description", i);
+                e.innerHTML = rcontents[i].description;
+            }
+        }
+        if (type == "RecentPolitics") {
+
+            rcontents = NewsContents.getRandomContent(3);
+            for (let i = 0; i < count; i++) {
+                e = ItemSuggestid(name, "Title", i);
+                e.innerHTML = rcontents[i].title;
+                e.setAttribute('onclick','NewsContents.loadContent(NewsContents.getContent('+ (rcontents[i].id).toString() +'));');
+                e = ItemSuggestid(name, "Info", i);
+                //nothing lmao
+                e = ItemSuggestid(name, "Cover", i);
+                e.src = rdir + rcontents[i].id + "/pcover.png";
+                e = ItemSuggestid(name, "Description", i);
+                e.innerHTML = rcontents[i].description;
+            }
         }
     }
 }
@@ -1527,15 +1713,23 @@ function ItemSuggestid(item, attr, id) {
     let idstr = "";
     let element;
 
+    //attr
     if (attr == "Title") { idstr = "HST"; }
     if (attr == "Info") { idstr = "HSInfo"; }
     if (attr == "Cover") { idstr = "HSIMG"; }
     if (attr == "Description") { idstr = "HSD"; }
 
+    if (attr == "BInfo") { idstr = "HSBInfo"; }
+    if (attr == "Date") { idstr = "HSDate"; }
+    if (attr == "Author") { idstr = "HSA"; }
+    if (attr == "Source") { idstr = "HSS"; }
+
+    //items
     if (item == "HomeSports") { idstr += "1_"; }
     if (item == "HomeFoods") { idstr += "2_"; }
     if (item == "HomePolitics") { idstr += "3_"; }
     if (item == "HomeGeneral") { idstr += "4_"; }
+    if (item == "NewsList") { idstr += "NL"; }
     if (item == "ContentAside") { idstr += "CA"; }
     idstr += (id+1).toString();
     element = document.getElementById(idstr);

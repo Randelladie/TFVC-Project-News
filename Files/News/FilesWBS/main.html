@@ -24,7 +24,7 @@
             <input type="Password" id="register_cpassword"></input>
             <label id="register_error" style="color: red"></label><div></div>
             <div><br></div><div></div>
-            <a href="#" onclick="LoadPage('Login')">Already have an account?</a>
+            <a href="#" onclick="SetCategoryTheme('Refresh'); LoadPage('Login');">Already have an account?</a>
             <button style="display: flex; align-self: right; justify-self: right;" onclick="Register(document.getElementById('register_username').value,document.getElementById('register_password').value,document.getElementById('register_cpassword').value,document.getElementById('register_email').value)">Register</button>
             <a href="#" onclick="LoadPage('Home')">Continue as guest</a>
         </div>
@@ -94,7 +94,7 @@
                             </div>
                         </div>
 
-                        <button id="Home_MoreSports" class="Home_SeeMore">See More</button>
+                        <button id="Home_MoreSports" class="Home_SeeMore" onclick="NewsContents.loadNewsList(1);">See More</button>
 
                     </div>
 
@@ -125,7 +125,7 @@
                             </div>
                         </div>
 
-                        <button id="Home_MoreFoods" class="Home_SeeMore">See More</button>
+                        <button id="Home_MoreFoods" class="Home_SeeMore" onclick="NewsContents.loadNewsList(2);">See More</button>
 
                     </div>
 
@@ -156,7 +156,7 @@
                             </div>
                         </div>
 
-                        <button id="Home_MorePolitics" class="Home_SeeMore">See More</button>
+                        <button id="Home_MorePolitics" class="Home_SeeMore" onclick="NewsContents.loadNewsList(3);">See More</button>
 
                     </div>
 
@@ -187,7 +187,7 @@
                             </div>
                         </div>
 
-                        <button id="Home_MorePolitics" class="Home_SeeMore">See More</button>
+                        <button id="Home_MoreGeneral" class="Home_SeeMore" onclick="NewsContents.loadNewsList(0);">See More</button>
 
                     </div>
 
@@ -204,32 +204,159 @@
             </div>
 
         </div>
-        
-        <div id="Form_Privacy">
 
-            <h1>Privacy Policy</h1>
-            <p>Our Website (FVNW) wants you to protect your privacy, because we value you. So you can see in this page what possible things we can get to you.
-            </p>
-            
-            <h2>Information we may collect</h2>
-            <p>We're not collecting any kinds of your data, when you enter in our webpage. We do not use cookies either, or any kinds of data collecting,tracking thing that may collect
-                your information.
-            </p>
+        <div id="Form_NewsList">
+            <div id="NewsList_Border">
+                <article id="NewsList_Main">
+                    <div id="NewsList_Main_Content">
+                        <div id="NewsList_SearchDiv">
+                            <input>
+                            <button>Search</button>
+                        </div>
 
-            <h3>Policy Changes</h3>
-            <p>We inform you, if we have new or update in our policy. To insure your date privacy in our webpage, to have chill while you visiting our website. Morely,
-            </p>
+                        <div class="NewsList_List"> <!-- was Home_Suggestions -->
+                            <div class="NewsList_List_Item"> <!-- was Home_Suggestions_Item -->
 
-            <h4>Contact</h4>
-            <p>If you have any concern and questions, dont hesitate to ask and contact us in this website and DM's.</p>
+                                <a id="HSTNL1" class="NewsList_Suggestions_Title" href="#">Title<br> </a> <!-- Was HST_1_1 -->
+                                <div id="HSInfoNL1" class="NewsList_Suggestions_Info"> <!-- Was HSInfo1_1 -->
+                                    <img id="HSIMGNL1" class="NewsList_Suggestions_Image"> <!-- Was HSIMG1_1 -->
+                                    <div id="HSDNL1" class="NewsList_Suggestions_Description">Description</div> <!-- Was HSD1_1 -->
+                                </div>
+                                <div id="HSBInfoNL1" class="NewsList_Item_BInfo">
+                                    <label>Date: </label><span id="HSDateNL1">N/A</span>
+                                    <label>Author: </label><span id="HSANL1">Unknown</span> <br>
+                                    <label>Source: </label><span id="HSSNL1"></span>
+                                </div>
 
-        </div>
+                                <a id="HSTNL2" class="NewsList_Suggestions_Title" href="#">Title</a>
+                                <div id="HSInfoNL2" class="NewsList_Suggestions_Info">
+                                    <img id="HSIMGNL2" class="NewsList_Suggestions_Image">
+                                    <div id="HSDNL2" class="NewsList_Suggestions_Description">Description</div> <br>
+                                </div>
+                                <div id="HSBInfoNL2" class="NewsList_Item_BInfo">
+                                    <label>Date: </label><span id="HSDateNL2">N/A</span>
+                                    <label>Author: </label><span id="HSANL2">Unknown</span> <br>
+                                    <label>Source: </label><span id="HSSNL2"></span>
+                                </div>
 
-        <div id="Form_Terms">
+                                <a id="HSTNL3" class="NewsList_Suggestions_Title" href="#">Title<br> </a>
+                                <div id="HSInfoNL3" class="NewsList_Suggestions_Info">
+                                    <img id="HSIMGNL3" class="NewsList_Suggestions_Image">
+                                    <div id="HSDNL3" class="NewsList_Suggestions_Description">Description</div> <br>
+                                </div>
+                                <div id="HSBInfoNL3" class="NewsList_Item_BInfo">
+                                    <label>Date: </label><span id="HSDateNL3">N/A</span>
+                                    <label>Author: </label><span id="HSANL3">Unknown</span> <br>
+                                    <label>Source: </label><span id="HSSNL3"></span>
+                                </div>
 
-            <h1>Terms of Service</h1>
-            <p></p>
+                                <a id="HSTNL4" class="NewsList_Suggestions_Title" href="#">Title<br> </a>
+                                <div id="HSInfoNL4" class="NewsList_Suggestions_Info">
+                                    <img id="HSIMGNL4" class="NewsList_Suggestions_Image">
+                                    <div id="HSDNL4" class="NewsList_Suggestions_Description">Description</div> <br>
+                                </div>
+                                <div id="HSBInfoNL4" class="NewsList_Item_BInfo">
+                                    <label>Date: </label><span id="HSDateNL4">N/A</span>
+                                    <label>Author: </label><span id="HSANL4">Unknown</span> <br>
+                                    <label>Source: </label><span id="HSSNL4"></span>
+                                </div>
 
+                                <a id="HSTNL5" class="NewsList_Suggestions_Title" href="#">Title<br> </a>
+                                <div id="HSInfoNL5" class="NewsList_Suggestions_Info">
+                                    <img id="HSIMGNL5" class="NewsList_Suggestions_Image">
+                                    <div id="HSDNL5" class="NewsList_Suggestions_Description">Description</div> <br>
+                                </div>
+                                <div id="HSBInfoNL5" class="NewsList_Item_BInfo">
+                                    <label>Date: </label><span id="HSDateNL5">N/A</span>
+                                    <label>Author: </label><span id="HSANL5">Unknown</span> <br>
+                                    <label>Source: </label><span id="HSSNL5"></span>
+                                </div>
+
+                                <a id="HSTNL6" class="NewsList_Suggestions_Title" href="#">Title<br> </a>
+                                <div id="HSInfoNL6" class="NewsList_Suggestions_Info">
+                                    <img id="HSIMGNL6" class="NewsList_Suggestions_Image">
+                                    <div id="HSDNL6" class="NewsList_Suggestions_Description">Description</div> <br>
+                                </div>
+                                <div id="HSBInfoNL6" class="NewsList_Item_BInfo">
+                                    <label>Date: </label><span id="HSDateNL6">N/A</span>
+                                    <label>Author: </label><span id="HSANL6">Unknown</span> <br>
+                                    <label>Source: </label><span id="HSSNL6"></span>
+                                </div>
+
+                                <a id="HSTNL7" class="NewsList_Suggestions_Title" href="#">Title<br> </a>
+                                <div id="HSInfoNL7" class="NewsList_Suggestions_Info">
+                                    <img id="HSIMGNL7" class="NewsList_Suggestions_Image">
+                                    <div id="HSDNL7" class="NewsList_Suggestions_Description">Description</div> <br>
+                                </div>
+                                <div id="HSBInfoNL7" class="NewsList_Item_BInfo">
+                                    <label>Date: </label><span id="HSDateNL7">N/A</span>
+                                    <label>Author: </label><span id="HSANL7">Unknown</span> <br>
+                                    <label>Source: </label><span id="HSSNL7"></span>
+                                </div>
+
+                                <a id="HSTNL8" class="NewsList_Suggestions_Title" href="#">Title<br> </a>
+                                <div id="HSInfoNL8" class="NewsList_Suggestions_Info">
+                                    <img id="HSIMGNL8" class="NewsList_Suggestions_Image">
+                                    <div id="HSDNL8" class="NewsList_Suggestions_Description">Description</div> <br>
+                                </div>
+                                <div id="HSBInfoNL8" class="NewsList_Item_BInfo">
+                                    <label>Date: </label><span id="HSDateNL8">N/A</span>
+                                    <label>Author: </label><span id="HSANL8">Unknown</span> <br>
+                                    <label>Source: </label><span id="HSSNL8"></span>
+                                </div>
+
+                                <a id="HSTNL9" class="NewsList_Suggestions_Title" href="#">Title<br> </a>
+                                <div id="HSInfoNL9" class="NewsList_Suggestions_Info">
+                                    <img id="HSIMGNL9" class="NewsList_Suggestions_Image">
+                                    <div id="HSDNL9" class="NewsList_Suggestions_Description">Description</div> <br>
+                                </div>
+                                <div id="HSBInfoNL9" class="NewsList_Item_BInfo">
+                                    <label>Date: </label><span id="HSDateNL9">N/A</span>
+                                    <label>Author: </label><span id="HSANL9">Unknown</span> <br>
+                                    <label>Source: </label><span id="HSSNL9"></span>
+                                </div>
+
+                                <a id="HSTNL10" class="NewsList_Suggestions_Title" href="#">Title<br> </a>
+                                <div id="HSInfoNL10" class="NewsList_Suggestions_Info">
+                                    <img id="HSIMGNL10" class="NewsList_Suggestions_Image">
+                                    <div id="HSDNL10" class="NewsList_Suggestions_Description">Description</div> <br>
+                                </div>
+                                <div id="HSBInfoNL10" class="NewsList_Item_BInfo">
+                                    <label>Date: </label><span id="HSDateNL10">N/A</span>
+                                    <label>Author: </label><span id="HSANL10">Unknown</span> <br>
+                                    <label>Source: </label><span id="HSSNL10"></span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <aside id="NewsList_Aside">
+
+                    <div id="NewsList_Categories">
+                        <a href="#" onclick="LoadPage('Home');">Home</a>
+                        <ul>
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Foods</a></li>
+                            <li><a href="#">Politics</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="NewsList_Ads">
+                        <a href="mainRes/Ads/Ad1.html">
+                            <img class="NewsList_Ads_Ad" src="mainRes/Ads/Ad1.png">
+                        </a>
+                        <a href="https://www.minecraft.net/">
+                            <img class="NewsList_Ads_Ad" src="mainRes/Ads/Ad2.jpg">
+                        </a>
+                        <a href="https://www.burgerking.com.ph/">
+                            <img class="NewsList_Ads_Ad" src="mainRes/Ads/Ad3.jpg">
+                        </a>
+                    </div>
+                </aside>
+            </div>
         </div>
 
         <div id="Content_Layout">
@@ -241,6 +368,16 @@
                 </article>
 
                 <aside id="Content_Aside">
+
+                    <div id="Content_Categories">
+                        <a href="#" onclick="LoadPage('Home');">Home</a>
+                        <ul>
+                            <li><a href="#">General</a></li>
+                            <li><a href="#">Sports</a></li>
+                            <li><a href="#">Foods</a></li>
+                            <li><a href="#">Politics</a></li>
+                        </ul>
+                    </div>
 
                     <div id="Content_Suggestions">
                         <div class="Content_Suggestions_Item">
@@ -282,6 +419,34 @@
             </div>
         </div>
 
+        <div id="Form_Privacy">
+
+            <h1>Privacy Policy</h1>
+            <p>Our Website (FVNW) wants you to protect your privacy, because we value you. So you can see in this page what possible things we can get to you.
+            </p>
+            
+            <h2>Information we may collect</h2>
+            <p>We're not collecting any kinds of your data, when you enter in our webpage. We do not use cookies either, or any kinds of data collecting,tracking thing that may collect
+                your information.
+            </p>
+
+            <h3>Policy Changes</h3>
+            <p>We inform you, if we have new or update in our policy. To insure your date privacy in our webpage, to have chill while you visiting our website. Morely,
+            </p>
+
+            <h4>Contact</h4>
+            <p>If you have any concern and questions, dont hesitate to ask and contact us in this website and DM's.</p>
+
+        </div>
+
+        <div id="Form_Terms">
+
+            <h1>Terms of Service</h1>
+            <p></p>
+
+        </div>
+
+
         <!-- The Master Page -->
         <div id="Main_Layout">
             <aside id="Main_AsideCategory">
@@ -295,11 +460,11 @@
                 <button id="Main_LogoButton" onclick="LoadPage('Home')"><img id="Main_Logo" src="mainRes/Website/LogoDefault.png"></button>
                 <div id="Main_TopRight">
                     <div id="Main_TopRightD1">
-                        <label id="Main_HGreetings"><b>Greetings, <br>Guest</b></label>
+                        <label id="Main_HGreetings">Greetings, <br>Guest</label>
                     </div>
                     <div id="Main_TopRightD2">
-                        <div><button id="Main_LogButton" onclick="LogButton(); ">Login</button></div>
-                        <div><button id="Main_RegButton" onclick="RegButton()">Register</button></div>
+                        <div><button id="Main_LogButton" onclick="LogButton();">Login</button></div>
+                        <div><button id="Main_RegButton" onclick="RegButton();">Register</button></div>
                     </div>
                     <div>
                         <button id="Main_CategoryButton" onclick="ToggleCategory()"><div id="Main_CategoryButtonBackground"><img id="Main_CategoryButtonIcon" src="mainRes/Website/ListVector.png"></div></button>

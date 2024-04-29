@@ -95,6 +95,8 @@
         text-overflow: ellipsis;
         text-wrap: nowrap;
         padding:24px;
+
+        font-weight: bold;
     }
 
     #Main_TopRightD2 {
@@ -656,6 +658,15 @@
             padding:4px;
         }
 
+        #Content_Categories {
+            height: 142px;
+
+            border-color:#792845;
+            border-style:solid;
+            padding:8px;
+            margin-bottom: 8px;
+        }
+
         #Content_Suggestions {
             height: 410px;
 
@@ -718,5 +729,146 @@
         }
 
 /*#endregion*/
+
+    /*#region NewsList*/
+
+    #Form_NewsList {
+        position:absolute;
+        top:132px;
+        left:50%;
+        transform:translate(-50%,0);
+        width:1120px;
+        display:inline;
+    }
+
+    #NewsList_Border {
+        background-color:white;
+
+        display: none;
+        grid-template-columns:auto 1fr;
+        
+        border-color:#792845;
+        border-style:solid;
+
+        margin-bottom:68px;
+    }
+
+        #NewsList_Main {
+            position:relative;
+            width:832px;
+            right:0;
+
+            padding:4px;
+        }
+
+        #NewsList_Main_Content {
+            border-color:#792845;
+            border-style:solid;
+            padding:16px;
+        }
+
+        #NewsList_SearchDiv {
+            text-align: center;
+        }
+        
+        #NewsList_SearchDiv * {
+            font-size: 18px;
+            padding: 11px;
+        }
+
+        #NewsList_SearchDiv input {
+            width: 60%;
+        }
+
+        #NewsList_Aside {
+            position:relative;
+            width:280px;
+            height:100%;
+            left:0;
+
+            padding:4px;
+        }
+
+        #NewsList_Categories {
+            height: 142px;
+
+            border-color:#792845;
+            border-style:solid;
+            padding:8px;
+        }
+
+        .NewsList_List_Item {
+        }
+
+        .NewsList_List {
+    
+            /*border-color:blue;
+            border-style:solid;*/
+            padding:8px;
+            margin: 8px;
+    
+            font-size:16px;
+            font-family:'Times New Roman', Times, serif;
+    
+            /*background-color: rgb(213, 244, 255);*/
+        }
+
+        .NewsList_Suggestions_Title {
+            width:100%; 
+            line-height: 16px;
+
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+
+            overflow:hidden;
+            text-overflow:ellipsis;
+            display:none;
+            margin-bottom:8px;
+        }
+
+        .NewsList_Suggestions_Info {
+            display:none;
+        }
+
+        .NewsList_Suggestions_Image {
+            width:96px; 
+            height:64px;
+            margin-right: 4px;
+            margin-bottom: 12px;
+        }
+
+        .NewsList_Suggestions_Description {
+            height:72px;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+
+        .NewsList_Item_BInfo {
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: none;
+        }
+
+        #NewsList_Ads {
+            position: -webkit-sticky;
+            position:sticky;
+
+            width:280px;
+            float:right;
+            top:128px;
+        }
+
+        .NewsList_Ads_Ad {
+            width:248px;
+            margin:16px;
+        }
+
+/*#endregion*/
+
 
 /*#endregion*/
