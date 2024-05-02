@@ -2505,9 +2505,1507 @@ chtml = `
 
 NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
 
-/*
+//#endregion
+
+//#region Report 22
+
+cid = 22
+ctype = 2 //Sports=1, Foods=2, Politics=3
+ctitle = "GNT names color directions affecting food, beverage industry";
+cdesc = `MIERLO, THE NETHERLANDS -  GNT, a supplier of plant-based Exberry colors, said "Regeneration Rising" is becoming a popular trend among the food and beverage industries.`;
+cdate = new Date("2024-04-24T21:24:00"); //APR 24, 2024 9:24 PM PHT+8
+csource = "https://www.foodbusinessnews.net/articles/25958-gnt-names-color-directions-affecting-food-beverage-industry"
+cauthor = "Brooke Just";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 22
+    ctype = 2 //Sports=1, Foods=2, Politics=3
+    ctitle = "GNT names color directions affecting food, beverage industry";
+    cdesc = "MIERLO, THE NETHERLANDS -  GNT, a supplier of plant-based Exberry colors, said "Regeneration Rising" is becoming a popular trend among the food and beverage industries.";
+    cdate = new Date("2024-04-24T21:24:00"); //APR 24, 2024 9:24 PM PHT+8
+    csource = "https://www.foodbusinessnews.net/articles/25958-gnt-names-color-directions-affecting-food-beverage-industry"
+    cauthor = "By Brooke Just.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <p>
+        MIERLO, THE NETHERLANDS -  GNT, a supplier of plant-based Exberry colors, said "Regeneration Rising" is becoming a popular trend among the food and beverage industries.
+
+"Regeneration Rising" consists of three color directions of "Elevated Earth," "Nature Lab," and "Wholesome Nostalgia."
+
+"Elevated Earth" features earthy shades, including red-browns, warm oranges, textured purples and inky teals. These colors may help elevate products with an organic but premium look and feel, according to the company.
+
+"Nature Lab" encompasses a range of colors from green, pink, red, yellow, orange and blue.
+
+"Wholesome Nostalgia" welcomes such colors as yellow, green, blue, peach and pink that offer a velvet-like to milky, translucent, muted and dreamlike appeal, the company said.
+
+"Consumers of all ages are developing a much stronger interest in sustainability and rebuilding their relationships with the natural world," said Dieuwertje Raaijmakers, marketing communications specialist at GNT Group. "To appeal to these shoppers, food and beverage companies have to showcase their commitment to the planet. Color can play an important role in telling that story, helping brands create appealing products that send out strong visual signals about how they're produced."
+<p>
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
 
 //#endregion
+
+//#region Report 23
+
+cid = 23
+ctype = 2 //Sports=1, Foods=2, Politics=3
+ctitle = "Pet Food Processing Exchange announces speaker lineup";
+cdesc = "KANSAS CITY - Pet Food Processing magazine and parent company Sosland Publishing Company announce the speaker lineup for the inaugural Pet Food Processing Exchange, an educational and networking event to be held Oct. 7 to 8 in Kansas City, at the InterContinental on the Country Club Plaza. The goal of the inaugural event is to unite industry influencers, thought leaders and decision makers.";
+cdate = new Date("2024-04-24T21:24:00"); //APR 24, 2024 9:24 PM PHT+8
+csource = "https://www.foodbusinessnews.net/articles/25950-pet-food-processing-exchange-announces-speaker-lineup"
+cauthor = "Kimberlie Clyma";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 23
+    ctype = 2 //Sports=1, Foods=2, Politics=3
+    ctitle = "Pet Food Processing Exchange announces speaker lineup";
+    cdesc = "KANSAS CITY - Pet Food Processing magazine and parent company Sosland Publishing Company announce the speaker lineup for the inaugural Pet Food Processing Exchange, an educational and networking event to be held Oct. 7 to 8 in Kansas City, at the InterContinental on the Country Club Plaza. The goal of the inaugural event is to unite industry influencers, thought leaders and decision makers.";
+    cdate = new Date("2024-04-24T21:24:00"); //APR 24, 2024 9:24 PM PHT+8
+    csource = "https://www.foodbusinessnews.net/articles/25950-pet-food-processing-exchange-announces-speaker-lineup"
+    cauthor = "By Kimberlie Clyma.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <p>
+        KANSAS CITY - Pet Food Processing magazine and parent company Sosland Publishing Company announce the speaker lineup for the inaugural Pet Food Processing Exchange, an educational and networking event to be held Oct. 7 to 8 in Kansas City, at the InterContinental on the Country Club Plaza. The goal of the inaugural event is to unite industry influencers, thought leaders and decision makers.
+
+Attendees will include pet food and treat manufacturers as well as professionals involved in animal nutrition, ingredient development, food science, product development, food safety, processing and packaging technologies.
+
+"The inaugural Pet Food Processing Exchange will offer attendees the chance to expand their knowledge about the formulation, production and safety of pet food through topical presentations given by leaders in the industry," said Dave Crost, publisher of Pet Food Processing. "Our team has put together an agenda covering topics ranging from ingredient formulation, supply chain challenges, exporting opportunities, recall protection, sustainable packaging and so much more.
+
+"You also won't want to miss the perspectives and insights that will be shared by our State of the Industry panel and during the Plant of the Future session," Crost added.
+
+Speakers presenting during the 1 1/2-day event represent pet food processing organizations, industry associations and supplier companies. Other subject matter experts from the fields of animal nutrition, data analysis, supply chain logistics, legal, design and automation will share their knowledge on-stage.
+
+The Pet Food Processing Exchange agenda includes:
+
+A Look at the Pet Food Industry: Today and Tomorrow - A broad look at today's pet food and treat industry, the trends affecting the industry, and where things are headed. (Seth Kaufman and Nate Thomas, co-founders of BSM Partners)
+
+All About the Ingredients - Pet food processors look to the latest and greatest ingredients when formulating new pet food and treat products. Find out what new and existing ingredients are finding their way into today's pet food formulations. (Brittany White, Ph.D., senior director of product development, innovation and applied research, Simmons Pet Food)
+
+Finding Partners: Co-manufacturing Opportunities - With the increasing influx of new pet food products entering the market annually, the persistent obstacle lies in discovering suitable manufacturers to produce them. In this session, you'll gain insight into the essential qualities to look for in a co-manufacturing partner. (Worth Turner, chief executive officer, Custom Veterinary Services)
+
+Supply Chain Challenges, Transportation and Industry Economics - Learn how to navigate ongoing supply chain obstacles and transportation challenges while maintaining profitability. (Jim Ritchie, CEO, RedStone Logistics, and instructor, University of Kansas School of Business)
+
+Global Market Opportunities: Expansion Through Exporting - With the remarkable surge in pet food sales worldwide, find out how you can capitalize on this growth and successfully navigate this potentially arduous process. (Mallory Gaines, director of market access and trade policy, American Feed Industry Association)
+
+Leveraging Data for Business Growth - From market research to consumer data, how can processors use valuable data-driven insights to help guide product development and drive profitability? (Andrea Binder, vice president of retail account development, NielsenIQ)
+
+State of the Industry Panel - Hear from leaders in the pet food and treat industry as they share insights into the state of today's ever-changing pet food industry. (Jeremy Couture, director of business development – Pet Specialty Group, Nestlé Purina PetCare; Scott Krebs, president, Wenger Group; Amy Patterson, president, Petsource by Scoular; and Tom Rychlewski, vice president, Food and Beverage Operations, CRB)
+
+The Plant of the Future - As pet food processors strategize their long-term capital investments, what would be the optimal blueprint for the plant of tomorrow? (Tyler Cundiff, president, Integrated Process Group, Gray; Billy Gillispie, client delivery partner, Microsoft; and Brian Lakari, vice president of operations, Carnivore Meat Company)
+
+Recall Protection and Prevention: Keeping Pets and Pet Food Safe - Processors are tasked with delivering safe pet food to the pet parents that rely on them. Learn about how processors can keep those products safe during and after processing. (Billie Johnson, Ph.D., food safety and regulatory compliance manager, BHJ North America)
+
+Sustainability and Pet Food Packaging - How can pet food manufacturers make conscious choices regarding packaging that's right for their products and that align in terms of design, functionality and branding, all while considering the environmental impacts? (Ali Boden, senior packaging manager, Pet Sustainability Coalition)
+
+Legal Considerations for Overseas Partnerships - As US pet food processors consider overseas distribution, it's important to understand the legal requirements surrounding potential sales, manufacturing, and joint development arrangements. (Fang Shen, partner, Husch Blackwell)
+
+Emerging Trends in New Product Development - What factors are fueling the latest advancements in pet food, treats and supplements? (Stephanie Clark, Ph.D., companion animal nutritionist, BSM Partners)
+<p>
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 24
+
+cid = 24
+ctype = 2 //Sports=1, Foods=2, Politics=3
+ctitle = "Quaker recalls continue to cut into PepsiCo results";
+cdesc = "PURCHASE, NY. - PepsiCo, Inc. posted revenue growth of 2.3% in the first quarter ended March 23 despite the impact of product recalls at Quaker Foods North America and comparisons against high revenue growth in the previous year's first quarter.";
+cdate = new Date("2024-04-24T21:24:00"); //APR 24, 2024 9:24 PM PHT+8
+csource = "https://www.foodbusinessnews.net/articles/25951-quaker-recalls-continue-to-cut-into-pepsico-results"
+cauthor = "Jeff Gelski";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 24
+    ctype = 2 //Sports=1, Foods=2, Politics=3
+    ctitle = "Quaker recalls continue to cut into PepsiCo results";
+    cdesc = "PURCHASE, NY. - PepsiCo, Inc. posted revenue growth of 2.3% in the first quarter ended March 23 despite the impact of product recalls at Quaker Foods North America and comparisons against high revenue growth in the previous year's first quarter.";
+    cdate = new Date("2024-04-24T21:24:00"); //APR 24, 2024 9:24 PM PHT+8
+    csource = "https://www.foodbusinessnews.net/articles/25951-quaker-recalls-continue-to-cut-into-pepsico-results"
+    cauthor = "By Jeff Gelski.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+S    <p>
+        PURCHASE, NY. - PepsiCo, Inc. posted revenue growth of 2.3% in the first quarter ended March 23 despite the impact of product recalls at Quaker Foods North America and comparisons against high revenue growth in the previous year's first quarter.
+
+Net income increased 6% to $2.04 billion, or $1.48 per share on the common stock, from $1.93 billion, or $1.40 per share, in the previous year's first quarter. Revenues of $18.25 billion were up from $17.85 billion.
+
+Organic revenue increased 2.7%, which compared with 14% in the previous year's first quarter. The recalls at QFNA had a negative impact of one percentage point on organic revenue in this year's first quarter.  PepsiCo continues to expect at least 4% organic revenue growth in the fiscal year.
+
+BofA maintained a "buy" rating for PepsiCo, noting organic sales growth was in line with BofA's estimates.
+
+"We believe (PepsiCo's) premium to non-alcoholic beverage peer average of 23 times is warranted by their strengthened position and pricing power to manage through the ongoing inflationary environment," said Bryan D. Spillane, research analyst at BofA.
+
+PepsiCo gave its financial results on April 23. The company's stock price on the Nasdaq that day closed at $171.22 per share, which was down 3% from an April 22 close of $176.46.
+
+Ramon Luis Laguarta, chief executive officer of PepsiCo, said he sees two reasons for optimism in North America.
+
+"No. 1, I think wages are growing above inflation, and we see that not only in the US but across the world, and we see our consumer packaged food inflation below, I would say, total CPI (Consumer Price Index)," he said in an April 23 earnings call. "So those two numbers make us feel comfortable that the consumers will start coming back to our categories."
+
+Within Frito-Lay North America, revenue rose 1.7% to $5.68 billion from $5.58 billion. An organic revenue increase of 2% compared to 16% in the previous year's first quarter. Cheetos and Doritos delivered mid-single-digit revenue growth while smaller brands like Miss Vickie's and Bare that are geared to specialty occasions or positive choices had double-digit revenue growth. SunChips had high single-digit revenue growth. PopCorners and Stacy's each delivered mid-single-digit revenue growth.
+
+Within PepsiCo Beverages North America, revenue increased 1.2% to $5.87 billion from $5.80 billion. Zero-sugar varieties of the brands Pepsi and Mountain Dew powered the revenue increase. Market share in Gatorade improved. Organic revenue at PBNA increased 1%, which compared with 12% in the previous year's first quarter.
+
+While Laguarta acknowledged volumes were weak for Gatorade in the quarter, he added the brand and Mountain Dew gained market share.
+
+"So that's a meaningful good performance, I would say," he said. "Now Gatorade, as you mentioned, a little bit of weather impact. So we're not concerned about Gatorade this year as the weather improves, I think we have the right investments, the right commercial programs."
+
+PepsiCo plans to "de-emphasize" certain low-profit or no-profit product and package combinations within PBNA.
+
+Revenue at QFNA plunged 24% to $593 million from $777 million while volume fell 22%. The operating loss at QFNA was $49 million. As the year progresses PepsiCo expects QFNA production to increase and financial impacts associated with the product recalls to moderate.
+
+Last December a voluntary recall at Quaker involved select granola bars and cereals in the United States, Puerto Rico, Guam and Spain due to potential contamination of Salmonella. Quaker in April of this year said it permanently will close a facility in Danville, Ill., linked to the recall.
+
+Internationally, sales increased 16% to $2.01 billion in Latin America, 2.7% to $1.94 billion in Europe, 2.1% to $1.04 billion in Africa, Middle East and Southeast Asia, and 6% to $1.06 billion in Asia Pacific, Australia and New Zealand, and China. PepsiCo recently opened a factory in Poland and plans to open factories in Vietnam, China, India and Mexico, Laguarta said.
+
+
+<p>
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 25
+
+cid = 25
+ctype = 2 //Sports=1, Foods=2, Politics=3
+ctitle = "Mang Inasal launches all-in-one meal via Solo Fiesta";
+cdesc = "As an answer to the public's strong desire for a complete Ihaw-Sarap and Unli-Saya experience, Mang Inasal, the Philippines' Grill Expert, introduces the all-in-one meal perfect for all Mang Inasal fans - the Solo Fiesta!";
+cdate = new Date("2024-04-5T16:45:00"); //APR 5, 2024 5:45 PM PHT+8
+csource = "https://business.inquirer.net/453480/mang-inasal-launches-all-in-one-meal-via-solo-fiesta"
+cauthor = "Mang Inasal President Mike V. Castro.";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 25
+    ctype = 2 //Sports=1, Foods=2, Politics=3
+    ctitle = "Mang Inasal launches all-in-one meal via Solo Fiesta";
+    cdesc = "As an answer to the public's strong desire for a complete Ihaw-Sarap and Unli-Saya experience, Mang Inasal, the Philippines' Grill Expert, introduces the all-in-one meal perfect for all Mang Inasal fans - the Solo Fiesta!";
+    cdate = new Date("2024-04-5T16:45:00"); //APR 5, 2024 5:45 PM PHT+8
+    csource = "https://business.inquirer.net/453480/mang-inasal-launches-all-in-one-meal-via-solo-fiesta"
+    cauthor = "Mang Inasal President Mike V. Castro.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <p>
+        "The Mang Inasal Solo Fiesta combines all of our customers' favorites - from Chicken Inasal Paa or Pecho and Pork BBQ, to Palabok, Lumpiang Togue, and Java Rice," said Mang Inasal President Mike V. Castro. "It's something that we are excited for everyone to enjoy because a lot have requested for a solo version of our Fiesta bundles. And now, our customers in Luzon can try it." 
+
+Starting at a dine-in price of P189, Solo Fiesta comes in five different bundles perfect for anyone's cravings. It is a complete meal with the Ihaw-Sarap Mang Inasal Chicken Inasal and/or Pork BBQ, combined with Palabok, Java Rice, and their recently launched Lumpiang Togue.
+
+Enjoy Mang Inasal Solo Fiesta now through dine-in or takeout at Mang Inasal stores in Luzon It can also be ordered via delivery through the Mang Inasal Delivery App, https://manginasaldelivery.com.ph/ or through food delivery apps GrabFood and FoodPanda. 
+<p>
+
+    <div class="InContent_Div">
+    <img class="InContent_Imgs_port" src="p1.png"> 
+</div>
+
+    <p>Want more Mang Inasal exclusives NOW? Visit www.manginasal.ph for the latest news, https://manginasaldelivery.com.ph for delivery deals, and follow Mang Inasal on social media for more Ihaw-Sarap and Unli-Saya updates!
+    </p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 26
+
+cid = 26
+ctype = 2 //Sports=1, Foods=2, Politics=3
+ctitle = "Craving for Lumpiang Togue? Mang Inasal offers it for only P29";
+cdesc = "Mang Inasal, the Philippines' Grill Expert, has recently launched its new Lumpiang Togue at all its stores in Luzon.";
+cdate = new Date("2024-03-16T13:40:00"); //MARCH 16, 2024 1:40 PM PHT+8
+csource = "https://business.inquirer.net/450418/craving-for-lumpiang-togue-mang-inasal-offers-it-for-only-%e2%82%b129"
+cauthor = "Mang Inasal President Mike V. Castro..";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 26
+    ctype = 2 //Sports=1, Foods=2, Politics=3
+    ctitle = "Craving for Lumpiang Togue? Mang Inasal offers it for only P29";
+    cdesc = "Mang Inasal, the Philippines' Grill Expert, has recently launched its new Lumpiang Togue at all its stores in Luzon.";
+    cdate = new Date("2024-03-16T13:40:00"); //MARCH 16, 2024 1:40 PM PHT+8
+    csource = "https://business.inquirer.net/450418/craving-for-lumpiang-togue-mang-inasal-offers-it-for-only-%e2%82%b129"
+    cauthor = "Mang Inasal President Mike V. Castro..";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <p>
+        "This is our response to our customers who have been requesting for the return of their favorite snack at Mang Inasal," said Mang Inasal President Mike V. Castro. "Now, they can enjoy our crispy, crunchy, and delicious Lumpiang Togue anytime they want. It's a perfect add-on to our Ihaw-Sarap rice meals and even as an individual snack!"
+
+    </p>
+    <div class="InContent_Div">
+        <img class="InContent_Imgs_port" src="p1.png"> 
+    </div>
+    <p>For as low as P29 per piece as an add-on to your rice meal, Mang Inasal Lumpiang Togue can now be enjoyed via dine-in, takeout, and delivery at all stores in Luzon. Customers can also order two pieces or six pieces Lumpiang Togue, which are perfect for takeout or delivery.
+
+    </p>
+    <div class="InContent_Div">
+        <img class="InContent_Imgs_port" src="p2.png"> 
+    </div>
+    <p>Want more Mang Inasal exclusives NOW? Visit www.manginasal.ph for the latest news, https://manginasaldelivery.com.ph for delivery deals, and follow Mang Inasal on social media for more Ihaw-Sarap and Unli-Saya updates!
+
+        </p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 27
+
+cid = 27
+ctype = 2 //Sports=1, Foods=2, Politics=3
+ctitle = "PH seen to import more rice as harvest may fall short this year";
+cdesc = "The Philippines is seen to import more rice than earlier expected this year-remaining as the biggest rice buyer in the global market-amid a likely larger shortfall in local harvest.";
+cdate = new Date("2024-03-11T2:11:00"); //MARCH 11, 2024 2:11 AM PHT+8
+csource = "https://business.inquirer.net/449449/ph-seen-to-import-more-rice-as-harvest-may-fall-short-this-year"
+cauthor = "Jordeene B. Lagare";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 27
+    ctype = 2 //Sports=1, Foods=2, Politics=3
+    ctitle = "PH seen to import more rice as harvest may fall short this year";
+    cdesc = "The Philippines is seen to import more rice than earlier expected this year-remaining as the biggest rice buyer in the global market-amid a likely larger shortfall in local harvest.";
+    cdate = new Date("2024-03-11T2:11:00"); //MARCH 11, 2024 2:11 AM PHT+8
+    csource = "https://business.inquirer.net/449449/ph-seen-to-import-more-rice-as-harvest-may-fall-short-this-year"
+    cauthor = " Jordeene B. Lagare.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <h5>Imported rice from Vietnam being unloaded in Surigao City port. -FILE PHOTO    </h5>
+    <p>
+        The Philippines is seen to import more rice than earlier expected this year-remaining as the biggest rice buyer in the global market-amid a likely larger shortfall in local harvest.
+
+This is according to the Foreign Agricultural Service of US Department of Agriculture (USDA), which estimated that the country would import 4.1 million metric tons (MT) of rice this year, up by 200,000 MT or 5.1 percent from the previous estimate of 3.9 million MT in February due to "smaller crop" from local farms.
+
+If reached, this would be nearly 14 percent more than the 3.6 million MT of rice that entered the archipelago in 2023.
+
+The latest forecast is aligned with the report of the USDA unit that global rice imports would rise to 53.3 million MT from 52.38 million MT mainly due to higher demand from Indonesia and the Philippines.
+
+It also estimated that the country would remain as the leading rice importer worldwide, followed by Indonesia, China and the European Union.
+
+READ: Farmers: PH lost P7.2B in 2023 due to undervalued rice imports
+
+In the first two months of 2024, the country imported 728,254.49 MT of rice, based on a tally from the Bureau of Plant Industry. Like in the past years, Vietnam accounted for the majority of the supply, amounting to 390,997.22 MT.
+
+This was as the USDA lowered its projection on domestic rice production this year to 12.3 million MT from the previous estimate of 12.5 million MT. This is contrary to its outlook that global rice output will increase to 515.4 million MT, due to larger crop expected from India.
+
+Local production
+The Philippines produced a total of 20.06 million MT of rice in 2023, up by 1.5 percent, based on data from the Philippine Statistics Authority (PSA). Last year's output surpassed the previous record output of 19.96 million MT in 2021.
+
+Central Luzon was the leading producer of palay with 3.64 million MT or a share of 18.1 percent, followed by Cagayan Valley and Western Visayas with 3.03 million MT and 2.26 million MT, respectively.
+
+READ: El Niño won't necessarily spell doomsday to rice farmers, says DA
+
+Philippine rice self-sufficiency level declined to 77 percent in 2022 from 81.5 percent in 2021, based on PSA figures.
+
+The DA, through the Masagana program, is aiming for a 97-percent rice self-sufficiency by 2028.
+
+Meanwhile, the United Broiler Raisers Association (Ubra) anticipates poultry production to reach at least 1.8 million kilograms to as much as 1.9 million kg this year, up 2 percent from a year prior.
+
+Ubra chair Elias Jose Inciong said this outlook is "conservative," noting that normal growth is 4 to 7 percent a year.
+<p>
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 28
+
+cid = 28
+ctype = 2 //Sports=1, Foods=2, Politics=3
+ctitle = "Jollibee Group, San Miguel Foods in long-term cooperation to nourish Filipinos with delicious quality food";
+cdesc = "Jollibee Group celebrates its 45th anniversary with strengthened partnerships";
+cdate = new Date("2024-08-25T9:00:00"); //AUG 25, 2024 9:00 AM PHT+8
+csource = "https://business.inquirer.net/417515/jollibee-group-san-miguel-foods-in-long-term-cooperation-to-nourish-filipinos-with-delicious-quality-food"
+cauthor = "Jollibee Foods Corporation (JFC).";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 28
+    ctype = 2 //Sports=1, Foods=2, Politics=3
+    ctitle = "Jollibee Group, San Miguel Foods in long-term cooperation to nourish Filipinos with delicious quality food";
+    cdesc = "Jollibee Group celebrates its 45th anniversary with strengthened partnerships";
+    cdate = new Date("2024-08-25T9:00:00"); //AUG 25, 2024 9:00 AM PHT+8
+    csource = "https://business.inquirer.net/417515/jollibee-group-san-miguel-foods-in-long-term-cooperation-to-nourish-filipinos-with-delicious-quality-food"
+    cauthor = "Jollibee Foods Corporation (JFC).";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+    <p>For 45 years, home-grown Jollibee Foods Corporation (JFC)  strived to only work with reputable suppliers that share the same passion for food quality, food safety, and go beyond these to extend themselves towards driving sustainable operations.
+
+        It is no surprise then that San Miguel Foods Incorporated (SMFI) has been a partner to JFC across decades with SMFI supplying fresh, quality poultry products for Jollibee Chickenjoy, and providing other products such as pizza toppings, hams, bacon, butter, cheese and flour for the different restaurant brands of JFC .</p>
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <p>
+        As Filipino-owned companies deeply rooted in the value of malasakit or concern for others, both SMFI and JFC work hard every day to nourish and nurture Filipinos by providing food that is fresh, delicious, safe, high in quality, and offer value for money. Both companies are proud in being Filipino-born companies competing in the global arena, being professionally managed, customer-centered, strategic and yet, flexible.
+
+Beyond common values, the longstanding cooperation of JFC and SMFI is attributable to strategically aligned goals further strengthened by mutual respect, transparency of business directions and challenges, and commitment to find solutions to address ever-changing consumer demands. 
+
+Sustainability 
+
+Both JFC and SMFI's commitment towards improving its impact towards society and environment has been manifested in each company's sustainability architecture. For Jollibee Group, it has made significant strides over its 45-year history in various community and energy saving projects, and is now consolidating all its sustainability efforts into "Joy for Tomorrow," the company's Global Sustainability Agenda. 
+
+The "Joy for Tomorrow" centers on three pillars-food, people, and the planet. This is a more cohesive framework that unites the Jollibee Group community, including employees, business partners, suppliers, vendors, and other stakeholders, toward a set of shared sustainability goals. 
+
+On SMFI's end, its sustainability agenda focuses on four overarching goals which are to establish a circular economy approach by 2040, to achieve Net Zero by 2050, to uplift the lives of at least 15 million people by 2030 and have a fully sustainable and ethical supply chain by 2040. 
+
+To achieve these targets, it has implemented key initiatives that help reduce its impact on the environment and improve the quality of life of Filipinos.  These include repurposing some by-products from its production as raw materials for feeds, installing rainwater harvest systems in its facilities to conserve water, and tapping renewable energy sources such as solar energy and biomass.  
+
+Outlook
+
+As the two companies further extend its collaboration, both remain focused on being customer-centric, from the area of product innovations to market reach expansion.    
+
+SMFI lauds JFC for prioritizing listening to its consumers and knowing them well, enabling it to develop the most innovative products that directly meet the customer's wants and needs.  Hence, it sees JFC not only retaining its market leadership in the Philippines but also continuing its successful expansion to other parts of the world. 
+
+JFC recognizes the depth and breadth of SMFI's initiatives to instill high standards of quality in its food offerings and new product development and to deliver these with minimal impact to the planet while maximizing its positive effect to communities.  It applauds SMFI for exhibiting characteristics of a world-class food producer and counts on it as one of its top suppliers that helps the Jollibee Group fulfill its mission to serve great tasting food that brings joy to everyone. 
+<p>
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 29
+
+cid = 29
+ctype = 1 //Sports=1, Foods=2, Politics=3
+ctitle = "Track Nations Cup: Katie Archibald & Neah Evans win madison, Ethan Hayter claims omnium";
+cdesc = "Katie Archibald and Neah Evans won madison gold while GB team-mate Ethan Hayter clinched the omnium title on day two of the Track Nations Cup in Canada.";
+cdate = new Date("2024-04-14T21:24:00"); //APR 14, 2024 9:24 PM PHT+8
+csource = "https://www.bbc.com/sport/cycling/68811048"
+cauthor = "";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 29
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "Track Nations Cup: Katie Archibald & Neah Evans win madison, Ethan Hayter claims omnium";
+    cdesc = "Katie Archibald and Neah Evans won madison gold while GB team-mate Ethan Hayter clinched the omnium title on day two of the Track Nations Cup in Canada.";
+    cdate = new Date("2024-04-14T21:24:00"); //APR 14, 2024 9:24 PM PHT+8
+    csource = "https://www.bbc.com/sport/cycling/68811048"
+    cauthor = "";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <h5>Ethan Hayter is a two-time world and European champion in the omnium    </h5>
+    <p>
+        Katie Archibald and Neah Evans won madison gold while GB team-mate Ethan Hayter clinched the omnium title on day two of the Track Nations Cup in Canada.
+
+Archibald and Evans topped the madison standings on 37 points, beating pairs from France and the United States.
+
+In the men's omnium, Hayter won both the elimination and points races, taking a lap in the final moments of the latter to secure the overall win.
+
+Jack Carlin also won keirin bronze to add to Friday's team sprint silver.
+
+On the final lap, he took the inside line to finish behind Dutch duo Harrie Lavreysen and Jeffrey Hoogland.
+
+This weekend's competition in Milton is the third and final round of the 2024 Track Nations Cup and is the final opportunity for GB's track cyclists to race on the boards before this summer's Olympics in Paris.
+
+
+<p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 30
+
+cid = 30
+ctype = 3 //Sports=1, Foods=2, Politics=3
+ctitle = "Red-hot San Beda still unbeaten with four-set romp of San Sebastian | NCAA Philippines";
+cdesc = "San Beda University shrugged off a third set hiccup to overcome San Sebastian College-Recoletos, 25-17, 25-19, 22-25, 25-18, in the NCAA Season 99 men's volleyball tournament on Sunday at the FilOil EcoOil Centre.";
+cdate = new Date("2024-04-14T19:37:00"); //APR 14, 2024 7:37 PM PHT+8
+csource = "https://www.gmanetwork.com/ncaa/sports/volleyball/903631/red-hot-san-beda-still-unbeaten-with-four-set-romp-of-san-sebastian/story/"
+cauthor = "BEA MICALLER,GMA Integrated News.";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 30
+    ctype = 3 //Sports=1, Foods=2, Politics=3
+    ctitle = "Red-hot San Beda still unbeaten with four-set romp of San Sebastian | NCAA Philippines";
+    cdesc = "San Beda University shrugged off a third set hiccup to overcome San Sebastian College-Recoletos, 25-17, 25-19, 22-25, 25-18, in the NCAA Season 99 men's volleyball tournament on Sunday at the FilOil EcoOil Centre.";
+    cdate = new Date("2024-04-14T19:37:00"); //APR 14, 2024 7:37 PM PHT+8
+    csource = "https://www.gmanetwork.com/ncaa/sports/volleyball/903631/red-hot-san-beda-still-unbeaten-with-four-set-romp-of-san-sebastian/story/"
+    cauthor = "BEA MICALLER,GMA Integrated News.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <p>
+        San Beda University shrugged off a third set hiccup to overcome San Sebastian College-Recoletos, 25-17, 25-19, 22-25, 25-18, in the NCAA Season 99 men's volleyball tournament on Sunday at the FilOil EcoOil Centre.
+
+The Red Spikers remained unscathed with a 3-0 card while inflicting the Stags their first taste of defeat to fall to 2-1.
+
+Rookie Van Book continued his stellar outing with an all-around showing of 21 points anchored on 15 attacks, four blocks, and two aces while also making his presence felt on defense with six receptions. 
+
+The 20-year-old outside hitter unloaded back-to-back blocks to give San Beda a 24-17 lead before Ralph Cabalsa punched the game-winning point to deny the Stags from forcing a decider. 
+
+Anrie Bakil chipped in 19 points built on 14 attacks while Ralph Cabalsa and Alener Munsing chipped in 12 and 11 markers apiece. 
+
+Sophomore Kyle Villamor led San Sebastian with 15 points together with three digs and 11 receptions while Joshua Espenida chimed in with 13.
+<p>
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 31
+
+cid = 31
+ctype = 1 //Sports=1, Foods=2, Politics=3
+ctitle = "On parallel bars, Carlos Yulo has third shot at Olympic glory";
+cdesc = "Carlos Yulo is expected to battle for a medal in the floor exercise and the vault, two disciplines in artistic gymnastics where the Filipino spark plug has won world titles.";
+cdate = new Date("2024-04-25T5:20:00"); //APR 25, 2024 5:20 AM PHT+8
+csource = "https://sports.inquirer.net/562958/on-parallel-bars-yulo-has-third-shot-at-olympic-glory"
+cauthor = "June Navarro - Reporter / @junavINQ";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 31
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "On parallel bars, Carlos Yulo has third shot at Olympic glory";
+    cdesc = "Carlos Yulo is expected to battle for a medal in the floor exercise and the vault, two disciplines in artistic gymnastics where the Filipino spark plug has won world titles.";
+    cdate = new Date("2024-04-25T5:20:00"); //APR 25, 2024 5:20 AM PHT+8
+    csource = "https://sports.inquirer.net/562958/on-parallel-bars-yulo-has-third-shot-at-olympic-glory"
+    cauthor = "By: June Navarro - Reporter / @junavINQ.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png">
+    <h5>Carlos Yulo has had success in the parallel bars, winning a gold medal during the Southeast Asian Games. -CONTRIBUTED PHOTO    </h5> 
+    <p>
+        (Last of a series)
+
+Carlos Yulo is expected to battle for a medal in the floor exercise and the vault, two disciplines in artistic gymnastics where the Filipino spark plug has won world titles.
+
+But don't be surprised if Yulo will find himself in contention in one more apparatus in the 2024 Paris Olympics.
+
+As earlier mentioned, there are three events where Yulo could tab a podium finish.
+
+One of them is the parallel bars (p-bar).
+
+READ: World champ in vault, Carlos Yulo goes after Paris Olympics glory
+The apparatus features two horizontal bars 3.35 meters long and about 2 m high. To kick off his routine, Yulo will initiate his parallel bar mount or his run-up from a still stand with legs together.
+
+The moment the feet leave the ground simultaneously, the quest begins. A vaulting board placed at the height of the landing mats is permitted for the mount.
+
+Yulo has so far used the following moves in the p-bars:
+
+1. Healy-a skill that involves performing a 180-degree turnaround one of the parallel bars while transitioning from a support hold to a handstand.
+
+2. Press Handstand-lifting one's body from a straddle L position to a handstand without any swinging or momentum. It can be performed with hands on one rail or two rails.
+
+3. Stutz Handstand-a swing down from the handstand, then releasing both hands and twisting the body a half turn prior to holding again onto the bar in a handstand.
+
+4. Diamidov-named to celebrate the feat of Russian gymnast Sergey Diomidov in the event, it consists of a swing down from handstand, through support, then releasing one hand and twisting the body a full turn, before ending things with a handstand.
+
+5. Tippelt-Perfected by German gymnast Sven Tippelt, the maneuver sets out from a handstand, swings forward and straddles backward to handstand.
+
+6. Bhavsar-Stephen Raj Bhavsar of the United States gymnastics team created and performed the act in 2009 at the Moscow World Cup. It's a release move from a handstand, a swing forward, a straddle backward and a regrasp with a horizontal straight body. The move starts on one end of the bars and finishes on the other.
+
+READ: Carlos Yulo has deep bag of tricks for Paris Olympics bid
+
+Yulo mixes these elements and normally executes a double front salto dismount in most of his performances in this event.
+
+Regulated by the Code of Points, scoring at the Olympics consists of two panels of judges for each routine-one assesses the difficulty and the other evaluates the execution, after which the final score is the combined accumulation of these two scores.
+
+"I understand that [all my opponents are] getting better, so I have to improve my skills,'' said Yulo, who will fly to the French capital on July 6 and arrange another training camp until July 21 before entering the Olympic village on July 22.
+
+READ: Carlos Yulo snares Doha Worlds bars gold; PH qualifies two more for Paris Olympics
+
+"Aside from proper execution, this is definitely a test of mental strength. It's going to be me versus me,'' said Yulo.
+<p>
+    
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 32
+
+cid = 32
+ctype = 1 //Sports=1, Foods=2, Politics=3
+ctitle = "PBA: TNT remains wary despite latest win amid tight playoff race";
+cdesc = "MANILA, Philippines-TNT coach Chot Reyes remained wary of the PBA Philippine Cup playoff race even after defeating Phoenix at Ninoy Aquino Stadium on Wednesday.";
+cdate = new Date("2024-04-25T18:44:00"); //APR 25, 2024 6:244 PM PHT+8
+csource = "https://https://sports.inquirer.net/563001/pba-tnt-remains-wary-amid-tight-playoff-race-despite-latest-win"
+cauthor = "Rommel Fuertes Jr";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 32
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "PBA: TNT remains wary despite latest win amid tight playoff race";
+    cdesc = "MANILA, Philippines-TNT coach Chot Reyes remained wary of the PBA Philippine Cup playoff race even after defeating Phoenix at Ninoy Aquino Stadium on Wednesday.";
+    cdate = new Date("2024-04-25T18:44:00"); //APR 25, 2024 6:244 PM PHT+8
+    csource = "https://https://sports.inquirer.net/563001/pba-tnt-remains-wary-amid-tight-playoff-race-despite-latest-win"
+    cauthor = "By: Rommel Fuertes Jr.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <h5>TNT Tropang Giga coach Chot Reyes during a huddle in a PBA Philippine Cup game. –PBA IMAGES    </h5>
+    <p>
+        MANILA, Philippines-TNT coach Chot Reyes remained wary of the PBA Philippine Cup playoff race even after defeating Phoenix at Ninoy Aquino Stadium on Wednesday.
+
+Despite the close 108-101 win over the Fuel Masters, Tropang Giga are still in the middle of the pack where no other team has a clear view of a playoff spot except unbeaten San Miguel.
+
+"Dikit-dikit lahat (Everyone's neck-and-neck). Nobody has a lock on anything right now, I think only San Miguel. Other than that, everyone else's one loss means a lot in the scheme of things," said Reyes.
+
+READ: PBA: TNT rallies from 20 down to beat Phoenix in crucial win
+
+"It's been very difficult for us. Before in Talk N' Text, after a bad game, we know certain games are sure wins. That's no longer the case. Every game now, it doesn't matter who we play, we know it's going to be a challenge that demands our best."
+After the TNT win on Wednesday, the Tropang Giga improved to 5-4 in the standings to momentarily sit at the fifth seed. But like how Reyes put it, one loss can alter the complexion of the playoff race.
+
+One defeat from the TNT side will slide Reyes' wards to 5-5 and create a logjam for the sixth seed with Terrafirma and Rain or Shine, which hold identical records with Tropang Giga.
+
+The Beermen are the only lock for the quarters as of writing with an unscathed 7-0 record.
+
+READ: PBA: TNT ends slide but Chot Reyes wants to ‘fix ourselves first'
+
+Kelly Williams, who dropped a stellar double-double of 17 points and 13 rebounds, also acknowledged how TNT, once portrayed as one of the league's juggernauts, is now uncertain about making the quarterfinals.
+
+All that could be traced to how young the Tropang Giga squad is with the addition of new blood and retirements of old squad remnants.
+
+"In past teams and groups, we've had difficult conferences as well. Now, we have a lot of young and skilled guys who are learning the system and culture of how we manage each other," said Williams.
+
+"There's a lot of learning and adjustments. Coach is big on being able to pivot and adjust at different times. We're all learning and we have the capability to be where we want to be but it's just going to take some time... We'll need to throw our biggest punches in these last few games and hopefully get to the playoffs," the veteran big added.
+
+Tropang Giga will have two games left in the elimination round but wins and losses on those bouts still wouldn't determine where they'd stand with a tight race at hand.
+
+<p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 33
+
+cid = 33
+ctype = 1 //Sports=1, Foods=2, Politics=3
+ctitle = "Blow-By-Blow: Unbeaten Albert Francisco wins PH Youth belt";
+cdesc = "MANILA, Philippines-Albert Francisco stopped Dennis Endar in the eighth round to snatch the Philippine Youth flyweight crown during Manny Pacquiao Presents: Blow-By-Blow Friday at San Andres Sports Complex.";
+cdate = new Date("2024-04-13T22:48:00"); //APR 13, 2024 10:48 PM PHT+8
+csource = "https://sports.inquirer.net/561639/blow-by-blow-unbeaten-albert-francisco-wins-ph-youth-belt"
+cauthor = "";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 33
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "Blow-By-Blow: Unbeaten Albert Francisco wins PH Youth belt";
+    cdesc = "MANILA, Philippines-Albert Francisco stopped Dennis Endar in the eighth round to snatch the Philippine Youth flyweight crown during Manny Pacquiao Presents: Blow-By-Blow Friday at San Andres Sports Complex.";
+    cdate = new Date("2024-04-13T22:48:00"); //APR 13, 2024 10:48 PM PHT+8
+    csource = "https://sports.inquirer.net/561639/blow-by-blow-unbeaten-albert-francisco-wins-ph-youth-belt"
+    cauthor = "";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <h5>Albert Francisco wins the Philippine Youth flyweight crown in the main event of Blow-By-Blow.-CONTRIBUTED PHOTO    </h5>
+    <p>
+        MANILA, Philippines-Albert Francisco stopped Dennis Endar in the eighth round to snatch the Philippine Youth flyweight crown during Manny Pacquiao Presents: Blow-By-Blow Friday at San Andres Sports Complex.
+
+The end came at the 1:28 mark of the eighth round as Francisco rained punches on the fading Endar, forcing the referee to call a halt to the intense encounter between the promising 112-pounders.
+
+It was a back-and-forth battle that had Francisco on the receiving end of Endar's heavy blows to the head and body.
+
+READ: Blow-By-Blow: Albert Francisco, Dennis Endar vie for PH Youth belt
+But owing to his superb conditioning, Francisco, fighting out the Johnny Elorde Stable, managed to weather each assault and fought back with his own combinations.
+
+Early in the eighth, Endar, probably sensing that he had to win by stoppage, went on the attack and had Francisco on the retreat as the small but boisterous and appreciative crowd roared in delight.
+
+But Endar, representing MP Boxing Gym of Davao, simply could not sustain it and he got caught with Francisco's well-timed connections to send him across his foe's corner where he got pummeled until the third man stepped in.
+
+READ: Fast-rising Eman Bacosa impresses in Blow-By-Blow
+The victory raised Francisco's unbeaten slate to 12-0 with eight knockouts while the defeat dropped Endar's slate to 6-2-1 with five wins inside the distance.
+
+"A rematch could be underway," said Marife Barrera, who heads Blow-By-Blow.
+
+Eight-division legend Manny Pacquiao, who resurrected Blow-By-Blow in late-2022, guarantees that more lively action will be seen in the coming months.
+
+<p>
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 34
+
+cid = 34
+ctype = 1 //Sports=1, Foods=2, Politics=3
+ctitle = "ONE: Jeremy Pacatiw returns with statement win";
+cdesc = "MANILA. Philippines-After being sidelined for 16 months, Filipino fighter Jeremy Pacatiw returned in a triumphant way to announce his comeback in ONE Championship.";
+cdate = new Date("2024-04-06T17:20:00"); //APR 04, 2024 5:20 PM PHT+8
+csource = "https://sports.inquirer.net/560547/one-jeremy-pacatiw-returns-with-statement-win"
+cauthor = "Rommel Fuertes Jr";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 34
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "ONE: Jeremy Pacatiw returns with statement win";
+    cdesc = "MANILA. Philippines-After being sidelined for 16 months, Filipino fighter Jeremy Pacatiw returned in a triumphant way to announce his comeback in ONE Championship.";
+    cdate = new Date("2024-04-06T17:20:00"); //APR 04, 2024 5:20 PM PHT+8
+    csource = "https://sports.inquirer.net/560547/one-jeremy-pacatiw-returns-with-statement-win"
+    cauthor = "  Rommel Fuertes Jr.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <h5>Jeremy Pacatiw during the ONE Fight Night 21: Eersel vs. Nicolas. -ONE CHAMPIONSHIP    </h5>
+    <p>
+        MANILA. Philippines-After being sidelined for 16 months, Filipino fighter Jeremy Pacatiw returned in a triumphant way to announce his comeback in ONE Championship.
+
+        Pacatiw made quick and easy work of China's Wang Shuo, winning via first round submission in ONE Fight Night 21: Eersel vs. Nicolas at Lumpinee Boxing Stadium on Saturday.
+        
+        Pacatiw made a leap to the bantamweight division with his victory as he improved to a 13-5 record.
+        
+        READ: Jeremy Pacatiw's kickboxing silver wraps up PH's SEA Games campaign
+        
+        Pacatiw was expected to pull out a slow-paced opening round with this being his first match in a long while.
+        
+        But instead of getting his feet wet, the Lions Nation MMA combatant immediately jumped his Chinese foe with punches and strikes that seemed to have caught Wang by surprise.
+        
+        Wang, though, wasn't any slack as he matched Pacatiw's energy in the striking department but the fight immediately took a turn when it hit the mat.
+        
+        The 27-year-old fighter from Benguet took charge and locked Wang to a rear-naked choke which made the latter tap in the 2:07 mark of the opening round.
+        
+        In the main event, Alexis Nicolas defeated Regian Eersel via unanimous decision to win the ONE Lightweight Kickboxing World Championship.
+        
+        
+<p>
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 35
+cid = 35
+ctype = 1 //Sports=1, Foods=2, Politics=3
+ctitle = "ANALYSIS: This Gilas Pilipinas team has already proven its worth";
+cdesc = "On a particular Saturday midmorning, Gilas Pilipinas assembled in a well-lit, air-conditioned gym six floors up in a roadside building in Quezon City.";
+cdate = new Date("2024-04-18T18:10:00"); //APR 18, 2024 6:10 PM PHT+8
+csource = "https://sports.inquirer.net/505676/analysis-this-gilas-pilipinas-team-has-already-proven-its-worth"
+cauthor = "Francis T.J. Ochoa";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 35
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "ANALYSIS: This Gilas Pilipinas team has already proven its worth";
+    cdesc = "On a particular Saturday midmorning, Gilas Pilipinas assembled in a well-lit, air-conditioned gym six floors up in a roadside building in Quezon City.";
+    cdate = new Date("2024-04-18T18:10:00"); //APR 18, 2024 6:10 PM PHT+8
+    csource = "https://sports.inquirer.net/505676/analysis-this-gilas-pilipinas-team-has-already-proven-its-worth"
+    cauthor = "Francis T.J. Ochoa.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <h5>National team coach Pat Aquino and the Gilas Pilipinas Women. -FRANCIS OCHOA    </h5>
+    <p>
+        On a particular Saturday midmorning, Gilas Pilipinas assembled in a well-lit, air-conditioned gym six floors up in a roadside building in Quezon City.
+
+        There were 15 of them, dressed up for a scrimmage against a younger but more physical and more athletic squad.
+        
+        Toward the end of the match, up 11 and the clock dwindling to its final minutes, Gilas continued to apply full-court pressure. One of the team's guards, a star from Ateneo in the UAAP, nearly forced a turnover, only to get clocked-hard-in the jaw by an inadvertent elbow.
+        
+        The Eagles' playmaker shook the hit off, stood up and chased down the opposing player and continued to hound him.
+        
+        Later, after ditching the No. 15 Pilipinas jersey for a white shirt, the player was asked about the elbow.
+        
+        The only answer offered was a shrug and a smile.
+        
+        "Part of the game." Another smile.
+<p>
+
+    <img class="InContent_Imgs" src="p1.png"> 
+
+    <p>Except that this was just a tuneup match and Gilas Pilipinas was nursing an 11-point lead and the player was defending like it was the last few seconds of a one-possession ballgame in an Ateneo-La Salle championship decider in the UAAP.
+
+Another shrug. In the dictionary of sports nonverbal language, the usually means: "It's nothing."
+
+This time, the player meant: "It's nothing new."
+
+This is how Gilas Pilipinas has been preparing for the Southeast Asian Games. Bodies crashing everywhere, lung-busting full-court pressure from start to finish, everyone rolling up their sleeves and fighting hard for one of 12 slots in the final roster.
+
+"I've been hit a lot of times so..." Jhazmine Jason said.
+
+Oh, yes, this is the Gilas Pilipinas women's team. The oft-ignored, out-of-spotlight, underfunded Gilas Pilipinas squad that will be the only national basketball team defending a gold medal in Cambodia.
+
+And there's a reason why the team, a collection of nonsalaried standouts showing up for practice every day, prepares with a sense of urgency as the SEA Games draws near.
+
+"We are the target of every team," coach Pat Aquino told the Inquirer. "We can't even prepare for one country anymore. Everyone wants to beat us."
+
+"We know it's gonna be hard, just like every other year, nothing's gonna be given," said guard Ella Fajardo. "But the things that we do behind the scenes, practicing every day ... it [will show] on the court when we're there [in Cambodia]. We're doing everything on our part to prepare."
+
+That means playing against teams like a boys squad from high school powerhouse Xavier and taking everything thrown at them, and using uncanny teamwork to negate their opponents' strength and athleticism.
+
+"These girls are more than ready. They will mix it up regardless of who you put in front of them," Aquino said.
+
+In Cambodia, the women will face teams that are looking to stop the Philippines from completing a "three-peat" and which have done extensive preparation-including competing among themselves-just to strip Gilas of its gold.
+
+But ask the women about the pressure that comes with that and they will just smile it off.
+
+"Pressure will always be there," said Jack Animam, whose return to the national squad has generated a huge wave of optimism among her teammates. "We know that whatever we do, there will always be pressure. But among ourselves, we keep saying, 'let's not think about it, do what we're supposed to do and just follow coach's game plan.'"
+
+
+    </p>
+
+    <img class="InContent_Imgs" src="p2.png"> 
+    <h5>Gilas Pilipinas Women in training. -FRANCIS OCHOA    </h5>
+    <p>That last part is what thrills Aquino the most.
+
+        "You know, I've said this before, as a coach, whatever I teach them, I see them doing it," Aquino said. "They can get really physical, sometimes more physical than men. If they want to grab for the ball they go out there and just dive for it. They really want to show everybody what they can do."
+        
+        "They've won the gold medal back-to-back and yet, there they are, just eager to show more and prove themselves more," Aquino added.
+        That need to prove themselves more produces most of the pressure the team feels nowadays.
+        
+        "It seems like there's a lot of pressure from the outside because we're trying to get support, to try to hype up that we're trying to get the three-peat," Fajardo said. "But I think within ourselves, we're very good at staying together ... and building our confidence every day. We just focus on ourselves."
+        
+        "We just ask the fans to continue the support," Animam said. "We have something to prove, we're exciting to watch and we're doing this not just for ourselves but for our country."
+        
+        "We hope to show fans that we deserve their trust and that we can play at a really high level," team captain Janine Pontejos said.
+        
+        And so they collect floor burns while diving for loose balls and get hit hard in the jaw while applying pressure at garbage time-all during an exhibition match-just to earn a little of a country's love and attention.
+        
+        These girls don't know it yet, but they're not the Gilas Pilipinas that has something to prove.
+      
+        </p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 36
+
+cid = 36
+ctype = 1 //Sports=1, Foods=2, Politics=3
+ctitle = "MLB: Shohei Ohtani has 3 doubles as Dodgers rout Nationals";
+cdesc = "WASHINGTON - Shohei Ohtani had three doubles to improve his major league-leading batting average to .371, rookie Landon Knack got his first victory and the Los Angeles Dodgers routed the Washington Nationals 11-2 in the MLB on Wednesday night.";
+cdate = new Date("2024-04-25T17:39:00"); //APR 25, 2024 2:39 PM PHT+8
+csource = "https://sports.inquirer.net/563047/mlb-shohei-ohtani-has-3-doubles-as-dodgers-rout-nationals"
+cauthor = "Mang Inasal President Mike V. Castro.";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 36
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "MLB: Shohei Ohtani has 3 doubles as Dodgers rout Nationals";
+    cdesc = "WASHINGTON - Shohei Ohtani had three doubles to improve his major league-leading batting average to .371, rookie Landon Knack got his first victory and the Los Angeles Dodgers routed the Washington Nationals 11-2 in the MLB on Wednesday night.";
+    cdate = new Date("2024-04-25T17:39:00"); //APR 25, 2024 2:39 PM PHT+8
+    csource = "https://sports.inquirer.net/563047/mlb-shohei-ohtani-has-3-doubles-as-dodgers-rout-nationals"
+    cauthor = "Mang Inasal President Mike V. Castro.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <h5>Los Angeles Dodgers designated hitter Shohei Ohtani prepares to bat during the sixth inning of the team's MLB game against the Washington Nationals at Nationals Park, Wednesday, April 24, 2024, in Washington. ( AP Photo/Alex Brandon)    </h5>
+    <p>
+        WASHINGTON - Shohei Ohtani had three doubles to improve his major league-leading batting average to .371, rookie Landon Knack got his first victory and the Los Angeles Dodgers routed the Washington Nationals 11-2 in the MLB on Wednesday night.
+
+The Dodgers had a season-high 20 hits en route to their third straight victory, with Mookie Betts and Will Smith each having four hits and Andy Pages homering.
+
+Nick Senzel homered for Washington. The Nationals didn't have a baserunner after the second inning.
+
+Ohtani went 3 for 6, hitting RBI doubles in the eighth and ninth innings. He leads the majors in slugging percentage (.695), OPS (1.128), extra-base hits (21) and doubles (14). He is hitting .429 during his nine-game hitting streak.
+
+READ: Ohtani passes Matsui for most MLB homers by Japanese-born player
+
+"His average exit velocity on balls he puts in play, he's got to be in a category by himself," Dodgers manager Dave Roberts said. "The ball just does different things when it comes off his bat."
+
+A night after ripping a 118.7 mph solo shot in the ninth inning - the hardest-hit home run of his career - Ohtani smashed a 115.6 mph double to right-center in the first inning off Jake Irvin (1-2). Ohtani came around two batters later on Smith's single.
+
+Betts pushed the lead to 3-0 in the second on a two-run single against a drawn-in infield.
+
+Senzel led off the Nationals' second with a homer into the bushes in the visiting bullpen in left. Washington then scored again without putting the ball in plan, sandwiching two walks around a hit batsman before Joey Meneses pushed in a run with a walk.
+
+READ: MLB: Shohei Ohtani delivers for Dodgers in home opener
+
+That was all the Nationals managed against Knack (1-1), who lost his debut against Washington last week. Knack retired his last 13 batters and struck out five over six innings.
+
+"I was just kind of missing off the edges," Knack said about his second inning. "I'm a guy who really needs to be more north and south with everything, so it was basically just trying to get everything back over instead of trying to be too perfect, especially with the slider and changeup. It was just trying to figure it out and execute quick."
+
+Max Muncy hit an RBI single in the third and Lux chased Irvin with a two-out, two-run single in the fifth. Irvin allowed six runs on 12 hits in 4 2/3 innings while striking out three.
+
+"He made some good pitches at times," Washington manager Dave Martinez said. "He just didn't have any consistency today. He fell behind, and that's what got him."
+
+Pages homered with one out in the eighth off Tanner Rainey, and Betts and Ohtani followed with back-to-back doubles to score another run.
+
+TRAINER'S ROOM
+Dodgers: RHP Blake Treinen (bruised lung) allowed three runs while getting one out Tuesday in his first rehabilitation appearance for Triple-A Oklahoma City. ... RHP Walker Buehler (elbow) allowed five runs (three earned) and struck out five in four innings Wednesday for Oklahoma City.
+
+Nationals: Washington placed OF Lane Thomas (sprained left MCL) on the 10-day injured list and recalled INF Trey Lipscomb from Triple-A Rochester. Thomas was injured stealing second base in the fifth inning Monday.
+
+<p>
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 37
+
+cid = 37
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "Messi's new Inter Miami soccer jersey replaces crypto firm logo with cruise operator icon";
+    cdesc = `Argentinian superstar Lionel Messi and his teammates at Major League Soccer's Inter Miami will wear the icon of Royal Caribbean International on their jerseys for the upcoming campaign. The Florida-based cruise operator revealed the news at an unveiling event and described the transaction as a "multiyear partnership." The club's sponsorship switch appeared to mark another step away from the crypto industry in Miami.`;
+    cdate = new Date("2024-01-25T5:02:00"); //JAN 25, 2024 5:02 AM PHT+8
+    csource = "https://www.cnbc.com/2024/01/25/lionel-messi-inter-miami-soccer-jersey-replaces-crypto-with-cruises.html"
+    cauthor = "Sam Meredith";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 37
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "Messi's new Inter Miami soccer jersey replaces crypto firm logo with cruise operator icon";
+    cdesc = "Argentinian superstar Lionel Messi and his teammates at Major League Soccer's Inter Miami will wear the icon of Royal Caribbean International on their jerseys for the upcoming campaign.
+             The Florida-based cruise operator revealed the news at an unveiling event and described the transaction as a "multiyear partnership."
+             The club's sponsorship switch appeared to mark another step away from the crypto industry in Miami.";
+    cdate = new Date("2024-01-25T5:02:00"); //JAN 25, 2024 5:02 AM PHT+8
+    csource = "https://www.cnbc.com/2024/01/25/lionel-messi-inter-miami-soccer-jersey-replaces-crypto-with-cruises.html"
+    cauthor = "Sam Meredith.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <h5>Benjamin Cremaschi #30, Lionel Messi #10 and Luis Suarez #9 of Inter Miami CF unveil new jerseys during the Royal Carribean & Inter Miami CF Launch Event on January 23, 2024 in Miami, Florida.
+        Megan Briggs | Getty Images Sport | Getty Images</h5>
+S    <p>
+    Argentinian superstar Lionel Messi and his teammates at Major League Soccer's Inter Miami will wear the icon of Royal Caribbean International on their jerseys for the upcoming campaign, replacing crypto investment firm XBTO as the club's main sponsor.
+
+    In a statement published Tuesday, Royal Caribbean International announced it would soon "make its mark front and center" on the Inter Miami's team's soccer jerseys.
+    
+    The Florida-based company, one of the world's largest cruise line operators, revealed the news at an unveiling event and described the transaction as a "multiyear partnership." It did not disclose financial details of the agreement.
+    
+    "It's exciting to now combine forces, and I can't wait for the future that our two organizations will forge for our industries, for our fans around the world, and of course, for our local communities here in South Florida," said Royal Caribbean Group President and CEO Jason Liberty in the statement.
+    
+    The sponsorship deal is likely seeking to harness Messi's popularity ahead of the eight-time Ballon d'Or winner's second season at Inter Miami.
+    
+    Alongside partnering with Hard Rock International for a "Milanese style" chicken sandwich, Messi recently helped Royal Caribbean International to launch its enormous "Icon of the Seas" ship.
+
+<p>
+    <img class="InContent_Imgs" src="p1.png"> 
+<p>XBTO, a global cryptofinance firm, had previously announced a multi-year partnership with Inter Miami in September 2021 in what was thought to have been among the biggest MLS deals.
+
+    Inter Miami said at the time that the XBTO agreement represented a "significant milestone in the mainstream acceptance of crypto" and inched Miami "closer to becoming the mecca of the crypto world."
+    
+    The club's sponsorship switch for the forthcoming MLS campaign, which gets underway next month, appeared to mark another step away from the crypto industry in Miami.
+    
+    Last year, for example, the home arena for the NBA's Miami Heat changed its name from the FTX Arena to the Kaseya Center. Crypto exchange FTX, once valued at $32 billion, collapsed in November 2022 following a liquidity crisis.
+    
+    Inter Miami's pivot to a cruise operator comes as the industry continues to recover from the Covid-19 pandemic. U.S. cruise operators and travel agents told Reuters late last year that 2024 was looking like a banner year for cruise vacations after being badly hit during the Covid-19 crisis.
+    
+    </p>
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 38
+
+cid = 38
+ctype = 1 //Sports=1, Foods=2, Politics=3
+ctitle = "'Let's make it a cage fight': Miami Heat shock Boston Celtics to level first-round playoff series";
+cdesc = "The Miami Heat stunned the Boston Celtics 111-101 at TD Garden on Wednesday to level their first-round playoff series at 1-1.";
+cdate = new Date("2024-04-25T5:32:00"); //APR 25, 2024 5:32 AM PHT+8
+csource = "https://edition.cnn.com/2024/04/25/sport/miami-heat-shock-boston-celtics-playoffs-spt-intl/index.html"
+cauthor = "Matias Grez, CNN";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 38
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "'Let's make it a cage fight': Miami Heat shock Boston Celtics to level first-round playoff series";
+    cdesc = "The Miami Heat stunned the Boston Celtics 111-101 at TD Garden on Wednesday to level their first-round playoff series at 1-1.";
+    cdate = new Date("2024-04-25T5:32:00"); //APR 25, 2024 5:32 AM PHT+8
+    csource = "https://edition.cnn.com/2024/04/25/sport/miami-heat-shock-boston-celtics-playoffs-spt-intl/index.html"
+    cauthor = "Matias Grez, CNN.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <h5>The Miami Heat upset the Boston Celtics to level the series. David Butler II/USA TODAY Sports/Reuters    </h5>
+    <p>
+        The Miami Heat stunned the Boston Celtics 111-101 at TD Garden on Wednesday to level their first-round playoff series at 1-1.
+
+The Heat, playing without injured talisman Jimmy Butler, knocked down a franchise playoff record of 23 three-pointers to upset the Celtics, with Tyler Herro hitting six of them to lead the team in scoring with 24 points.
+
+Herro also recorded 14 assists, while teammate Bam Adebayo also notched a double-double with 21 points and 10 rebounds.
+
+The Heat also got a big night from Caleb Martin, who matched Adebayo's 21 points, including making five of his six three-point attempts.
+
+After a beatdown by the Celtics in Game 1, few would have expected such a drastic turnaround in Game 2.
+
+However, this is the Heat, a team used to pulling off the improbable, and Miami fans will perhaps start to feel confident of emulating last season's incredible playoff run, when the team reached the NBA Finals after entering via the play-in.
+
+Herro admitted the team "lost bad" in the series opener but was proud of how "everybody responded" on Wednesday night.
+
+"We've been doubted a lot through our playoff runs, people saying we couldn't do a lot of stuff that we [eventually] did," Adebayo added, per ESPN.
+
+"So for me and my team, why lose belief now? Our backs are against the wall. Everybody's against us. So just use that as fuel.
+
+<p>
+    <img class="InContent_Imgs" src="p1.png"> 
+    <h5>Tyler Herro knocked down six three-pointers for Miami. Brian Babineau/NBAE/Getty Images    </h5>
+    <p>"Our guys believe we can win. So, let's make it mano a mano - a cage fight. Let's hoop."
+
+        Feeling confident, Butler posted a photo on Instagram of his face photoshopped onto Celtics star Jaylen Brown's body. Beneath is Brown's quote from last season's Conference Finals when the Celtics were 3-0 down to the Heat: "Don't let us get one."
+        
+        The Heat eventually won the series in seven.
+        
+        Brown scored a game high 33 points for the Celtics, with Jason Tatum adding 28.
+        
+        The teams now head to Miami to play the first of two games on Saturday.
+        
+        OKC hammer the Pelicans
+        Elsewhere, the youthful Oklahoma City Thunder thrashed the New Orleans Pelicans 124-92 to open up a 2-0 series lead.
+        
+        Shai Gilgeous-Alexander scored a game high and a personal playoff high 33 points on 68.4% shooting, while Chet Holmgren added 26 points and Jalen Williams 21 points.
+        
+        The Pelicans, still without Zion Williamson due to a hamstring injury picked up during the play-in, were led by 19 points from big man Jonas Valanciunas, while Brandon Ingram and Herb Jones each added 18 points.
+    </p>
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+//#region Report 39
+
+cid = 39
+ctype = 1 //Sports=1, Foods=2, Politics=3
+ctitle = "'I walked through the fire.' Ryan Garcia was three pounds overweight for major fight. It went ahead and he shocked the world";
+cdesc = "He came, he saw, he jabbed and then his life outside of the ring appeared to unravel.";
+cdate = new Date("2024-04-24T11:32:00"); //APR 24, 2024 11:32 AM PHT+8
+csource = "https://edition.cnn.com/2024/04/24/sport/ryan-garcia-devin-haney-boxing-spt-intl/index.html"
+cauthor = "Jonny Velasquez and Ben Morse";
+
+chtml = `
+<!-- You may edit this (optional)
+    cid = 39
+    ctype = 1 //Sports=1, Foods=2, Politics=3
+    ctitle = "'I walked through the fire.' Ryan Garcia was three pounds overweight for major fight. It went ahead and he shocked the world";
+    cdesc = "He came, he saw, he jabbed and then his life outside of the ring appeared to unravel.";
+    cdate = new Date("2024-04-24T11:32:00"); //APR 24, 2024 11:32 AM PHT+8
+    csource = "https://edition.cnn.com/2024/04/24/sport/ryan-garcia-devin-haney-boxing-spt-intl/index.html"
+    cauthor = "Jonny Velasquez and Ben Morse.";
+-->
+
+<style>
+    #InContent { width:786px; }
+    #InContent .InContent_Imgs { width:100%; }
+    #InContent .InContent_Div { text-align: center; }
+    #inContent .InContent_Imgs_port { height:640px; }
+</style>
+
+<div id="InContent">
+
+    <!-- Content Info -->
+    <h1 id="InContent_Title">Title</h1>
+    <div><label>Date: </label><span id="InContent_Date">January 1, 1970</span></div>
+    <div><label>Author: </label><span id="InContent_Author">Unknown</span></div>
+
+    <hr> <!-- Inside the Content (Only edit this) -->
+
+    <img class="InContent_Imgs" src="pcover.png"> 
+    <h5>Ryan Garcia reacts during his fight against Devin Haney. Al Bello/Getty Images    </h5>
+    <p>
+        He came, he saw, he jabbed and then his life outside of the ring appeared to unravel.
+
+        Ryan Garcia was seen as poster boy for boxing, training alongside the likes of Canelo Alvarez and Oscar Valdez. The boxer would also frequently reference the importance of his religious faith.
+        
+        "Thank you, the Lord Jesus Christ. The King of Kings, Lord of Lords, thank you," Garcia said at a pre-fight media conference.
+        
+        Then in January 2024, Garcia and his wife Andrea Celina, who have two children, announced their divorce.
+        
+        Boxing redemption
+        Garcia has a big smile on his face. He does a little dance and shakes his shoulders in a relaxed manner.
+        
+        His joyous, carefree attitude belies what's at stake. Garcia is within seconds of beating undefeated WBC super lightweight champion Haney in a performance which has got the boxing world talking - and then some.
+        
+        Ahead of the fight, Garcia missed the weight limit for the bout, which ended his chances of competing for a world title on April 20. To miss the weight limit for a world title fight isn't unheard of, but it's rare.
+        
+        Nonetheless, the 25-year-old Garcia knocked down Haney three times in a majority decision victory last Saturday in front of a sold-out crowd at Barclays Center in Brooklyn, New York.
+        
+        It's a result which not only reestablishes Garcia atop the boxing food chain, but also caps off a surreal week in his life.
+        
+        "I don't give a f**k what people say about me," Garcia said after the fight. "I walked through the fire and still held it down and still beat f**king Devin Haney and still drink every day."
+        
+        "Not necessarily proud of that, but I'm just saying it was a statement to show you, you guys can't really f**k with me."
+        <p>
+
+            <img class="InContent_Imgs" src="p1.png"> 
+            <h5>Garcia celebrates after knocking down Haney. Cris Esqueda/Golden Boy/Getty Images  </h5>
+            <p>Maverick
+                From Muhammad Ali and Mike Tyson to Tyson Fury and Deontay Wilder, boxing has had plenty of maverick fighters.
+                
+                However, the behavior of Garcia, who had previously had the reputation of a clean-cut boxing talent with the world at his feet, was so erratic on social media in the weeks preceding Saturday's bout that some people thought the 25-year-old shouldn't have been allowed to fight Haney.
+                
+                "In the ring, I'm gonna beat your a**," Garcia posted on Instagram ahead of the fight. "You thought I wasn't gonna make it to the fight. I bet you hoped I would've got pulled out. I bet you hoped it was some kind of mental health issues."
+                
+                Many speculated that Ryan was going through a mental health crisis, including boxing promoter Eddie Hearn.
+                
+                "It's like the Truman Show, watching Ryan Garcia implode," Hearn said in an interview with Boxing Social.
+                
+                Garcia hasn't shied away from talking about his struggles with mental health. After a knockout win over Luke Campbell in 2021, he stepped away from the sport of boxing to deal with his psychological struggles.
+                
+                "I had no choice. It was so intense. Usually, I can get past things because I'm mentally strong," Garcia told The Breakfast Club.
+                
+                "This one was different. It was like nope, you're not getting up today. It was everything. I thought I was losing my mind."
+                
+                Garcia returned to the sport in April 2022 to secure a unanimous decision win over Emmanuel Tagoe in San Antonio, Texas.
+                
+                'I'm perfect'
+                Fast forward to April 2024 and Garcia ramps up the braggadocio levels ahead of his fight with Haney, taking to Instagram to say he's been cleared to fight after a mandatory drug test and mental health evaluation.
+                
+                "I proved to everybody that I don't do drugs. I'm perfect," Garcia said in a video. "I'm perfectly fine. I've been evaluated. I had a meeting with the state commission. I don't understand why people continue to judge me so hard. I'm just having fun."
+                
+                CNN asked the New York State Athletic Commission for details as to how it evaluated Garcia's fitness to fight.
+                
+                "The commission works to protect the health and safety of all participants in combative sports, and to preserve the integrity of combative sport competition in New York State," said the Commission in a statement.
+                
+                "The Commission has broad authority to assess the medical fitness of professional athletes (mental and physical health included), and engages in a thorough case-by-case diligence process with every professional athlete based on their personal medical history and circumstances prior to their participation in competition.
+                
+                "No match is held until the professional athletes are found medically fit for competition. The Commission will not comment on the specific medical testing and evaluations of any particular person."
+                
+                CNN has also reached out to Garcia's representatives to offer the boxer the opportunity to comment.
+                
+                Underdog
+                However, at the weigh-in, Garcia takes to the stage and chugs what appeared to be a beer. He later told Youtuber and fighter Jake Paul in a recorded call that it was apple juice and sparkling water.
+                
+                The weight for the fight had been set at 140 pounds, but, to the surprise of many, Garcia came in at just over 143 pounds.
+                
+                One who wasn't surprised was Haney, who throughout the pre-fight press conference, predicted Garcia would miss weight.
+                
+                During the press conference for the fight, Haney asked Garcia to pay him $500,000 per pound if he missed weight. Haney later said that Garcia honored the agreement by paying him the $1.5 million.
+                
+                According to sources who spoke to ESPN, Garcia forfeited upward of $600,000 of his purse to step into the ring with Haney.
+                
+                As a result, Garcia's shot at winning the WBC super lightweight was lost but he still fought Haney, despite coming into the bout as a huge underdog.
+                
+                In the first round, Garcia pounced on Haney with constant pressure. Haney felt his power when he connected flush with a left hook. In the second, third and fourth rounds, Haney made adjustments and won by utilizing his jab.
+                
+                <p>
+                <img class="InContent_Imgs" src="p2.png"> 
+                <h5>Garcia throws a punch at Haney. Cris Esqueda/Golden Boy/Getty Images</h5>
+                <p>But Garcia's speed and power proved to be too much as the fight entered the later rounds. For the first time in Haney's professional career, Garcia was able to knock him to the canvas in the seventh, 10th and 11th rounds.
+
+                    In the end, Garcia's hand was raised, winning by the judges' scores of 115-109, 114-110 and 112-112.
+                    
+                    Although he missed a shot at claiming a championship belt, Garcia exited Saturday's fight with his reputation greatly enhanced after handing Haney his first professional defeat.
+                    
+                    And if Garcia's reputation as one of the most exciting boxing talents took a hit last year when he suffered his first professional defeat to Gervonta Davis, Saturday's victory is a giant step in rebuilding his boxing pedigree.
+                    
+                    "Come on, guys, you really thought I was crazy? You all lost your own minds." Garcia said in his post-fight interview. "You guys overegg everything."
+                    
+                    Garcia and Haney fought six times in the amateurs, each winning three fights. After Saturday night's fight, both boxers agreed to a rematch.
+                    
+                    </p>
+
+
+    <hr> <!-- Outside the Content (Never edit past this) -->
+
+    <label>Source: </label>
+    <a id="InContent_Source">
+    </a>
+</div>
+`
+
+NewsContents.newContent(new NewsContent(cid, ctype, ctitle, cdesc, cdate, csource, cauthor, chtml));
+
+//#endregion
+
+/*
 
 //#region Report Template
 
@@ -2557,8 +4055,6 @@ function PagesNews(page, maxpage) {
         document.getElementById("NewsList_Index7")  //6
     ];
     let nextpage = document.getElementById("NewsList_NextPage");
-
-    console.log("reset")
 
     //reset
     prevpage.style.display = 'none';
