@@ -943,6 +943,26 @@
             display: none;
         }
 
+        #NewsList_PagesDiv {
+            text-align: center;
+        }
+
+        .NewsList_Pages {
+            display: none; /* inline */
+        }
+
+        /*
+        #NewsList_PrevPage {}
+        #NewsList_Index1 {}
+        #NewsList_Index2 {}
+        #NewsList_Index3 {}
+        #NewsList_Index4 {}
+        #NewsList_Index5 {}
+        #NewsList_Index6 {}
+        #NewsList_Index7 {}
+        #NewsList_NextPage {}
+        */
+
         #NewsList_Ads {
             position: -webkit-sticky;
             position:sticky;
