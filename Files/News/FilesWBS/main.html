@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title id="Title">Title</title>
+        <title id="Title">The Fisher Valley News Website</title>
         <link rel="stylesheet" href="style.css">
         <style id="Style">
         </style>
@@ -9,6 +9,8 @@
         <link rel="stylesheet" href="bootstrap.css">
         <script src="bootstrap.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="mainRes/Website/LogoDefault.png" type="image/icon type">
+
     </head>
 
     <body id="Body">
@@ -202,7 +204,7 @@
                     <a href="https://www.minecraft.net/">
                         <img class="NewsList_Ads_Ad" src="mainRes/Ads/Ad2.jpg">
                     </a>
-                    <a href="https://www.burgerking.com.ph/">
+                    <a href="mainRes/Ads/Ad4.html">
                         <img class="NewsList_Ads_Ad" src="mainRes/Ads/Ad4.jpg">
                     </a>
                 </div>
@@ -215,8 +217,8 @@
                 <article id="NewsList_Main">
                     <div id="NewsList_Main_Content">
                         <div id="NewsList_SearchDiv">
-                            <input>
-                            <button>Search</button>
+                            <input id="NewsList_SearchIndex">
+                            <button id="NewsList_SearchButton" onclick="LoadNews('NewsList', 'SearchGeneral', 1);">Search</button>
                         </div>
 
                         <div class="NewsList_List"> <!-- was Home_Suggestions -->
@@ -437,43 +439,96 @@
         </div>
 
         <div id="Form_Privacy">
-
-            <h1>Privacy Policy</h1>
-            <p>Our Website (FVNW) wants you to protect your privacy, because we value you. So you can see in this page what possible things we can get to you.
-            </p>
-            
-            <h2>Information we may collect</h2>
-            <p>We're not collecting any kinds of your data, when you enter in our webpage. We do not use cookies either, or any kinds of data collecting,tracking thing that may collect
-                your information.
-            </p>
-
-            <h3>Policy Changes</h3>
-            <p>We inform you, if we have new or update in our policy. To insure your date privacy in our webpage, to have chill while you visiting our website. Morely,
-            </p>
-
-            <h4>Contact</h4>
-            <p>If you have any concern and questions, dont hesitate to ask and contact us in this website and DM's.</p>
-
+            <div>
+                <h1>Privacy Policy</h1>
+                <p>Our Website (FVNW) wants you to protect your privacy, because we value you. So you can see in this page what possible things we can get to you.
+                </p>
+            </div>
+            <div>
+                <h2>Information we may collect</h2>
+                <p>We're not collecting any kinds of your data, when you enter in our webpage. We do not use cookies either, or any kinds of data collecting,tracking thing that may collect
+                    your information.
+                </p>
+            </div>
+            <div>
+                <h2>Policy Changes</h2>
+                <p>We inform you, if we have new or update in our policy. To insure your date privacy in our webpage, to have chill while you visiting our website. Morely,
+                </p>
+            </div>
+            <div>
+                <h2>Contact</h2>
+                <p>If you have any concern and questions, dont hesitate to ask and contact us in this website and DM's.</p>
+            </div>
         </div>
 
         <div id="Form_Terms">
+            <div>
+                <h1>Terms of Service</h1>
+                By accessing this website, you are agreeing to be bound by these terms of service, all applicable laws and regulations, and agree that you are responsible for compliance with any applicable local laws.
 
-            <h1>Terms of Service</h1>
-            <p></p>
-
+                If you do not agree with any of these terms, you are prohibited from using or accessing this site. The materials contained in this website are protected by applicable copyright and trademark law unless marked otherwise.
+            </div>
+            <div>
+                <h2>Disclaimer</h2>
+                The materials on this website are provided on an 'as is' basis. This website makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+            
+                Further, We do not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.
+            </div>
+            <div>
+                <h2>Accuracy of materials</h2>
+                The materials appearing on this website could include technical, typographical, or photographic errors. We does not warrant that any of the materials on its website are accurate, complete or current. We may make changes to the materials contained on its website at any time without notice. However We do not make any commitment to update the materials.
+            </div>
+            <div>
+                <h2>Links</h2>
+                We the creators of the website have not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by us. Use of any such linked website is at the user's own risk.
+            </div>
+            <div style="margin-bottom:0px">
+                <h2> Modifications</h2>
+                We may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.
+            </div>
         </div>
 
         <div id="Form_Support">
-
-            <h1>How may we help you?</h1>
-            <p></p>
+            <h1>Support</h1>
+            <p>What can we do for you?</p>
+<div>
+<h2> I would like to report an article</h2>
+Please contact us using the media below, and send us the details of an inappropriate article
+</div>
+<div>
+<h2> I would like to submit my articles here</h2>
+You must have an account in this website, then contact us using the following media below. then we will add that account a permission to add articles to this website
+</div>
+<div>
+<h2> Can i advertise in this website?</h2>
+Yes, Contact us about the details of your advertisement
+</div>
+<p>
+Contact us:<br>
+Gmail: ragerock90@gmail.com<br>
+Discord: .lednar<br>
+Facebook: https://www.facebook.com/RandellArrogante1/
+            </p>
 
         </div>
 
         <div id="Form_About">
-
-            <h1>Credits to My team:</h1>
-            <p></p>
+            <div id="Form_About_BGdim">
+                <h1>About</h1>
+                <p>
+                    This website was made in April 2024, to discuss news about the interesting and most important stuff of our lives including sports, foods and politics.
+                    We look for information in the internet and create our own description based on the source from the internet and their experiences.
+                    We want you to know that we don't lie, but if contradictions ever come up, you can always contact us.
+                </p>
+                <h1>Credits:</h1>
+                <p>
+Lead Programmer: Randell Arrogante <br>
+Programmer: Arjay Cornillez <br>
+Lead Designer: Jasper Vinarao <br>
+Designer: Hannah Salarda <br>
+QA: Ramil Maddoy <br>
+                </p>
+            </div>
 
         </div>
 
@@ -490,9 +545,15 @@
             </aside>
             <header id="Main_Header">
                 <button id="Main_LogoButton" onclick="LoadPage('Home')"><img id="Main_Logo" src="mainRes/Website/LogoDefault.png"></button>
+
+                <div id="Main_SearchDiv">
+                    <input id="Main_SearchIndex">
+                    <button id="Main_SearchButton" onclick="NewsContents.loadNewsList(0); LoadNews('NewsList', 'MainSearchGeneral', 1);">Search</button>
+                </div>
+
                 <div id="Main_TopRight">
                     <div id="Main_TopRightD1">
-                        <label id="Main_HGreetings">Greetings, <br>Guest</label>
+                        <label id="Main_HGreetings">Greetings, Guest</label>
                     </div>
                     <div id="Main_TopRightD2">
                         <div><button id="Main_LogButton" onclick="LogButton();">Login</button></div>

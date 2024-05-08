@@ -66,28 +66,50 @@
         margin:16px;
     }
 
+    #Main_SearchDiv {
+        text-align: center;
+        margin-top:24px;
+    }
+    
+    #Main_SearchDiv * {
+        font-size: 18px;
+        padding: 11px;
+    }
+
+    #Main_SearchDiv input {
+        width: 30%;
+        /*
+        border-color: blue;
+        background: lightcyan;
+        */
+    }
+
+    #Main_SearchButton {
+        /*
+        background: lightcyan;
+        */
+    }
+
     #Main_TopRight {
         display: grid;
-        grid-template-columns: 304px 128px 128px;
-
-        position:fixed;
-        top:0;
-        right:0;
-
-        width:560px;
-        height:128px;
+        grid-template-columns: 320px 124px 64px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 560px;
+        height: 128px;
     }
 
     #Main_TopRightD1 {
         display: inline;
-        align-content: center;
     }
 
     #Main_HGreetings {
         
         margin:0;
 
-        width:304px;
+        width: 256px;
+
 
         color:white;
         font-size:20px;
@@ -100,9 +122,12 @@
     }
 
     #Main_TopRightD2 {
-        display: inline;
+        display: flex;
         align-content: center;
         text-align: center;
+        top: 16px;
+        right: 64px;
+        position: relative;
     }
 
     #Main_LogButton {
@@ -554,7 +579,8 @@
 
             background-color:white;
             width:1120px;
-            min-height:calc(100% - 168px);
+            min-height:calc(100% - 200px);
+            padding: 8px;
 
             display: none;
         
@@ -567,35 +593,16 @@
 
         }
 
-        #Form_Privacy h1 {
-            color: black;
-            text-shadow: 2px 2px 4px #000000;
-        }
-
-        #Form_Privacy p {
-            font-family: 'Lucida Console', sans-serif;
-        }
-
-        #Form_Privacy h2 {
-            text-shadow: 2px 2px 4px #000000;
-            font-size: large;
-        }
-
-        #Form_Privacy h3 {
-            text-shadow: 2px 2px 4px #000000;
-            font-size: large;
-        }
-        
-        #Form_Privacy h4 {
-            text-shadow: 2px 2px 4px #000000;
-            font-size: large;
+        #Form_Privacy div {
+            margin-bottom:32px;
         }
 
     /*#endregion*/
 
     /*#region Terms*/
         
-        #Form_Terms  {
+        #Form_Terms {
+
             position:absolute;
             top:132px;
             left:50%;
@@ -603,7 +610,8 @@
 
             background-color:white;
             width:1120px;
-            min-height:calc(100% - 168px);
+            min-height:calc(100% - 200px);
+            padding: 8px;
 
             display: none;
         
@@ -616,9 +624,10 @@
 
         }
 
-        #Form_Terms h1{
-            
+        #Form_Terms div {
+            margin-bottom:30px;
         }
+
     /*#endregion*/
 
     /*#region Support*/
@@ -632,7 +641,8 @@
 
             background-color:white;
             width:1120px;
-            min-height:calc(100% - 168px);
+            min-height:calc(100% - 200px);
+            padding: 8px;
 
             display: none;
         
@@ -645,43 +655,25 @@
 
         }
 
-        #Form_Privacy h1 {
-            color: black;
-            text-shadow: 2px 2px 4px #000000;
-        }
-
-        #Form_Privacy p {
-            font-family: 'Lucida Console', sans-serif;
-        }
-
-        #Form_Privacy h2 {
-            text-shadow: 2px 2px 4px #000000;
-            font-size: large;
-        }
-
-        #Form_Privacy h3 {
-            text-shadow: 2px 2px 4px #000000;
-            font-size: large;
-        }
-        
-        #Form_Privacy h4 {
-            text-shadow: 2px 2px 4px #000000;
-            font-size: large;
+        #Form_Support div {
+            margin-bottom:32px;
         }
 
     /*#endregion*/
 
     /*#region About*/
         
-        #Form_About  {
+        #Form_About {
             position:absolute;
             top:132px;
             left:50%;
             transform:translate(-50%,0);
 
             background-color:white;
+            background-image: url("mainRes/Website/About.jpg");
+            background-size: cover;
             width:1120px;
-            min-height:calc(100% - 168px);
+            min-height:calc(100% - 200px);
 
             display: none;
         
@@ -694,8 +686,21 @@
 
         }
 
-        #Form_Terms h1{
-            
+        #Form_About_BGDim {
+            width:100%;
+            height:100%;
+            position:inherit;
+            background-color: rgba(0, 0, 0, 0.500);
+            color:white;
+            padding: 8px;
+        }
+
+        #Form_About h1 {
+            font-size:64px;
+        }
+
+        #Form_About p {
+            font-size:32px;
         }
     /*#endregion*/
 
