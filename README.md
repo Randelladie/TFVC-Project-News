@@ -4,6 +4,10 @@ This is a 1st year college project about making a web system, the conditions of 
 This web design has functions that display the usefulness and possibilities of javascript, you may use these as references to level up your javascript knowledge.
 "News" was the chosen theme for our project to start with.
 
+### Disclaimer
+
+I would like you to be aware that most of the content I have put in here are not mine, they are credited to their owner and links
+
 ## Accounts
 
 I am using object arrays that can store more than 2 values that can be a different datatype.
