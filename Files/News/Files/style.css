@@ -41,7 +41,7 @@
     #Main_Header {
         position:fixed;
         width:100%;
-        height:64px;
+        height:128px;
         top:0;
         left:0;
 
@@ -58,56 +58,111 @@
         position: fixed;
         top: -16px;
         left: -16px;
-        width:64px;
-        height:64px;
+        width:128px;
+        height:128px;
 
         visibility: visible;
 
         margin:16px;
     }
 
-    #Main_HGreetings {
+    #Main_SearchDiv {
+        text-align: center;
+        margin-top:24px;
+    }
+    
+    #Main_SearchDiv * {
+        font-size: 18px;
+        padding: 11px;
+    }
+
+    #Main_SearchDiv input {
+        width: 30%;
+        /*
+        border-color: blue;
+        background: lightcyan;
+        */
+    }
+
+    #Main_SearchButton {
+        /*
+        background: lightcyan;
+        */
+    }
+
+    #Main_TopRight {
+        display: grid;
+        grid-template-columns: 320px 124px 64px;
         position: fixed;
-        width:192px;
-        height:48px;
-        top:8px;
-        right:80px;
+        top: 0;
+        right: 0;
+        width: 560px;
+        height: 128px;
+    }
+
+    #Main_TopRightD1 {
+        display: inline;
+    }
+
+    #Main_HGreetings {
+        
         margin:0;
+
+        width: 256px;
+
+
         color:white;
         font-size:20px;
         overflow: hidden;
         text-overflow: ellipsis;
         text-wrap: nowrap;
+        padding:24px;
+
+        font-weight: bold;
+    }
+
+    #Main_TopRightD2 {
+        display: flex;
+        align-content: center;
+        text-align: center;
+        top: 16px;
+        right: 64px;
+        position: relative;
     }
 
     #Main_LogButton {
-        position: fixed;
-        top:8px;
-        right:80px;
-        margin:0;
+        margin:2px;
+        font-size:24px;
+        width:102px;
     }
 
     #Main_RegButton {
-        position: fixed;
-        top:32px;
-        right:80px;
-        margin:0;
+        margin:2px;
+        font-size:24px;
+        width:102px;
     }
 
     #Main_CategoryButton {
-        position: fixed;
-        width:32px;
-        height:32px;
-        top:16px;
-        right:16px;
-        margin:0;
-
-        border:none;
+        position: static;
+        border: none;
+        visibility:hidden;
     }
 
     #Main_CategoryButtonIcon {
-        width:100%;
-        height:66%;
+        width:64px;
+        height:64px;
+        transform:translate(-3px,-3px);
+        visibility: visible;
+    }
+
+    #Main_CategoryButtonBackground {
+        position:absolute;
+        height:57px;
+        width:57px;
+        margin:36px;
+        background-color:rgb(69, 111, 188);
+
+        visibility: visible;
     }
 
     #Main_AsideCategory {
@@ -131,17 +186,34 @@
     #Main_Footer {
         position:fixed;
         width:100%;
-        height:32px;
+        height:64px;
         bottom:0;
         left:0;
 
         background-color:#e5b5c6;
         color:white;
+
+        display: flex;
+    }
+
+    #Main_Footer div {
+        margin:8px;
+    }
+
+    #Main_Footer a {
+        margin:8px;
+        font-size:24px;
     }
 
 /*#endregion*/
 
 /*#region Content*/
+
+    .Form_C_Accounts button {
+        background-color: rgb(114, 255, 250);
+        padding:4px 16px 4px 16px;
+        font-size: 20px;
+    } 
 
     /*#region Register*/
 
@@ -160,15 +232,17 @@
             background-color: rgb(213, 244, 255);
             display:none;
             grid-template-columns:auto auto;
-            padding:64px;
+            padding:96px;
         }
 
         #Form_Register label {
+            font-size:24px;
             margin:4px;
         }
         #Form_Register input {
             margin:4px;
-            margin-left:8px;
+            margin-left:24px;
+            padding-left: 1px;
         }
         #Form_Register a {
             margin:4px;
@@ -198,15 +272,17 @@
             background-color: rgb(213, 244, 255);
             display:none;
             grid-template-columns:auto auto;
-            padding:64px;
+            padding:96px;
         }
 
         #Form_Login label {
             margin:4px;
+            font-size:24px;
         }
         #Form_Login input {
             margin:4px;
-            margin-left:8px;
+            margin-left:24px;
+            padding-left: 1px;
         }
         #Form_Login a {
             margin:4px;
@@ -216,7 +292,7 @@
             margin-top:auto;
             margin-bottom:auto;
         }
-
+        
 /*#endregion*/
 
     /*#region Forgot*/
@@ -241,6 +317,7 @@
 
         #Form_Forgot label {
             margin:4px;
+            font-size:24px;
         }
         #Form_Forgot input {
             margin:4px;
@@ -259,20 +336,20 @@
     #Form_Home {
 
         position:absolute;
-        top:100px;
+        top:128px;
         left:50%;
         transform:translate(-50%,0);
 
         background-color:rgb(213, 244, 255);
-        width:1120px;
-        min-height: 756px;
-        max-height:calc(100% - 168px);
+        width:100%;
+        height:calc(100% - 192px);
 
         display: none;
+        grid-template-columns: calc(100% - 280px) 280px;
         
         overflow:hidden;
         border-color:blue;
-        border-style:solid;
+        border-style:hidden;
 
         margin-bottom:36px;
 
@@ -299,12 +376,12 @@
 
     }
 
-    #Home_3C {
+    #Home_4C {
 
-        width: 100%;
-        height: 500px;
+        width: calc(100% - 280px);
+        height: 550px;
         display: grid;
-        grid-template-columns:33.33% 33.33% 33.33%;
+        grid-template-columns:25% 25% 25% 25%;
         position: absolute;
         bottom: 0;
         font-size: auto;
@@ -312,17 +389,18 @@
     }
     
     .Home_Column {
-        height:500px;
+        height:550px;
         background-color: purple;
         background-image: url("mainRes/Website/hsportbg.jpg");
         background-size: cover;
         overflow: hidden;
+        font-size: 50px;
     }
 
     .Home_ColumnI {
         position: absolute;
         height: 100%;
-        width:33.5%;
+        width:25%;
         overflow: hidden;
 
         background-image: linear-gradient(rgb(104, 18, 68) 0%,rgba(104, 18, 68, 0.123) 80%);
@@ -342,9 +420,14 @@
 
     }
 
+    #Home_Column1 button {
+        background-color: purple;
+        color: white;
+    }
+
     #Home_Column1I {
 
-        background-image: linear-gradient(rgba(104, 18, 68, 0.8) 0%,rgba(104, 18, 68, 0.4) 100%)
+        background-image: linear-gradient(rgba(104, 18, 68, 0.9) 0%,rgba(104, 18, 68, 0.6) 100%)
 
     }
 
@@ -357,9 +440,14 @@
 
     }
 
+    #Home_Column2 button {
+        background-color: green;
+        color: white;
+    }
+
     #Home_Column2I {
 
-        background-image: linear-gradient(rgba(3, 92, 22, 0.8) 0%,rgba(104, 18, 68, 0.4) 100%)
+        background-image: linear-gradient(rgba(3, 82, 20, 0.9) 0%,rgba(3, 82, 20, 0.6) 100%)
 
     }
 
@@ -371,9 +459,34 @@
 
     }
 
+    #Home_Column3 button {
+        background-color: darkred;
+        color: white;
+    }
+
     #Home_Column3I {
 
-        background-image: linear-gradient(rgba(146, 7, 7, 0.8) 0%,rgba(104, 18, 68, 0.4) 100%)
+        background-image: linear-gradient(rgba(109, 8, 8, 0.9) 0%,rgba(109, 8, 8, 0.6) 100%)
+
+    }
+
+    #Home_Column4 {
+
+        font-size: 50px;
+        background-color: greenyellow;
+        background-image: url("mainRes/Website/hdefaultbg.jpg");
+        left:33%;
+
+    }
+
+    #Home_Column4 button {
+        background-color: rgb(11, 0, 159);
+        color: white;
+    }
+
+    #Home_Column4I {
+
+        background-image: linear-gradient(rgba(0, 2, 94, 0.9) 0%,rgba(0, 2, 94, 0.6) 100%)
 
     }
 
@@ -384,15 +497,15 @@
         left:0;
         top:60px;
 
-        border-color:blue;
-        border-style:solid;
+        /*border-color:blue;
+        border-style:solid;*/
         padding:8px;
         margin: 8px;
 
         font-size:16px;
         font-family:'Times New Roman', Times, serif;
 
-        background-color: rgb(213, 244, 255);
+        /*background-color: rgb(213, 244, 255);*/
     }
 
     .Home_Suggestions_Item {
@@ -412,7 +525,8 @@
     }
 
     .Home_Suggestions_Info {
-        display:flex
+        display:flex;
+        color:white;
     }
 
     .Home_Suggestions_Image {
@@ -423,8 +537,8 @@
     }
 
     .Home_Suggestions_Description {
-        width:230px; 
-        height:56px;
+        width:290px; 
+        height:78px;
 
         display: -webkit-box;
         -webkit-line-clamp: 3;
@@ -443,6 +557,15 @@
         padding: 8px;    
     }
 
+    #Form_Home_Ads {
+        position: -webkit-sticky;
+        position:sticky;
+
+        width:280px;
+        float:right;
+        top:128px;
+    }
+
     /*#endregion*/
 
     /*#region Privacy*/
@@ -456,7 +579,8 @@
 
             background-color:white;
             width:1120px;
-            min-height:calc(100% - 168px);
+            min-height:calc(100% - 200px);
+            padding: 8px;
 
             display: none;
         
@@ -469,35 +593,16 @@
 
         }
 
-        #Form_Privacy h1 {
-            color: black;
-            text-shadow: 2px 2px 4px #000000;
-        }
-
-        #Form_Privacy p {
-            font-family: 'Lucida Console', sans-serif;
-        }
-
-        #Form_Privacy h2 {
-            text-shadow: 2px 2px 4px #000000;
-            font-size: large;
-        }
-
-        #Form_Privacy h3 {
-            text-shadow: 2px 2px 4px #000000;
-            font-size: large;
-        }
-        
-        #Form_Privacy h4 {
-            text-shadow: 2px 2px 4px #000000;
-            font-size: large;
+        #Form_Privacy div {
+            margin-bottom:32px;
         }
 
     /*#endregion*/
 
     /*#region Terms*/
         
-        #Form_Terms  {
+        #Form_Terms {
+
             position:absolute;
             top:132px;
             left:50%;
@@ -505,7 +610,8 @@
 
             background-color:white;
             width:1120px;
-            min-height:calc(100% - 168px);
+            min-height:calc(100% - 200px);
+            padding: 8px;
 
             display: none;
         
@@ -518,8 +624,83 @@
 
         }
 
-        #Form_Terms h1{
-            
+        #Form_Terms div {
+            margin-bottom:30px;
+        }
+
+    /*#endregion*/
+
+    /*#region Support*/
+        
+        #Form_Support {
+
+            position:absolute;
+            top:132px;
+            left:50%;
+            transform:translate(-50%,0);
+
+            background-color:white;
+            width:1120px;
+            min-height:calc(100% - 200px);
+            padding: 8px;
+
+            display: none;
+        
+            border-color:blue;
+            border-style:solid;
+
+            margin-bottom:36px;
+
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        #Form_Support div {
+            margin-bottom:32px;
+        }
+
+    /*#endregion*/
+
+    /*#region About*/
+        
+        #Form_About {
+            position:absolute;
+            top:132px;
+            left:50%;
+            transform:translate(-50%,0);
+
+            background-color:white;
+            background-image: url("mainRes/Website/About.jpg");
+            background-size: cover;
+            width:1120px;
+            min-height:calc(100% - 200px);
+
+            display: none;
+        
+            border-color:blue;
+            border-style:solid;
+
+            margin-bottom:36px;
+
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        #Form_About_BGDim {
+            width:100%;
+            height:100%;
+            position:inherit;
+            background-color: rgba(0, 0, 0, 0.500);
+            color:white;
+            padding: 8px;
+        }
+
+        #Form_About h1 {
+            font-size:64px;
+        }
+
+        #Form_About p {
+            font-size:32px;
         }
     /*#endregion*/
 
@@ -527,7 +708,7 @@
 
     #Content_Layout {
         position:absolute;
-        top:68px;
+        top:132px;
         left:50%;
         transform:translate(-50%,0);
         width:1120px;
@@ -543,7 +724,7 @@
         border-color:#792845;
         border-style:solid;
 
-        margin-bottom:36px;
+        margin-bottom:68px;
     }
 
         #Content_Article {
@@ -558,6 +739,7 @@
             border-color:#792845;
             border-style:solid;
             padding:16px;
+            min-height: 1306px;
         }
 
         #Content_Aside {
@@ -567,6 +749,15 @@
             left:0;
 
             padding:4px;
+        }
+
+        #Content_Categories {
+            height: 142px;
+
+            border-color:#792845;
+            border-style:solid;
+            padding:8px;
+            margin-bottom: 8px;
         }
 
         #Content_Suggestions {
@@ -606,7 +797,7 @@
 
         .Content_Suggestions_Description {
             width:156px; 
-            height:56px;
+            height:72px;
 
             display: -webkit-box;
             -webkit-line-clamp: 3;
@@ -631,5 +822,167 @@
         }
 
 /*#endregion*/
+
+    /*#region NewsList*/
+
+    #Form_NewsList {
+        position:absolute;
+        top:132px;
+        left:50%;
+        transform:translate(-50%,0);
+        width:1120px;
+        display:inline;
+    }
+
+    #NewsList_Border {
+        background-color:white;
+
+        display: none;
+        grid-template-columns:auto 1fr;
+        
+        border-color:#792845;
+        border-style:solid;
+
+        margin-bottom:68px;
+    }
+
+        #NewsList_Main {
+            position:relative;
+            width:832px;
+            right:0;
+
+            padding:4px;
+        }
+
+        #NewsList_Main_Content {
+            border-color:#792845;
+            border-style:solid;
+            padding:16px;
+            min-height:888px;
+        }
+
+        #NewsList_SearchDiv {
+            text-align: center;
+        }
+        
+        #NewsList_SearchDiv * {
+            font-size: 18px;
+            padding: 11px;
+        }
+
+        #NewsList_SearchDiv input {
+            width: 60%;
+        }
+
+        #NewsList_Aside {
+            position:relative;
+            width:280px;
+            height:100%;
+            left:0;
+
+            padding:4px;
+        }
+
+        #NewsList_Categories {
+            height: 142px;
+
+            border-color:#792845;
+            border-style:solid;
+            padding:8px;
+        }
+
+        .NewsList_List_Item {
+        }
+
+        .NewsList_List {
+    
+            /*border-color:blue;
+            border-style:solid;*/
+            padding:8px;
+            margin: 8px;
+    
+            font-size:16px;
+            font-family:'Times New Roman', Times, serif;
+    
+            /*background-color: rgb(213, 244, 255);*/
+        }
+
+        .NewsList_Suggestions_Title {
+            width:100%; 
+            line-height: 16px;
+
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+
+            overflow:hidden;
+            text-overflow:ellipsis;
+            display:none;
+            margin-bottom:8px;
+        }
+
+        .NewsList_Suggestions_Info {
+            display:none;
+        }
+
+        .NewsList_Suggestions_Image {
+            width:96px; 
+            height:64px;
+            margin-right: 4px;
+            margin-bottom: 12px;
+        }
+
+        .NewsList_Suggestions_Description {
+            height:72px;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+
+        .NewsList_Item_BInfo {
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: none;
+        }
+
+        #NewsList_PagesDiv {
+            text-align: center;
+        }
+
+        .NewsList_Pages {
+            display: none; /* inline */
+        }
+
+        /*
+        #NewsList_PrevPage {}
+        #NewsList_Index1 {}
+        #NewsList_Index2 {}
+        #NewsList_Index3 {}
+        #NewsList_Index4 {}
+        #NewsList_Index5 {}
+        #NewsList_Index6 {}
+        #NewsList_Index7 {}
+        #NewsList_NextPage {}
+        */
+
+        #NewsList_Ads {
+            position: -webkit-sticky;
+            position:sticky;
+
+            width:280px;
+            float:right;
+            top:128px;
+        }
+
+        .NewsList_Ads_Ad {
+            width:248px;
+            margin:16px;
+        }
+
+/*#endregion*/
+
 
 /*#endregion*/

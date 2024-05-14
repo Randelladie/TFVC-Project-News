@@ -1,0 +1,635 @@
+/*#region Global*/
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #Global_Background {
+        background-image: url('SportsBG.jpg');
+        background-size: 1920px 1080px;
+        background-repeat: no-repeat;
+        position:fixed;
+        width: 1920px;
+        height: 1080px;
+        display:inline;
+        background-position: 50% 50%;
+    }
+
+    .overflow {
+        height: 200px;
+        display: flex;
+    }
+
+    body {
+        min-height:900px;
+    }
+
+/*#endregion*/
+
+/*#region Main*/
+
+    #Main_Layout {
+        position:fixed;
+        width:100%;
+        height:100%;
+        top:0;
+        left:0;
+
+        display:contents;
+    }
+
+    #Main_Header {
+        position:fixed;
+        width:100%;
+        height:64px;
+        top:0;
+        left:0;
+
+        background-color:#792845;
+        color:white;
+        font-size:35px;
+    }
+
+    #Main_LogoButton {
+        visibility: hidden;
+    }
+
+    #Main_Logo {
+        position: fixed;
+        top: -16px;
+        left: -16px;
+        width:64px;
+        height:64px;
+
+        visibility: visible;
+
+        margin:16px;
+    }
+
+    #Main_HGreetings {
+        position: fixed;
+        width:192px;
+        height:48px;
+        top:8px;
+        right:80px;
+        margin:0;
+        color:white;
+        font-size:20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-wrap: nowrap;
+    }
+
+    #Main_LogButton {
+        position: fixed;
+        top:8px;
+        right:80px;
+        margin:0;
+    }
+
+    #Main_RegButton {
+        position: fixed;
+        top:32px;
+        right:80px;
+        margin:0;
+    }
+
+    #Main_CategoryButton {
+        position: fixed;
+        width:32px;
+        height:32px;
+        top:16px;
+        right:16px;
+        margin:0;
+
+        border:none;
+    }
+
+    #Main_CategoryButtonIcon {
+        width:100%;
+        height:66%;
+    }
+
+    #Main_AsideCategory {
+        position:fixed;
+        width:256px;
+        height:100%;
+        right:0;
+
+        background-color:#d883a1;
+        color:white;
+
+        display:none;
+    }
+
+    .Main_CategoryListButton {
+        width:256px;
+        height:64px;
+        background-color:#c34773;
+    }
+
+    #Main_Footer {
+        position:fixed;
+        width:100%;
+        height:32px;
+        bottom:0;
+        left:0;
+
+        background-color:#e5b5c6;
+        color:white;
+    }
+
+/*#endregion*/
+
+/*#region Content*/
+
+    /*#region Register*/
+
+        #Form_Register {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            margin:auto;
+            vertical-align:middle;
+
+            border-style:solid;
+            border-color:blue;
+            border-radius: 20px;
+
+            background-color: rgb(213, 244, 255);
+            display:none;
+            grid-template-columns:auto auto;
+            padding:64px;
+        }
+
+        #Form_Register label {
+            margin:4px;
+        }
+        #Form_Register input {
+            margin:4px;
+            margin-left:8px;
+        }
+        #Form_Register a {
+            margin:4px;
+        }
+        #Form_Register button {
+            margin:0;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+
+    /*#endregion*/
+
+    /*#region Login*/
+
+        #Form_Login {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            margin:auto;
+            vertical-align:middle;
+
+            border-style:solid;
+            border-color:blue;
+            border-radius: 20px;
+
+            background-color: rgb(213, 244, 255);
+            display:none;
+            grid-template-columns:auto auto;
+            padding:64px;
+        }
+
+        #Form_Login label {
+            margin:4px;
+        }
+        #Form_Login input {
+            margin:4px;
+            margin-left:8px;
+        }
+        #Form_Login a {
+            margin:4px;
+        }
+        #Form_Login button {
+            margin:0;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+
+/*#endregion*/
+
+    /*#region Forgot*/
+
+        #Form_Forgot {
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            margin:auto;
+            vertical-align:middle;
+
+            border-style:solid;
+            border-color:blue;
+            border-radius: 20px;
+
+            background-color: rgb(213, 244, 255);
+            display:none;
+            grid-template-columns:auto auto;
+            padding:64px;
+        }
+
+        #Form_Forgot label {
+            margin:4px;
+        }
+        #Form_Forgot input {
+            margin:4px;
+            margin-left:8px;
+        }
+        #Form_Forgot button {
+            margin:0;
+            margin-top:auto;
+            margin-bottom:auto;
+        }
+
+    /*#endregion*/
+
+    /*#region Home*/
+
+    #Form_Home {
+
+        position:absolute;
+        top:100px;
+        left:50%;
+        transform:translate(-50%,0);
+
+        background-color:rgb(213, 244, 255);
+        width:1120px;
+        min-height: 756px;
+        max-height:calc(100% - 168px);
+
+        display: none;
+        
+        overflow:hidden;
+        border-color:blue;
+        border-style:solid;
+
+        margin-bottom:36px;
+
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+    }
+
+    #Form_Home p {
+
+        margin:8px;
+
+    }
+
+    #Form_Home h1 {
+
+        font-size: 50px;
+        margin:8px;
+
+    }
+
+    #Form_Home h2 {
+
+        margin:8px;
+
+    }
+
+    #Home_3C {
+
+        width: 100%;
+        height: 500px;
+        display: grid;
+        grid-template-columns:33.33% 33.33% 33.33%;
+        position: absolute;
+        bottom: 0;
+        font-size: auto;
+
+    }
+    
+    .Home_Column {
+        height:500px;
+        background-color: purple;
+        background-image: url("mainRes/Website/hsportbg.jpg");
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .Home_ColumnI {
+        position: absolute;
+        height: 100%;
+        width:33.5%;
+        overflow: hidden;
+
+        background-image: linear-gradient(rgb(104, 18, 68) 0%,rgba(104, 18, 68, 0.123) 80%);
+        color: white;
+
+        text-align: center;
+
+    }
+
+    #Home_Column1 {
+
+        font-size: 50px;
+        background-color: purple;
+        background-image: url("mainRes/Website/hsportbg.jpg");
+        background-size: cover;
+        overflow: hidden;
+
+    }
+
+    #Home_Column1I {
+
+        background-image: linear-gradient(rgba(104, 18, 68, 0.8) 0%,rgba(104, 18, 68, 0.4) 100%)
+
+    }
+
+    #Home_Column2 {
+
+        font-size: 50px;
+        background-color: greenyellow;
+        background-image: url("mainRes/Website/hfoodbg.jpg");
+        left:33%;
+
+    }
+
+    #Home_Column2I {
+
+        background-image: linear-gradient(rgba(3, 92, 22, 0.8) 0%,rgba(104, 18, 68, 0.4) 100%)
+
+    }
+
+    #Home_Column3 {
+
+        font-size: 50px;
+        background-color: red;
+        background-image: url("mainRes/Website/hpoliticbg.jpg");
+
+    }
+
+    #Home_Column3I {
+
+        background-image: linear-gradient(rgba(146, 7, 7, 0.8) 0%,rgba(104, 18, 68, 0.4) 100%)
+
+    }
+
+    .Home_Suggestions {
+        position:relative;
+        width:calc(100%-16px);
+        height:350px;
+        left:0;
+        top:60px;
+
+        border-color:blue;
+        border-style:solid;
+        padding:8px;
+        margin: 8px;
+
+        font-size:16px;
+        font-family:'Times New Roman', Times, serif;
+
+        background-color: rgb(213, 244, 255);
+    }
+
+    .Home_Suggestions_Item {
+
+    }
+
+    .Home_Suggestions_Title {
+        width:100%; 
+        line-height: 16px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .Home_Suggestions_Info {
+        display:flex
+    }
+
+    .Home_Suggestions_Image {
+        width:96px; 
+        height:64px;
+        margin-right: 4px;
+        margin-bottom: 12px;
+    }
+
+    .Home_Suggestions_Description {
+        width:230px; 
+        height:56px;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        overflow:hidden;
+        text-overflow:ellipsis;
+    }
+
+    .Home_SeeMore {
+        position: relative;
+        top: 66px;
+        left: 50%;
+        transform: translate(-50%,0);
+        font-size: 32px;
+        padding: 8px;    
+    }
+
+    /*#endregion*/
+
+    /*#region Privacy*/
+        
+        #Form_Privacy {
+
+            position:absolute;
+            top:132px;
+            left:50%;
+            transform:translate(-50%,0);
+
+            background-color:white;
+            width:1120px;
+            min-height:calc(100% - 168px);
+
+            display: none;
+        
+            border-color:blue;
+            border-style:solid;
+
+            margin-bottom:36px;
+
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        #Form_Privacy h1 {
+            color: black;
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        #Form_Privacy p {
+            font-family: 'Lucida Console', sans-serif;
+        }
+
+        #Form_Privacy h2 {
+            text-shadow: 2px 2px 4px #000000;
+            font-size: large;
+        }
+
+        #Form_Privacy h3 {
+            text-shadow: 2px 2px 4px #000000;
+            font-size: large;
+        }
+        
+        #Form_Privacy h4 {
+            text-shadow: 2px 2px 4px #000000;
+            font-size: large;
+        }
+
+    /*#endregion*/
+
+    /*#region Terms*/
+        
+        #Form_Terms  {
+            position:absolute;
+            top:132px;
+            left:50%;
+            transform:translate(-50%,0);
+
+            background-color:white;
+            width:1120px;
+            min-height:calc(100% - 168px);
+
+            display: none;
+        
+            border-color:blue;
+            border-style:solid;
+
+            margin-bottom:36px;
+
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        #Form_Terms h1{
+            
+        }
+    /*#endregion*/
+
+    /*#region Article Page*/
+
+    #Content_Layout {
+        position:absolute;
+        top:68px;
+        left:50%;
+        transform:translate(-50%,0);
+        width:1120px;
+        display:inline;
+    }
+
+    #Content_Layout_Border {
+        background-color:white;
+
+        display: none;
+        grid-template-columns:auto 1fr;
+        
+        border-color:#792845;
+        border-style:solid;
+
+        margin-bottom:36px;
+    }
+
+        #Content_Article {
+            position:relative;
+            width:832px;
+            right:0;
+
+            padding:4px;
+        }
+
+        #Content_Article_Content {
+            border-color:#792845;
+            border-style:solid;
+            padding:16px;
+        }
+
+        #Content_Aside {
+            position:relative;
+            width:280px;
+            height:100%;
+            left:0;
+
+            padding:4px;
+        }
+
+        #Content_Suggestions {
+            height: 410px;
+
+            border-color:#792845;
+            border-style:solid;
+            padding:8px;
+        }
+
+        .Content_Suggestions_Item {
+
+        }
+
+        .Content_Suggestions_Title {
+            width:100%; 
+            line-height: 16px;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+
+        .Content_Suggestions_Info {
+            display:flex
+        }
+
+        .Content_Suggestions_Image {
+            width:96px; 
+            height:64px;
+            margin-right: 4px;
+            margin-bottom: 12px;
+        }
+
+        .Content_Suggestions_Description {
+            width:156px; 
+            height:56px;
+
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+
+        #Content_Ads {
+            position: -webkit-sticky;
+            position:sticky;
+
+            width:280px;
+            float:right;
+            top:128px;
+        }
+
+        .Content_Ads_Ad {
+            width:248px;
+            margin:16px;
+        }
+
+/*#endregion*/
+
+/*#endregion*/
